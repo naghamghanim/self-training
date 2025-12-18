@@ -1,0 +1,11 @@
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "launcher.py", line 239, in <module>
+    train_examples = data_processor.get_train_examples(args.data_dir)
+  File "/home/aelmekki/ner_da/jobs/utils/data_utils.py", line 148, in get_train_examples
+    self._read_file(os.path.join(data_dir, "full_train.txt"))
+  File "/home/aelmekki/ner_da/jobs/utils/data_utils.py", line 178, in _read_file
+    f = open(filename, encoding='utf-8', errors='ignore')
+FileNotFoundError: [Errno 2] No such file or directory: 'data/NER/ANERCorp/full_train.txt'

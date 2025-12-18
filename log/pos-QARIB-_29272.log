@@ -1,0 +1,1202 @@
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+675
+3000
+Training started with cuda
+/home/aelmekki/.conda/envs/tabnet/lib/python3.7/site-packages/transformers/optimization.py:309: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use thePyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: DET seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: NOUN seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: NSUFF seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: V seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: PRON seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: ADJ seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: CASE seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: CONJ seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: PREP seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: PART seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: PROG_PART seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: PUNC seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: HASH seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: EMOT seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: FUT_PART seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: NEG_PART seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: NUM seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: MENTION seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: ADV seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: URL seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: FOREIGN seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: WB seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+
+##########     save the best model EGY.    #############
+
+iter: 00500, Macro F1: 0.53097
+iter: 00500, F1 EGY: 0.53097, best F1 for EGY: 0.53097
+
+##########     save the best model GLF.    #############
+
+iter: 00500, Macro F1: 0.66426
+iter: 00500, F1 GLF: 0.66426, best F1 for GLF: 0.66426
+
+##########     save the best model LEV.    #############
+
+iter: 00500, Macro F1: 0.56301
+iter: 00500, F1 LEV: 0.56301, best F1 for LEV: 0.56301
+
+##########     save the best model MAG.    #############
+
+iter: 00500, Macro F1: 0.56301
+iter: 00500, F1 MAG: 0.53183, best F1 for MAG: 0.53183
+
+##########     save the best model MSA.    #############
+
+iter: 00500, Macro F1: 0.78485
+iter: 00500, F1 MSA: 0.78485, best F1 for MSA: 0.78485
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: ABBREV seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: TB seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+
+##########     save the best model EGY.    #############
+
+iter: 01000, Macro F1: 0.53332
+iter: 01000, F1 EGY: 0.53332, best F1 for EGY: 0.53332
+iter: 01000, F1 GLF: 0.63313, best F1 for GLF: 0.66426
+
+##########     save the best model LEV.    #############
+
+iter: 01000, Macro F1: 0.56997
+iter: 01000, F1 LEV: 0.56997, best F1 for LEV: 0.56997
+iter: 01000, F1 MAG: 0.52721, best F1 for MAG: 0.53183
+
+##########     save the best model MSA.    #############
+
+iter: 01000, Macro F1: 0.86723
+iter: 01000, F1 MSA: 0.86723, best F1 for MSA: 0.86723
+
+##########     save the best model EGY.    #############
+
+iter: 01500, Macro F1: 0.54522
+iter: 01500, F1 EGY: 0.54522, best F1 for EGY: 0.54522
+
+##########     save the best model GLF.    #############
+
+iter: 01500, Macro F1: 0.67520
+iter: 01500, F1 GLF: 0.67520, best F1 for GLF: 0.67520
+
+##########     save the best model LEV.    #############
+
+iter: 01500, Macro F1: 0.58284
+iter: 01500, F1 LEV: 0.58284, best F1 for LEV: 0.58284
+iter: 01500, F1 MAG: 0.50431, best F1 for MAG: 0.53183
+
+##########     save the best model MSA.    #############
+
+iter: 01500, Macro F1: 0.87938
+iter: 01500, F1 MSA: 0.87938, best F1 for MSA: 0.87938
+iter: 02000, F1 EGY: 0.54036, best F1 for EGY: 0.54522
+iter: 02000, F1 GLF: 0.64271, best F1 for GLF: 0.67520
+iter: 02000, F1 LEV: 0.55229, best F1 for LEV: 0.58284
+iter: 02000, F1 MAG: 0.50428, best F1 for MAG: 0.53183
+iter: 02000, F1 MSA: 0.86811, best F1 for MSA: 0.87938
+iter: 02500, F1 EGY: 0.54038, best F1 for EGY: 0.54522
+iter: 02500, F1 GLF: 0.67004, best F1 for GLF: 0.67520
+iter: 02500, F1 LEV: 0.57397, best F1 for LEV: 0.58284
+iter: 02500, F1 MAG: 0.50091, best F1 for MAG: 0.53183
+iter: 02500, F1 MSA: 0.87191, best F1 for MSA: 0.87938
+iter: 03000, F1 EGY: 0.54328, best F1 for EGY: 0.54522
+iter: 03000, F1 GLF: 0.67355, best F1 for GLF: 0.67520
+iter: 03000, F1 LEV: 0.57802, best F1 for LEV: 0.58284
+iter: 03000, F1 MAG: 0.50193, best F1 for MAG: 0.53183
+iter: 03000, F1 MSA: 0.87241, best F1 for MSA: 0.87938
+iter: 03500, F1 EGY: 0.54356, best F1 for EGY: 0.54522
+iter: 03500, F1 GLF: 0.67449, best F1 for GLF: 0.67520
+iter: 03500, F1 LEV: 0.57091, best F1 for LEV: 0.58284
+iter: 03500, F1 MAG: 0.50237, best F1 for MAG: 0.53183
+iter: 03500, F1 MSA: 0.87283, best F1 for MSA: 0.87938
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+0
+Training started with cuda
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: U seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+
+##########     save the best model EGY.    #############
+
+iter: 00500, Macro F1: 0.55314
+iter: 00500, F1 EGY: 0.55314, best F1 for EGY: 0.55314
+
+##########     save the best model GLF.    #############
+
+iter: 00500, Macro F1: 0.68238
+iter: 00500, F1 GLF: 0.68238, best F1 for GLF: 0.68238
+
+##########     save the best model LEV.    #############
+
+iter: 00500, Macro F1: 0.58380
+iter: 00500, F1 LEV: 0.58380, best F1 for LEV: 0.58380
+iter: 00500, F1 MAG: 0.51299, best F1 for MAG: 0.53183
+iter: 00500, F1 MSA: 0.86171, best F1 for MSA: 0.87938
+
+##########     save the best model EGY.    #############
+
+iter: 01000, Macro F1: 0.55340
+iter: 01000, F1 EGY: 0.55340, best F1 for EGY: 0.55340
+
+##########     save the best model GLF.    #############
+
+iter: 01000, Macro F1: 0.68319
+iter: 01000, F1 GLF: 0.68319, best F1 for GLF: 0.68319
+iter: 01000, F1 LEV: 0.57964, best F1 for LEV: 0.58380
+
+##########     save the best model MAG.    #############
+
+iter: 01000, Macro F1: 0.58380
+iter: 01000, F1 MAG: 0.54323, best F1 for MAG: 0.54323
+
+##########     save the best model MSA.    #############
+
+iter: 01000, Macro F1: 0.92716
+iter: 01000, F1 MSA: 0.92716, best F1 for MSA: 0.92716
+iter: 01500, F1 EGY: 0.55300, best F1 for EGY: 0.55340
+iter: 01500, F1 GLF: 0.67607, best F1 for GLF: 0.68319
+
+##########     save the best model LEV.    #############
+
+iter: 01500, Macro F1: 0.60800
+iter: 01500, F1 LEV: 0.60800, best F1 for LEV: 0.60800
+iter: 01500, F1 MAG: 0.53453, best F1 for MAG: 0.54323
+iter: 01500, F1 MSA: 0.92141, best F1 for MSA: 0.92716
+iter: 02000, F1 EGY: 0.55013, best F1 for EGY: 0.55340
+iter: 02000, F1 GLF: 0.67550, best F1 for GLF: 0.68319
+iter: 02000, F1 LEV: 0.59750, best F1 for LEV: 0.60800
+iter: 02000, F1 MAG: 0.53250, best F1 for MAG: 0.54323
+
+##########     save the best model MSA.    #############
+
+iter: 02000, Macro F1: 0.92835
+iter: 02000, F1 MSA: 0.92835, best F1 for MSA: 0.92835
+iter: 02500, F1 EGY: 0.55014, best F1 for EGY: 0.55340
+iter: 02500, F1 GLF: 0.68117, best F1 for GLF: 0.68319
+
+##########     save the best model LEV.    #############
+
+iter: 02500, Macro F1: 0.62497
+iter: 02500, F1 LEV: 0.62497, best F1 for LEV: 0.62497
+iter: 02500, F1 MAG: 0.53753, best F1 for MAG: 0.54323
+iter: 02500, F1 MSA: 0.92284, best F1 for MSA: 0.92835
+
+##########     save the best model EGY.    #############
+
+iter: 03000, Macro F1: 0.55478
+iter: 03000, F1 EGY: 0.55478, best F1 for EGY: 0.55478
+iter: 03000, F1 GLF: 0.67949, best F1 for GLF: 0.68319
+
+##########     save the best model LEV.    #############
+
+iter: 03000, Macro F1: 0.62714
+iter: 03000, F1 LEV: 0.62714, best F1 for LEV: 0.62714
+iter: 03000, F1 MAG: 0.54142, best F1 for MAG: 0.54323
+
+##########     save the best model MSA.    #############
+
+iter: 03000, Macro F1: 0.93246
+iter: 03000, F1 MSA: 0.93246, best F1 for MSA: 0.93246
+iter: 03500, F1 EGY: 0.55211, best F1 for EGY: 0.55478
+iter: 03500, F1 GLF: 0.67696, best F1 for GLF: 0.68319
+iter: 03500, F1 LEV: 0.61315, best F1 for LEV: 0.62714
+iter: 03500, F1 MAG: 0.53877, best F1 for MAG: 0.54323
+iter: 03500, F1 MSA: 0.92911, best F1 for MSA: 0.93246
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+30616
+Training started with cuda
+iter: 00500, F1 EGY: 0.47639, best F1 for EGY: 0.55478
+iter: 00500, F1 GLF: 0.59273, best F1 for GLF: 0.68319
+iter: 00500, F1 LEV: 0.48159, best F1 for LEV: 0.62714
+iter: 00500, F1 MAG: 0.41965, best F1 for MAG: 0.54323
+iter: 00500, F1 MSA: 0.67483, best F1 for MSA: 0.93246
+iter: 01000, F1 EGY: 0.52437, best F1 for EGY: 0.55478
+iter: 01000, F1 GLF: 0.65982, best F1 for GLF: 0.68319
+iter: 01000, F1 LEV: 0.57271, best F1 for LEV: 0.62714
+iter: 01000, F1 MAG: 0.48923, best F1 for MAG: 0.54323
+iter: 01000, F1 MSA: 0.73081, best F1 for MSA: 0.93246
+
+##########     save the best model EGY.    #############
+
+iter: 01500, Macro F1: 0.55841
+iter: 01500, F1 EGY: 0.55841, best F1 for EGY: 0.55841
+iter: 01500, F1 GLF: 0.67285, best F1 for GLF: 0.68319
+iter: 01500, F1 LEV: 0.58966, best F1 for LEV: 0.62714
+iter: 01500, F1 MAG: 0.50779, best F1 for MAG: 0.54323
+iter: 01500, F1 MSA: 0.80941, best F1 for MSA: 0.93246
+
+##########     save the best model EGY.    #############
+
+iter: 02000, Macro F1: 0.56081
+iter: 02000, F1 EGY: 0.56081, best F1 for EGY: 0.56081
+iter: 02000, F1 GLF: 0.67992, best F1 for GLF: 0.68319
+iter: 02000, F1 LEV: 0.58693, best F1 for LEV: 0.62714
+iter: 02000, F1 MAG: 0.53816, best F1 for MAG: 0.54323
+iter: 02000, F1 MSA: 0.91506, best F1 for MSA: 0.93246
+iter: 02500, F1 EGY: 0.55792, best F1 for EGY: 0.56081
+iter: 02500, F1 GLF: 0.67917, best F1 for GLF: 0.68319
+iter: 02500, F1 LEV: 0.61789, best F1 for LEV: 0.62714
+iter: 02500, F1 MAG: 0.53261, best F1 for MAG: 0.54323
+iter: 02500, F1 MSA: 0.92125, best F1 for MSA: 0.93246
+
+##########     save the best model EGY.    #############
+
+iter: 03000, Macro F1: 0.64078
+iter: 03000, F1 EGY: 0.64078, best F1 for EGY: 0.64078
+iter: 03000, F1 GLF: 0.67065, best F1 for GLF: 0.68319
+iter: 03000, F1 LEV: 0.58653, best F1 for LEV: 0.62714
+iter: 03000, F1 MAG: 0.52900, best F1 for MAG: 0.54323
+iter: 03000, F1 MSA: 0.91111, best F1 for MSA: 0.93246
+iter: 03500, F1 EGY: 0.53211, best F1 for EGY: 0.64078
+iter: 03500, F1 GLF: 0.62768, best F1 for GLF: 0.68319
+iter: 03500, F1 LEV: 0.58460, best F1 for LEV: 0.62714
+iter: 03500, F1 MAG: 0.53803, best F1 for MAG: 0.54323
+iter: 03500, F1 MSA: 0.90747, best F1 for MSA: 0.93246
+iter: 04000, F1 EGY: 0.55363, best F1 for EGY: 0.64078
+iter: 04000, F1 GLF: 0.67483, best F1 for GLF: 0.68319
+iter: 04000, F1 LEV: 0.55932, best F1 for LEV: 0.62714
+iter: 04000, F1 MAG: 0.51515, best F1 for MAG: 0.54323
+iter: 04000, F1 MSA: 0.90870, best F1 for MSA: 0.93246
+iter: 04500, F1 EGY: 0.53347, best F1 for EGY: 0.64078
+iter: 04500, F1 GLF: 0.65746, best F1 for GLF: 0.68319
+iter: 04500, F1 LEV: 0.58649, best F1 for LEV: 0.62714
+iter: 04500, F1 MAG: 0.50626, best F1 for MAG: 0.54323
+iter: 04500, F1 MSA: 0.92009, best F1 for MSA: 0.93246
+iter: 05000, F1 EGY: 0.56194, best F1 for EGY: 0.64078
+iter: 05000, F1 GLF: 0.66569, best F1 for GLF: 0.68319
+iter: 05000, F1 LEV: 0.54883, best F1 for LEV: 0.62714
+
+##########     save the best model MAG.    #############
+
+iter: 05000, Macro F1: 0.62714
+iter: 05000, F1 MAG: 0.54431, best F1 for MAG: 0.54431
+iter: 05000, F1 MSA: 0.86427, best F1 for MSA: 0.93246
+iter: 05500, F1 EGY: 0.60025, best F1 for EGY: 0.64078
+iter: 05500, F1 GLF: 0.63685, best F1 for GLF: 0.68319
+iter: 05500, F1 LEV: 0.56342, best F1 for LEV: 0.62714
+iter: 05500, F1 MAG: 0.51465, best F1 for MAG: 0.54431
+iter: 05500, F1 MSA: 0.92211, best F1 for MSA: 0.93246
+iter: 06000, F1 EGY: 0.58861, best F1 for EGY: 0.64078
+iter: 06000, F1 GLF: 0.67774, best F1 for GLF: 0.68319
+iter: 06000, F1 LEV: 0.60234, best F1 for LEV: 0.62714
+iter: 06000, F1 MAG: 0.52657, best F1 for MAG: 0.54431
+iter: 06000, F1 MSA: 0.87526, best F1 for MSA: 0.93246
+
+##########     save the best model EGY.    #############
+
+iter: 06500, Macro F1: 0.64511
+iter: 06500, F1 EGY: 0.64511, best F1 for EGY: 0.64511
+iter: 06500, F1 GLF: 0.66325, best F1 for GLF: 0.68319
+iter: 06500, F1 LEV: 0.57936, best F1 for LEV: 0.62714
+
+##########     save the best model MAG.    #############
+
+iter: 06500, Macro F1: 0.62714
+iter: 06500, F1 MAG: 0.58248, best F1 for MAG: 0.58248
+iter: 06500, F1 MSA: 0.92440, best F1 for MSA: 0.93246
+
+##########     save the best model EGY.    #############
+
+iter: 07000, Macro F1: 0.64566
+iter: 07000, F1 EGY: 0.64566, best F1 for EGY: 0.64566
+iter: 07000, F1 GLF: 0.67136, best F1 for GLF: 0.68319
+iter: 07000, F1 LEV: 0.62038, best F1 for LEV: 0.62714
+iter: 07000, F1 MAG: 0.55186, best F1 for MAG: 0.58248
+iter: 07000, F1 MSA: 0.86419, best F1 for MSA: 0.93246
+iter: 07500, F1 EGY: 0.56208, best F1 for EGY: 0.64566
+iter: 07500, F1 GLF: 0.67689, best F1 for GLF: 0.68319
+iter: 07500, F1 LEV: 0.62091, best F1 for LEV: 0.62714
+iter: 07500, F1 MAG: 0.50718, best F1 for MAG: 0.58248
+iter: 07500, F1 MSA: 0.82406, best F1 for MSA: 0.93246
+iter: 08000, F1 EGY: 0.53314, best F1 for EGY: 0.64566
+iter: 08000, F1 GLF: 0.67727, best F1 for GLF: 0.68319
+iter: 08000, F1 LEV: 0.57461, best F1 for LEV: 0.62714
+iter: 08000, F1 MAG: 0.49624, best F1 for MAG: 0.58248
+iter: 08000, F1 MSA: 0.87476, best F1 for MSA: 0.93246
+iter: 08500, F1 EGY: 0.56489, best F1 for EGY: 0.64566
+iter: 08500, F1 GLF: 0.66977, best F1 for GLF: 0.68319
+iter: 08500, F1 LEV: 0.55583, best F1 for LEV: 0.62714
+iter: 08500, F1 MAG: 0.54581, best F1 for MAG: 0.58248
+iter: 08500, F1 MSA: 0.91917, best F1 for MSA: 0.93246
+iter: 09000, F1 EGY: 0.53251, best F1 for EGY: 0.64566
+iter: 09000, F1 GLF: 0.67197, best F1 for GLF: 0.68319
+iter: 09000, F1 LEV: 0.55663, best F1 for LEV: 0.62714
+iter: 09000, F1 MAG: 0.55790, best F1 for MAG: 0.58248
+iter: 09000, F1 MSA: 0.87139, best F1 for MSA: 0.93246
+iter: 09500, F1 EGY: 0.54323, best F1 for EGY: 0.64566
+iter: 09500, F1 GLF: 0.67227, best F1 for GLF: 0.68319
+iter: 09500, F1 LEV: 0.55177, best F1 for LEV: 0.62714
+iter: 09500, F1 MAG: 0.56051, best F1 for MAG: 0.58248
+iter: 09500, F1 MSA: 0.92345, best F1 for MSA: 0.93246
+iter: 10000, F1 EGY: 0.57400, best F1 for EGY: 0.64566
+iter: 10000, F1 GLF: 0.67872, best F1 for GLF: 0.68319
+iter: 10000, F1 LEV: 0.55176, best F1 for LEV: 0.62714
+iter: 10000, F1 MAG: 0.51843, best F1 for MAG: 0.58248
+iter: 10000, F1 MSA: 0.82930, best F1 for MSA: 0.93246
+iter: 10500, F1 EGY: 0.57681, best F1 for EGY: 0.64566
+iter: 10500, F1 GLF: 0.67131, best F1 for GLF: 0.68319
+iter: 10500, F1 LEV: 0.55427, best F1 for LEV: 0.62714
+iter: 10500, F1 MAG: 0.55878, best F1 for MAG: 0.58248
+iter: 10500, F1 MSA: 0.88169, best F1 for MSA: 0.93246
+iter: 11000, F1 EGY: 0.63831, best F1 for EGY: 0.64566
+iter: 11000, F1 GLF: 0.67399, best F1 for GLF: 0.68319
+iter: 11000, F1 LEV: 0.59024, best F1 for LEV: 0.62714
+iter: 11000, F1 MAG: 0.51555, best F1 for MAG: 0.58248
+iter: 11000, F1 MSA: 0.86817, best F1 for MSA: 0.93246
+iter: 11500, F1 EGY: 0.63341, best F1 for EGY: 0.64566
+iter: 11500, F1 GLF: 0.67325, best F1 for GLF: 0.68319
+iter: 11500, F1 LEV: 0.56177, best F1 for LEV: 0.62714
+iter: 11500, F1 MAG: 0.51932, best F1 for MAG: 0.58248
+iter: 11500, F1 MSA: 0.86855, best F1 for MSA: 0.93246
+iter: 12000, F1 EGY: 0.55737, best F1 for EGY: 0.64566
+iter: 12000, F1 GLF: 0.66884, best F1 for GLF: 0.68319
+iter: 12000, F1 LEV: 0.55868, best F1 for LEV: 0.62714
+iter: 12000, F1 MAG: 0.51928, best F1 for MAG: 0.58248
+iter: 12000, F1 MSA: 0.81751, best F1 for MSA: 0.93246
+iter: 12500, F1 EGY: 0.63598, best F1 for EGY: 0.64566
+iter: 12500, F1 GLF: 0.66969, best F1 for GLF: 0.68319
+iter: 12500, F1 LEV: 0.61754, best F1 for LEV: 0.62714
+iter: 12500, F1 MAG: 0.51813, best F1 for MAG: 0.58248
+iter: 12500, F1 MSA: 0.87052, best F1 for MSA: 0.93246
+iter: 13000, F1 EGY: 0.61082, best F1 for EGY: 0.64566
+iter: 13000, F1 GLF: 0.66559, best F1 for GLF: 0.68319
+iter: 13000, F1 LEV: 0.62110, best F1 for LEV: 0.62714
+iter: 13000, F1 MAG: 0.52155, best F1 for MAG: 0.58248
+iter: 13000, F1 MSA: 0.92208, best F1 for MSA: 0.93246
+iter: 13500, F1 EGY: 0.63943, best F1 for EGY: 0.64566
+iter: 13500, F1 GLF: 0.66639, best F1 for GLF: 0.68319
+iter: 13500, F1 LEV: 0.58354, best F1 for LEV: 0.62714
+iter: 13500, F1 MAG: 0.51277, best F1 for MAG: 0.58248
+iter: 13500, F1 MSA: 0.92112, best F1 for MSA: 0.93246
+iter: 14000, F1 EGY: 0.64007, best F1 for EGY: 0.64566
+iter: 14000, F1 GLF: 0.64011, best F1 for GLF: 0.68319
+iter: 14000, F1 LEV: 0.52795, best F1 for LEV: 0.62714
+iter: 14000, F1 MAG: 0.50998, best F1 for MAG: 0.58248
+iter: 14000, F1 MSA: 0.92124, best F1 for MSA: 0.93246
+
+##########     save the best model EGY.    #############
+
+iter: 14500, Macro F1: 0.64589
+iter: 14500, F1 EGY: 0.64589, best F1 for EGY: 0.64589
+iter: 14500, F1 GLF: 0.67404, best F1 for GLF: 0.68319
+iter: 14500, F1 LEV: 0.53370, best F1 for LEV: 0.62714
+iter: 14500, F1 MAG: 0.51029, best F1 for MAG: 0.58248
+iter: 14500, F1 MSA: 0.92008, best F1 for MSA: 0.93246
+
+##########     save the best model EGY.    #############
+
+iter: 15000, Macro F1: 0.64612
+iter: 15000, F1 EGY: 0.64612, best F1 for EGY: 0.64612
+iter: 15000, F1 GLF: 0.67259, best F1 for GLF: 0.68319
+iter: 15000, F1 LEV: 0.55036, best F1 for LEV: 0.62714
+iter: 15000, F1 MAG: 0.51167, best F1 for MAG: 0.58248
+iter: 15000, F1 MSA: 0.92421, best F1 for MSA: 0.93246
+iter: 15500, F1 EGY: 0.63343, best F1 for EGY: 0.64612
+iter: 15500, F1 GLF: 0.68005, best F1 for GLF: 0.68319
+iter: 15500, F1 LEV: 0.56552, best F1 for LEV: 0.62714
+iter: 15500, F1 MAG: 0.55489, best F1 for MAG: 0.58248
+iter: 15500, F1 MSA: 0.92219, best F1 for MSA: 0.93246
+iter: 16000, F1 EGY: 0.54572, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 16000, Macro F1: 0.68741
+iter: 16000, F1 GLF: 0.68741, best F1 for GLF: 0.68741
+iter: 16000, F1 LEV: 0.54839, best F1 for LEV: 0.62714
+iter: 16000, F1 MAG: 0.53841, best F1 for MAG: 0.58248
+iter: 16000, F1 MSA: 0.92284, best F1 for MSA: 0.93246
+iter: 16500, F1 EGY: 0.60650, best F1 for EGY: 0.64612
+iter: 16500, F1 GLF: 0.67534, best F1 for GLF: 0.68741
+iter: 16500, F1 LEV: 0.55247, best F1 for LEV: 0.62714
+iter: 16500, F1 MAG: 0.50951, best F1 for MAG: 0.58248
+iter: 16500, F1 MSA: 0.87197, best F1 for MSA: 0.93246
+iter: 17000, F1 EGY: 0.61062, best F1 for EGY: 0.64612
+iter: 17000, F1 GLF: 0.67492, best F1 for GLF: 0.68741
+iter: 17000, F1 LEV: 0.54764, best F1 for LEV: 0.62714
+iter: 17000, F1 MAG: 0.50748, best F1 for MAG: 0.58248
+iter: 17000, F1 MSA: 0.92195, best F1 for MSA: 0.93246
+iter: 17500, F1 EGY: 0.61204, best F1 for EGY: 0.64612
+iter: 17500, F1 GLF: 0.66992, best F1 for GLF: 0.68741
+iter: 17500, F1 LEV: 0.54763, best F1 for LEV: 0.62714
+iter: 17500, F1 MAG: 0.52037, best F1 for MAG: 0.58248
+iter: 17500, F1 MSA: 0.92026, best F1 for MSA: 0.93246
+iter: 18000, F1 EGY: 0.54135, best F1 for EGY: 0.64612
+iter: 18000, F1 GLF: 0.67033, best F1 for GLF: 0.68741
+iter: 18000, F1 LEV: 0.54132, best F1 for LEV: 0.62714
+iter: 18000, F1 MAG: 0.50676, best F1 for MAG: 0.58248
+iter: 18000, F1 MSA: 0.91587, best F1 for MSA: 0.93246
+iter: 18500, F1 EGY: 0.54524, best F1 for EGY: 0.64612
+iter: 18500, F1 GLF: 0.68395, best F1 for GLF: 0.68741
+iter: 18500, F1 LEV: 0.52633, best F1 for LEV: 0.62714
+iter: 18500, F1 MAG: 0.50542, best F1 for MAG: 0.58248
+iter: 18500, F1 MSA: 0.91955, best F1 for MSA: 0.93246
+iter: 19000, F1 EGY: 0.53918, best F1 for EGY: 0.64612
+iter: 19000, F1 GLF: 0.68450, best F1 for GLF: 0.68741
+iter: 19000, F1 LEV: 0.52603, best F1 for LEV: 0.62714
+iter: 19000, F1 MAG: 0.50777, best F1 for MAG: 0.58248
+iter: 19000, F1 MSA: 0.91918, best F1 for MSA: 0.93246
+iter: 19500, F1 EGY: 0.54403, best F1 for EGY: 0.64612
+iter: 19500, F1 GLF: 0.68612, best F1 for GLF: 0.68741
+iter: 19500, F1 LEV: 0.52770, best F1 for LEV: 0.62714
+iter: 19500, F1 MAG: 0.50530, best F1 for MAG: 0.58248
+iter: 19500, F1 MSA: 0.91887, best F1 for MSA: 0.93246
+iter: 20000, F1 EGY: 0.55394, best F1 for EGY: 0.64612
+iter: 20000, F1 GLF: 0.67808, best F1 for GLF: 0.68741
+iter: 20000, F1 LEV: 0.55152, best F1 for LEV: 0.62714
+iter: 20000, F1 MAG: 0.49746, best F1 for MAG: 0.58248
+iter: 20000, F1 MSA: 0.92056, best F1 for MSA: 0.93246
+iter: 20500, F1 EGY: 0.56391, best F1 for EGY: 0.64612
+iter: 20500, F1 GLF: 0.68389, best F1 for GLF: 0.68741
+iter: 20500, F1 LEV: 0.52673, best F1 for LEV: 0.62714
+iter: 20500, F1 MAG: 0.54333, best F1 for MAG: 0.58248
+iter: 20500, F1 MSA: 0.92396, best F1 for MSA: 0.93246
+iter: 21000, F1 EGY: 0.56015, best F1 for EGY: 0.64612
+iter: 21000, F1 GLF: 0.67726, best F1 for GLF: 0.68741
+iter: 21000, F1 LEV: 0.58818, best F1 for LEV: 0.62714
+iter: 21000, F1 MAG: 0.55634, best F1 for MAG: 0.58248
+iter: 21000, F1 MSA: 0.87118, best F1 for MSA: 0.93246
+iter: 21500, F1 EGY: 0.56309, best F1 for EGY: 0.64612
+iter: 21500, F1 GLF: 0.68536, best F1 for GLF: 0.68741
+iter: 21500, F1 LEV: 0.55783, best F1 for LEV: 0.62714
+iter: 21500, F1 MAG: 0.55622, best F1 for MAG: 0.58248
+iter: 21500, F1 MSA: 0.87232, best F1 for MSA: 0.93246
+iter: 22000, F1 EGY: 0.56756, best F1 for EGY: 0.64612
+iter: 22000, F1 GLF: 0.68400, best F1 for GLF: 0.68741
+iter: 22000, F1 LEV: 0.55830, best F1 for LEV: 0.62714
+iter: 22000, F1 MAG: 0.51279, best F1 for MAG: 0.58248
+iter: 22000, F1 MSA: 0.87225, best F1 for MSA: 0.93246
+iter: 22500, F1 EGY: 0.61690, best F1 for EGY: 0.64612
+iter: 22500, F1 GLF: 0.65687, best F1 for GLF: 0.68741
+iter: 22500, F1 LEV: 0.58109, best F1 for LEV: 0.62714
+iter: 22500, F1 MAG: 0.50782, best F1 for MAG: 0.58248
+iter: 22500, F1 MSA: 0.92719, best F1 for MSA: 0.93246
+iter: 23000, F1 EGY: 0.61166, best F1 for EGY: 0.64612
+iter: 23000, F1 GLF: 0.64373, best F1 for GLF: 0.68741
+iter: 23000, F1 LEV: 0.56113, best F1 for LEV: 0.62714
+iter: 23000, F1 MAG: 0.51594, best F1 for MAG: 0.58248
+iter: 23000, F1 MSA: 0.92802, best F1 for MSA: 0.93246
+iter: 23500, F1 EGY: 0.61194, best F1 for EGY: 0.64612
+iter: 23500, F1 GLF: 0.64351, best F1 for GLF: 0.68741
+iter: 23500, F1 LEV: 0.55890, best F1 for LEV: 0.62714
+iter: 23500, F1 MAG: 0.56498, best F1 for MAG: 0.58248
+iter: 23500, F1 MSA: 0.92535, best F1 for MSA: 0.93246
+iter: 24000, F1 EGY: 0.61116, best F1 for EGY: 0.64612
+iter: 24000, F1 GLF: 0.64511, best F1 for GLF: 0.68741
+iter: 24000, F1 LEV: 0.53126, best F1 for LEV: 0.62714
+iter: 24000, F1 MAG: 0.51626, best F1 for MAG: 0.58248
+iter: 24000, F1 MSA: 0.92383, best F1 for MSA: 0.93246
+iter: 24500, F1 EGY: 0.61024, best F1 for EGY: 0.64612
+iter: 24500, F1 GLF: 0.67805, best F1 for GLF: 0.68741
+iter: 24500, F1 LEV: 0.52812, best F1 for LEV: 0.62714
+iter: 24500, F1 MAG: 0.51341, best F1 for MAG: 0.58248
+iter: 24500, F1 MSA: 0.93013, best F1 for MSA: 0.93246
+iter: 25000, F1 EGY: 0.61540, best F1 for EGY: 0.64612
+iter: 25000, F1 GLF: 0.67800, best F1 for GLF: 0.68741
+iter: 25000, F1 LEV: 0.52805, best F1 for LEV: 0.62714
+iter: 25000, F1 MAG: 0.51268, best F1 for MAG: 0.58248
+iter: 25000, F1 MSA: 0.92557, best F1 for MSA: 0.93246
+iter: 25500, F1 EGY: 0.61363, best F1 for EGY: 0.64612
+iter: 25500, F1 GLF: 0.68235, best F1 for GLF: 0.68741
+iter: 25500, F1 LEV: 0.53412, best F1 for LEV: 0.62714
+iter: 25500, F1 MAG: 0.51481, best F1 for MAG: 0.58248
+iter: 25500, F1 MSA: 0.92816, best F1 for MSA: 0.93246
+iter: 26000, F1 EGY: 0.60974, best F1 for EGY: 0.64612
+iter: 26000, F1 GLF: 0.68542, best F1 for GLF: 0.68741
+iter: 26000, F1 LEV: 0.55107, best F1 for LEV: 0.62714
+iter: 26000, F1 MAG: 0.55356, best F1 for MAG: 0.58248
+iter: 26000, F1 MSA: 0.92219, best F1 for MSA: 0.93246
+iter: 26500, F1 EGY: 0.60742, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 26500, Macro F1: 0.68807
+iter: 26500, F1 GLF: 0.68807, best F1 for GLF: 0.68807
+iter: 26500, F1 LEV: 0.52822, best F1 for LEV: 0.62714
+iter: 26500, F1 MAG: 0.55475, best F1 for MAG: 0.58248
+iter: 26500, F1 MSA: 0.92706, best F1 for MSA: 0.93246
+iter: 27000, F1 EGY: 0.61455, best F1 for EGY: 0.64612
+iter: 27000, F1 GLF: 0.66334, best F1 for GLF: 0.68807
+iter: 27000, F1 LEV: 0.53155, best F1 for LEV: 0.62714
+iter: 27000, F1 MAG: 0.51919, best F1 for MAG: 0.58248
+iter: 27000, F1 MSA: 0.92482, best F1 for MSA: 0.93246
+iter: 27500, F1 EGY: 0.61534, best F1 for EGY: 0.64612
+iter: 27500, F1 GLF: 0.66858, best F1 for GLF: 0.68807
+iter: 27500, F1 LEV: 0.53416, best F1 for LEV: 0.62714
+iter: 27500, F1 MAG: 0.51578, best F1 for MAG: 0.58248
+iter: 27500, F1 MSA: 0.92307, best F1 for MSA: 0.93246
+iter: 28000, F1 EGY: 0.57055, best F1 for EGY: 0.64612
+iter: 28000, F1 GLF: 0.68580, best F1 for GLF: 0.68807
+iter: 28000, F1 LEV: 0.53727, best F1 for LEV: 0.62714
+iter: 28000, F1 MAG: 0.51480, best F1 for MAG: 0.58248
+iter: 28000, F1 MSA: 0.92188, best F1 for MSA: 0.93246
+iter: 28500, F1 EGY: 0.56577, best F1 for EGY: 0.64612
+iter: 28500, F1 GLF: 0.67438, best F1 for GLF: 0.68807
+iter: 28500, F1 LEV: 0.52918, best F1 for LEV: 0.62714
+iter: 28500, F1 MAG: 0.51462, best F1 for MAG: 0.58248
+iter: 28500, F1 MSA: 0.92195, best F1 for MSA: 0.93246
+iter: 29000, F1 EGY: 0.56483, best F1 for EGY: 0.64612
+iter: 29000, F1 GLF: 0.68004, best F1 for GLF: 0.68807
+iter: 29000, F1 LEV: 0.53009, best F1 for LEV: 0.62714
+iter: 29000, F1 MAG: 0.51400, best F1 for MAG: 0.58248
+iter: 29000, F1 MSA: 0.92326, best F1 for MSA: 0.93246
+iter: 29500, F1 EGY: 0.63270, best F1 for EGY: 0.64612
+iter: 29500, F1 GLF: 0.67934, best F1 for GLF: 0.68807
+iter: 29500, F1 LEV: 0.53146, best F1 for LEV: 0.62714
+iter: 29500, F1 MAG: 0.52588, best F1 for MAG: 0.58248
+iter: 29500, F1 MSA: 0.92708, best F1 for MSA: 0.93246
+iter: 30000, F1 EGY: 0.63377, best F1 for EGY: 0.64612
+iter: 30000, F1 GLF: 0.67999, best F1 for GLF: 0.68807
+iter: 30000, F1 LEV: 0.54057, best F1 for LEV: 0.62714
+iter: 30000, F1 MAG: 0.57091, best F1 for MAG: 0.58248
+iter: 30000, F1 MSA: 0.92730, best F1 for MSA: 0.93246
+iter: 30500, F1 EGY: 0.60961, best F1 for EGY: 0.64612
+iter: 30500, F1 GLF: 0.67081, best F1 for GLF: 0.68807
+iter: 30500, F1 LEV: 0.53557, best F1 for LEV: 0.62714
+iter: 30500, F1 MAG: 0.52488, best F1 for MAG: 0.58248
+iter: 30500, F1 MSA: 0.92227, best F1 for MSA: 0.93246
+iter: 31000, F1 EGY: 0.61121, best F1 for EGY: 0.64612
+iter: 31000, F1 GLF: 0.67729, best F1 for GLF: 0.68807
+iter: 31000, F1 LEV: 0.53104, best F1 for LEV: 0.62714
+iter: 31000, F1 MAG: 0.51545, best F1 for MAG: 0.58248
+iter: 31000, F1 MSA: 0.92795, best F1 for MSA: 0.93246
+iter: 31500, F1 EGY: 0.61130, best F1 for EGY: 0.64612
+iter: 31500, F1 GLF: 0.66822, best F1 for GLF: 0.68807
+iter: 31500, F1 LEV: 0.53731, best F1 for LEV: 0.62714
+iter: 31500, F1 MAG: 0.51539, best F1 for MAG: 0.58248
+iter: 31500, F1 MSA: 0.92800, best F1 for MSA: 0.93246
+iter: 32000, F1 EGY: 0.61311, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 32000, Macro F1: 0.68947
+iter: 32000, F1 GLF: 0.68947, best F1 for GLF: 0.68947
+iter: 32000, F1 LEV: 0.60200, best F1 for LEV: 0.62714
+iter: 32000, F1 MAG: 0.52563, best F1 for MAG: 0.58248
+iter: 32000, F1 MSA: 0.92840, best F1 for MSA: 0.93246
+iter: 32500, F1 EGY: 0.61969, best F1 for EGY: 0.64612
+iter: 32500, F1 GLF: 0.68539, best F1 for GLF: 0.68947
+iter: 32500, F1 LEV: 0.58037, best F1 for LEV: 0.62714
+iter: 32500, F1 MAG: 0.51135, best F1 for MAG: 0.58248
+iter: 32500, F1 MSA: 0.92622, best F1 for MSA: 0.93246
+iter: 33000, F1 EGY: 0.61314, best F1 for EGY: 0.64612
+iter: 33000, F1 GLF: 0.68638, best F1 for GLF: 0.68947
+iter: 33000, F1 LEV: 0.56229, best F1 for LEV: 0.62714
+iter: 33000, F1 MAG: 0.52171, best F1 for MAG: 0.58248
+iter: 33000, F1 MSA: 0.92622, best F1 for MSA: 0.93246
+iter: 33500, F1 EGY: 0.61452, best F1 for EGY: 0.64612
+iter: 33500, F1 GLF: 0.68759, best F1 for GLF: 0.68947
+iter: 33500, F1 LEV: 0.57997, best F1 for LEV: 0.62714
+iter: 33500, F1 MAG: 0.52392, best F1 for MAG: 0.58248
+iter: 33500, F1 MSA: 0.92620, best F1 for MSA: 0.93246
+iter: 34000, F1 EGY: 0.54359, best F1 for EGY: 0.64612
+iter: 34000, F1 GLF: 0.68588, best F1 for GLF: 0.68947
+iter: 34000, F1 LEV: 0.57352, best F1 for LEV: 0.62714
+iter: 34000, F1 MAG: 0.51154, best F1 for MAG: 0.58248
+iter: 34000, F1 MSA: 0.92566, best F1 for MSA: 0.93246
+iter: 34500, F1 EGY: 0.61376, best F1 for EGY: 0.64612
+iter: 34500, F1 GLF: 0.68346, best F1 for GLF: 0.68947
+iter: 34500, F1 LEV: 0.57700, best F1 for LEV: 0.62714
+iter: 34500, F1 MAG: 0.51161, best F1 for MAG: 0.58248
+iter: 34500, F1 MSA: 0.92547, best F1 for MSA: 0.93246
+iter: 35000, F1 EGY: 0.61344, best F1 for EGY: 0.64612
+iter: 35000, F1 GLF: 0.68772, best F1 for GLF: 0.68947
+iter: 35000, F1 LEV: 0.55010, best F1 for LEV: 0.62714
+iter: 35000, F1 MAG: 0.55771, best F1 for MAG: 0.58248
+iter: 35000, F1 MSA: 0.92612, best F1 for MSA: 0.93246
+iter: 35500, F1 EGY: 0.61976, best F1 for EGY: 0.64612
+iter: 35500, F1 GLF: 0.66009, best F1 for GLF: 0.68947
+iter: 35500, F1 LEV: 0.54913, best F1 for LEV: 0.62714
+iter: 35500, F1 MAG: 0.55210, best F1 for MAG: 0.58248
+iter: 35500, F1 MSA: 0.91014, best F1 for MSA: 0.93246
+iter: 36000, F1 EGY: 0.54427, best F1 for EGY: 0.64612
+iter: 36000, F1 GLF: 0.65892, best F1 for GLF: 0.68947
+iter: 36000, F1 LEV: 0.54867, best F1 for LEV: 0.62714
+iter: 36000, F1 MAG: 0.55085, best F1 for MAG: 0.58248
+iter: 36000, F1 MSA: 0.91877, best F1 for MSA: 0.93246
+iter: 36500, F1 EGY: 0.54271, best F1 for EGY: 0.64612
+iter: 36500, F1 GLF: 0.68624, best F1 for GLF: 0.68947
+iter: 36500, F1 LEV: 0.55021, best F1 for LEV: 0.62714
+iter: 36500, F1 MAG: 0.50762, best F1 for MAG: 0.58248
+iter: 36500, F1 MSA: 0.91890, best F1 for MSA: 0.93246
+iter: 37000, F1 EGY: 0.54320, best F1 for EGY: 0.64612
+iter: 37000, F1 GLF: 0.68491, best F1 for GLF: 0.68947
+iter: 37000, F1 LEV: 0.55040, best F1 for LEV: 0.62714
+iter: 37000, F1 MAG: 0.55110, best F1 for MAG: 0.58248
+iter: 37000, F1 MSA: 0.92512, best F1 for MSA: 0.93246
+iter: 37500, F1 EGY: 0.54320, best F1 for EGY: 0.64612
+iter: 37500, F1 GLF: 0.68491, best F1 for GLF: 0.68947
+iter: 37500, F1 LEV: 0.55138, best F1 for LEV: 0.62714
+iter: 37500, F1 MAG: 0.55110, best F1 for MAG: 0.58248
+iter: 37500, F1 MSA: 0.92585, best F1 for MSA: 0.93246
+iter: 38000, F1 EGY: 0.54285, best F1 for EGY: 0.64612
+iter: 38000, F1 GLF: 0.68497, best F1 for GLF: 0.68947
+iter: 38000, F1 LEV: 0.55009, best F1 for LEV: 0.62714
+iter: 38000, F1 MAG: 0.55110, best F1 for MAG: 0.58248
+iter: 38000, F1 MSA: 0.92585, best F1 for MSA: 0.93246
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+30661
+Training started with cuda
+iter: 00500, F1 EGY: 0.41691, best F1 for EGY: 0.64612
+iter: 00500, F1 GLF: 0.50554, best F1 for GLF: 0.68947
+iter: 00500, F1 LEV: 0.42717, best F1 for LEV: 0.62714
+iter: 00500, F1 MAG: 0.43604, best F1 for MAG: 0.58248
+iter: 00500, F1 MSA: 0.66904, best F1 for MSA: 0.93246
+iter: 01000, F1 EGY: 0.52083, best F1 for EGY: 0.64612
+iter: 01000, F1 GLF: 0.62749, best F1 for GLF: 0.68947
+iter: 01000, F1 LEV: 0.52689, best F1 for LEV: 0.62714
+iter: 01000, F1 MAG: 0.51423, best F1 for MAG: 0.58248
+iter: 01000, F1 MSA: 0.72940, best F1 for MSA: 0.93246
+iter: 01500, F1 EGY: 0.53793, best F1 for EGY: 0.64612
+iter: 01500, F1 GLF: 0.66873, best F1 for GLF: 0.68947
+iter: 01500, F1 LEV: 0.54108, best F1 for LEV: 0.62714
+iter: 01500, F1 MAG: 0.52494, best F1 for MAG: 0.58248
+iter: 01500, F1 MSA: 0.82267, best F1 for MSA: 0.93246
+iter: 02000, F1 EGY: 0.53464, best F1 for EGY: 0.64612
+iter: 02000, F1 GLF: 0.67967, best F1 for GLF: 0.68947
+iter: 02000, F1 LEV: 0.54426, best F1 for LEV: 0.62714
+iter: 02000, F1 MAG: 0.50003, best F1 for MAG: 0.58248
+iter: 02000, F1 MSA: 0.87321, best F1 for MSA: 0.93246
+iter: 02500, F1 EGY: 0.53544, best F1 for EGY: 0.64612
+iter: 02500, F1 GLF: 0.66375, best F1 for GLF: 0.68947
+iter: 02500, F1 LEV: 0.54384, best F1 for LEV: 0.62714
+iter: 02500, F1 MAG: 0.50659, best F1 for MAG: 0.58248
+iter: 02500, F1 MSA: 0.87042, best F1 for MSA: 0.93246
+iter: 03000, F1 EGY: 0.54450, best F1 for EGY: 0.64612
+iter: 03000, F1 GLF: 0.67683, best F1 for GLF: 0.68947
+iter: 03000, F1 LEV: 0.53595, best F1 for LEV: 0.62714
+iter: 03000, F1 MAG: 0.51143, best F1 for MAG: 0.58248
+iter: 03000, F1 MSA: 0.86587, best F1 for MSA: 0.93246
+iter: 03500, F1 EGY: 0.55205, best F1 for EGY: 0.64612
+iter: 03500, F1 GLF: 0.67685, best F1 for GLF: 0.68947
+iter: 03500, F1 LEV: 0.53470, best F1 for LEV: 0.62714
+iter: 03500, F1 MAG: 0.50449, best F1 for MAG: 0.58248
+iter: 03500, F1 MSA: 0.86737, best F1 for MSA: 0.93246
+iter: 04000, F1 EGY: 0.55267, best F1 for EGY: 0.64612
+iter: 04000, F1 GLF: 0.63469, best F1 for GLF: 0.68947
+iter: 04000, F1 LEV: 0.53822, best F1 for LEV: 0.62714
+iter: 04000, F1 MAG: 0.50337, best F1 for MAG: 0.58248
+iter: 04000, F1 MSA: 0.86835, best F1 for MSA: 0.93246
+iter: 04500, F1 EGY: 0.55495, best F1 for EGY: 0.64612
+iter: 04500, F1 GLF: 0.64333, best F1 for GLF: 0.68947
+iter: 04500, F1 LEV: 0.53864, best F1 for LEV: 0.62714
+iter: 04500, F1 MAG: 0.50260, best F1 for MAG: 0.58248
+iter: 04500, F1 MSA: 0.87047, best F1 for MSA: 0.93246
+iter: 05000, F1 EGY: 0.51462, best F1 for EGY: 0.64612
+iter: 05000, F1 GLF: 0.65795, best F1 for GLF: 0.68947
+iter: 05000, F1 LEV: 0.54074, best F1 for LEV: 0.62714
+iter: 05000, F1 MAG: 0.53537, best F1 for MAG: 0.58248
+iter: 05000, F1 MSA: 0.86701, best F1 for MSA: 0.93246
+iter: 05500, F1 EGY: 0.56711, best F1 for EGY: 0.64612
+iter: 05500, F1 GLF: 0.68743, best F1 for GLF: 0.68947
+iter: 05500, F1 LEV: 0.53164, best F1 for LEV: 0.62714
+iter: 05500, F1 MAG: 0.50236, best F1 for MAG: 0.58248
+iter: 05500, F1 MSA: 0.86748, best F1 for MSA: 0.93246
+iter: 06000, F1 EGY: 0.55956, best F1 for EGY: 0.64612
+iter: 06000, F1 GLF: 0.66559, best F1 for GLF: 0.68947
+iter: 06000, F1 LEV: 0.53587, best F1 for LEV: 0.62714
+iter: 06000, F1 MAG: 0.53307, best F1 for MAG: 0.58248
+iter: 06000, F1 MSA: 0.86978, best F1 for MSA: 0.93246
+iter: 06500, F1 EGY: 0.53054, best F1 for EGY: 0.64612
+iter: 06500, F1 GLF: 0.68475, best F1 for GLF: 0.68947
+iter: 06500, F1 LEV: 0.53649, best F1 for LEV: 0.62714
+iter: 06500, F1 MAG: 0.50878, best F1 for MAG: 0.58248
+iter: 06500, F1 MSA: 0.91276, best F1 for MSA: 0.93246
+iter: 07000, F1 EGY: 0.54910, best F1 for EGY: 0.64612
+iter: 07000, F1 GLF: 0.66278, best F1 for GLF: 0.68947
+iter: 07000, F1 LEV: 0.55871, best F1 for LEV: 0.62714
+iter: 07000, F1 MAG: 0.50663, best F1 for MAG: 0.58248
+iter: 07000, F1 MSA: 0.87081, best F1 for MSA: 0.93246
+iter: 07500, F1 EGY: 0.55641, best F1 for EGY: 0.64612
+iter: 07500, F1 GLF: 0.68169, best F1 for GLF: 0.68947
+iter: 07500, F1 LEV: 0.56476, best F1 for LEV: 0.62714
+iter: 07500, F1 MAG: 0.50017, best F1 for MAG: 0.58248
+iter: 07500, F1 MSA: 0.87355, best F1 for MSA: 0.93246
+iter: 08000, F1 EGY: 0.53239, best F1 for EGY: 0.64612
+iter: 08000, F1 GLF: 0.66930, best F1 for GLF: 0.68947
+iter: 08000, F1 LEV: 0.55281, best F1 for LEV: 0.62714
+iter: 08000, F1 MAG: 0.50110, best F1 for MAG: 0.58248
+iter: 08000, F1 MSA: 0.86967, best F1 for MSA: 0.93246
+iter: 08500, F1 EGY: 0.55176, best F1 for EGY: 0.64612
+iter: 08500, F1 GLF: 0.66958, best F1 for GLF: 0.68947
+iter: 08500, F1 LEV: 0.53674, best F1 for LEV: 0.62714
+iter: 08500, F1 MAG: 0.50001, best F1 for MAG: 0.58248
+iter: 08500, F1 MSA: 0.92008, best F1 for MSA: 0.93246
+iter: 09000, F1 EGY: 0.56688, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 09000, Macro F1: 0.69931
+iter: 09000, F1 GLF: 0.69931, best F1 for GLF: 0.69931
+iter: 09000, F1 LEV: 0.54083, best F1 for LEV: 0.62714
+iter: 09000, F1 MAG: 0.51943, best F1 for MAG: 0.58248
+iter: 09000, F1 MSA: 0.87637, best F1 for MSA: 0.93246
+iter: 09500, F1 EGY: 0.55050, best F1 for EGY: 0.64612
+iter: 09500, F1 GLF: 0.68196, best F1 for GLF: 0.69931
+iter: 09500, F1 LEV: 0.52390, best F1 for LEV: 0.62714
+iter: 09500, F1 MAG: 0.49514, best F1 for MAG: 0.58248
+iter: 09500, F1 MSA: 0.91894, best F1 for MSA: 0.93246
+iter: 10000, F1 EGY: 0.56353, best F1 for EGY: 0.64612
+iter: 10000, F1 GLF: 0.69148, best F1 for GLF: 0.69931
+iter: 10000, F1 LEV: 0.52467, best F1 for LEV: 0.62714
+iter: 10000, F1 MAG: 0.49830, best F1 for MAG: 0.58248
+iter: 10000, F1 MSA: 0.92188, best F1 for MSA: 0.93246
+iter: 10500, F1 EGY: 0.56328, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 10500, Macro F1: 0.69947
+iter: 10500, F1 GLF: 0.69947, best F1 for GLF: 0.69947
+iter: 10500, F1 LEV: 0.54277, best F1 for LEV: 0.62714
+iter: 10500, F1 MAG: 0.49132, best F1 for MAG: 0.58248
+iter: 10500, F1 MSA: 0.87916, best F1 for MSA: 0.93246
+iter: 11000, F1 EGY: 0.56141, best F1 for EGY: 0.64612
+iter: 11000, F1 GLF: 0.69392, best F1 for GLF: 0.69947
+iter: 11000, F1 LEV: 0.53912, best F1 for LEV: 0.62714
+iter: 11000, F1 MAG: 0.49606, best F1 for MAG: 0.58248
+iter: 11000, F1 MSA: 0.92111, best F1 for MSA: 0.93246
+iter: 11500, F1 EGY: 0.55925, best F1 for EGY: 0.64612
+iter: 11500, F1 GLF: 0.68558, best F1 for GLF: 0.69947
+iter: 11500, F1 LEV: 0.53776, best F1 for LEV: 0.62714
+iter: 11500, F1 MAG: 0.50173, best F1 for MAG: 0.58248
+iter: 11500, F1 MSA: 0.92293, best F1 for MSA: 0.93246
+iter: 12000, F1 EGY: 0.56097, best F1 for EGY: 0.64612
+iter: 12000, F1 GLF: 0.68878, best F1 for GLF: 0.69947
+iter: 12000, F1 LEV: 0.53960, best F1 for LEV: 0.62714
+iter: 12000, F1 MAG: 0.50877, best F1 for MAG: 0.58248
+iter: 12000, F1 MSA: 0.92430, best F1 for MSA: 0.93246
+iter: 12500, F1 EGY: 0.55089, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 12500, Macro F1: 0.70652
+iter: 12500, F1 GLF: 0.70652, best F1 for GLF: 0.70652
+iter: 12500, F1 LEV: 0.51777, best F1 for LEV: 0.62714
+iter: 12500, F1 MAG: 0.49755, best F1 for MAG: 0.58248
+iter: 12500, F1 MSA: 0.92280, best F1 for MSA: 0.93246
+iter: 13000, F1 EGY: 0.55219, best F1 for EGY: 0.64612
+iter: 13000, F1 GLF: 0.68495, best F1 for GLF: 0.70652
+iter: 13000, F1 LEV: 0.50691, best F1 for LEV: 0.62714
+iter: 13000, F1 MAG: 0.49610, best F1 for MAG: 0.58248
+iter: 13000, F1 MSA: 0.91687, best F1 for MSA: 0.93246
+iter: 13500, F1 EGY: 0.54423, best F1 for EGY: 0.64612
+iter: 13500, F1 GLF: 0.64143, best F1 for GLF: 0.70652
+iter: 13500, F1 LEV: 0.53915, best F1 for LEV: 0.62714
+iter: 13500, F1 MAG: 0.49421, best F1 for MAG: 0.58248
+iter: 13500, F1 MSA: 0.91927, best F1 for MSA: 0.93246
+iter: 14000, F1 EGY: 0.55269, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 14000, Macro F1: 0.70734
+iter: 14000, F1 GLF: 0.70734, best F1 for GLF: 0.70734
+iter: 14000, F1 LEV: 0.51626, best F1 for LEV: 0.62714
+iter: 14000, F1 MAG: 0.49720, best F1 for MAG: 0.58248
+iter: 14000, F1 MSA: 0.92021, best F1 for MSA: 0.93246
+iter: 14500, F1 EGY: 0.55468, best F1 for EGY: 0.64612
+iter: 14500, F1 GLF: 0.70613, best F1 for GLF: 0.70734
+iter: 14500, F1 LEV: 0.51991, best F1 for LEV: 0.62714
+iter: 14500, F1 MAG: 0.49890, best F1 for MAG: 0.58248
+iter: 14500, F1 MSA: 0.92193, best F1 for MSA: 0.93246
+iter: 15000, F1 EGY: 0.55569, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 15000, Macro F1: 0.71208
+iter: 15000, F1 GLF: 0.71208, best F1 for GLF: 0.71208
+iter: 15000, F1 LEV: 0.55261, best F1 for LEV: 0.62714
+iter: 15000, F1 MAG: 0.50018, best F1 for MAG: 0.58248
+iter: 15000, F1 MSA: 0.92428, best F1 for MSA: 0.93246
+iter: 15500, F1 EGY: 0.55708, best F1 for EGY: 0.64612
+iter: 15500, F1 GLF: 0.70043, best F1 for GLF: 0.71208
+iter: 15500, F1 LEV: 0.50794, best F1 for LEV: 0.62714
+iter: 15500, F1 MAG: 0.50232, best F1 for MAG: 0.58248
+iter: 15500, F1 MSA: 0.92087, best F1 for MSA: 0.93246
+iter: 16000, F1 EGY: 0.55939, best F1 for EGY: 0.64612
+iter: 16000, F1 GLF: 0.69425, best F1 for GLF: 0.71208
+iter: 16000, F1 LEV: 0.51123, best F1 for LEV: 0.62714
+iter: 16000, F1 MAG: 0.50470, best F1 for MAG: 0.58248
+iter: 16000, F1 MSA: 0.91764, best F1 for MSA: 0.93246
+iter: 16500, F1 EGY: 0.53575, best F1 for EGY: 0.64612
+iter: 16500, F1 GLF: 0.70112, best F1 for GLF: 0.71208
+iter: 16500, F1 LEV: 0.49450, best F1 for LEV: 0.62714
+iter: 16500, F1 MAG: 0.50532, best F1 for MAG: 0.58248
+iter: 16500, F1 MSA: 0.92080, best F1 for MSA: 0.93246
+iter: 17000, F1 EGY: 0.53706, best F1 for EGY: 0.64612
+iter: 17000, F1 GLF: 0.67747, best F1 for GLF: 0.71208
+iter: 17000, F1 LEV: 0.50196, best F1 for LEV: 0.62714
+iter: 17000, F1 MAG: 0.49851, best F1 for MAG: 0.58248
+iter: 17000, F1 MSA: 0.91023, best F1 for MSA: 0.93246
+iter: 17500, F1 EGY: 0.54792, best F1 for EGY: 0.64612
+iter: 17500, F1 GLF: 0.69739, best F1 for GLF: 0.71208
+iter: 17500, F1 LEV: 0.49897, best F1 for LEV: 0.62714
+iter: 17500, F1 MAG: 0.50709, best F1 for MAG: 0.58248
+iter: 17500, F1 MSA: 0.86888, best F1 for MSA: 0.93246
+iter: 18000, F1 EGY: 0.54673, best F1 for EGY: 0.64612
+iter: 18000, F1 GLF: 0.69604, best F1 for GLF: 0.71208
+iter: 18000, F1 LEV: 0.49912, best F1 for LEV: 0.62714
+iter: 18000, F1 MAG: 0.50819, best F1 for MAG: 0.58248
+iter: 18000, F1 MSA: 0.86892, best F1 for MSA: 0.93246
+iter: 18500, F1 EGY: 0.54573, best F1 for EGY: 0.64612
+iter: 18500, F1 GLF: 0.67171, best F1 for GLF: 0.71208
+iter: 18500, F1 LEV: 0.52980, best F1 for LEV: 0.62714
+iter: 18500, F1 MAG: 0.50019, best F1 for MAG: 0.58248
+iter: 18500, F1 MSA: 0.86893, best F1 for MSA: 0.93246
+iter: 19000, F1 EGY: 0.54042, best F1 for EGY: 0.64612
+iter: 19000, F1 GLF: 0.68099, best F1 for GLF: 0.71208
+iter: 19000, F1 LEV: 0.50846, best F1 for LEV: 0.62714
+iter: 19000, F1 MAG: 0.49895, best F1 for MAG: 0.58248
+iter: 19000, F1 MSA: 0.86875, best F1 for MSA: 0.93246
+iter: 19500, F1 EGY: 0.61705, best F1 for EGY: 0.64612
+iter: 19500, F1 GLF: 0.69174, best F1 for GLF: 0.71208
+iter: 19500, F1 LEV: 0.51422, best F1 for LEV: 0.62714
+iter: 19500, F1 MAG: 0.49919, best F1 for MAG: 0.58248
+iter: 19500, F1 MSA: 0.91785, best F1 for MSA: 0.93246
+iter: 20000, F1 EGY: 0.54396, best F1 for EGY: 0.64612
+iter: 20000, F1 GLF: 0.66287, best F1 for GLF: 0.71208
+iter: 20000, F1 LEV: 0.51237, best F1 for LEV: 0.62714
+iter: 20000, F1 MAG: 0.51001, best F1 for MAG: 0.58248
+iter: 20000, F1 MSA: 0.91931, best F1 for MSA: 0.93246
+iter: 20500, F1 EGY: 0.54228, best F1 for EGY: 0.64612
+iter: 20500, F1 GLF: 0.66295, best F1 for GLF: 0.71208
+iter: 20500, F1 LEV: 0.50987, best F1 for LEV: 0.62714
+iter: 20500, F1 MAG: 0.51008, best F1 for MAG: 0.58248
+iter: 20500, F1 MSA: 0.92053, best F1 for MSA: 0.93246
+iter: 21000, F1 EGY: 0.54818, best F1 for EGY: 0.64612
+iter: 21000, F1 GLF: 0.69758, best F1 for GLF: 0.71208
+iter: 21000, F1 LEV: 0.51242, best F1 for LEV: 0.62714
+iter: 21000, F1 MAG: 0.50957, best F1 for MAG: 0.58248
+iter: 21000, F1 MSA: 0.91729, best F1 for MSA: 0.93246
+iter: 21500, F1 EGY: 0.54568, best F1 for EGY: 0.64612
+iter: 21500, F1 GLF: 0.70350, best F1 for GLF: 0.71208
+iter: 21500, F1 LEV: 0.50383, best F1 for LEV: 0.62714
+iter: 21500, F1 MAG: 0.50734, best F1 for MAG: 0.58248
+iter: 21500, F1 MSA: 0.92079, best F1 for MSA: 0.93246
+iter: 22000, F1 EGY: 0.55202, best F1 for EGY: 0.64612
+iter: 22000, F1 GLF: 0.70914, best F1 for GLF: 0.71208
+iter: 22000, F1 LEV: 0.53032, best F1 for LEV: 0.62714
+iter: 22000, F1 MAG: 0.50088, best F1 for MAG: 0.58248
+iter: 22000, F1 MSA: 0.92494, best F1 for MSA: 0.93246
+iter: 22500, F1 EGY: 0.55500, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 22500, Macro F1: 0.71266
+iter: 22500, F1 GLF: 0.71266, best F1 for GLF: 0.71266
+iter: 22500, F1 LEV: 0.51688, best F1 for LEV: 0.62714
+iter: 22500, F1 MAG: 0.50021, best F1 for MAG: 0.58248
+iter: 22500, F1 MSA: 0.92411, best F1 for MSA: 0.93246
+iter: 23000, F1 EGY: 0.55454, best F1 for EGY: 0.64612
+iter: 23000, F1 GLF: 0.70824, best F1 for GLF: 0.71266
+iter: 23000, F1 LEV: 0.54457, best F1 for LEV: 0.62714
+iter: 23000, F1 MAG: 0.50406, best F1 for MAG: 0.58248
+iter: 23000, F1 MSA: 0.92509, best F1 for MSA: 0.93246
+iter: 23500, F1 EGY: 0.55408, best F1 for EGY: 0.64612
+iter: 23500, F1 GLF: 0.70603, best F1 for GLF: 0.71266
+iter: 23500, F1 LEV: 0.54133, best F1 for LEV: 0.62714
+iter: 23500, F1 MAG: 0.54490, best F1 for MAG: 0.58248
+iter: 23500, F1 MSA: 0.92379, best F1 for MSA: 0.93246
+iter: 24000, F1 EGY: 0.56037, best F1 for EGY: 0.64612
+iter: 24000, F1 GLF: 0.70370, best F1 for GLF: 0.71266
+iter: 24000, F1 LEV: 0.54313, best F1 for LEV: 0.62714
+iter: 24000, F1 MAG: 0.49868, best F1 for MAG: 0.58248
+iter: 24000, F1 MSA: 0.92326, best F1 for MSA: 0.93246
+iter: 24500, F1 EGY: 0.56188, best F1 for EGY: 0.64612
+iter: 24500, F1 GLF: 0.70626, best F1 for GLF: 0.71266
+iter: 24500, F1 LEV: 0.54322, best F1 for LEV: 0.62714
+iter: 24500, F1 MAG: 0.54578, best F1 for MAG: 0.58248
+iter: 24500, F1 MSA: 0.92511, best F1 for MSA: 0.93246
+iter: 25000, F1 EGY: 0.55289, best F1 for EGY: 0.64612
+iter: 25000, F1 GLF: 0.70375, best F1 for GLF: 0.71266
+iter: 25000, F1 LEV: 0.54606, best F1 for LEV: 0.62714
+iter: 25000, F1 MAG: 0.49947, best F1 for MAG: 0.58248
+iter: 25000, F1 MSA: 0.92429, best F1 for MSA: 0.93246
+iter: 25500, F1 EGY: 0.55405, best F1 for EGY: 0.64612
+iter: 25500, F1 GLF: 0.70859, best F1 for GLF: 0.71266
+iter: 25500, F1 LEV: 0.54637, best F1 for LEV: 0.62714
+iter: 25500, F1 MAG: 0.50484, best F1 for MAG: 0.58248
+iter: 25500, F1 MSA: 0.92614, best F1 for MSA: 0.93246
+iter: 26000, F1 EGY: 0.59534, best F1 for EGY: 0.64612
+iter: 26000, F1 GLF: 0.70475, best F1 for GLF: 0.71266
+iter: 26000, F1 LEV: 0.54370, best F1 for LEV: 0.62714
+iter: 26000, F1 MAG: 0.49588, best F1 for MAG: 0.58248
+iter: 26000, F1 MSA: 0.91823, best F1 for MSA: 0.93246
+iter: 26500, F1 EGY: 0.52580, best F1 for EGY: 0.64612
+iter: 26500, F1 GLF: 0.70778, best F1 for GLF: 0.71266
+iter: 26500, F1 LEV: 0.51923, best F1 for LEV: 0.62714
+iter: 26500, F1 MAG: 0.54049, best F1 for MAG: 0.58248
+iter: 26500, F1 MSA: 0.92134, best F1 for MSA: 0.93246
+iter: 27000, F1 EGY: 0.52415, best F1 for EGY: 0.64612
+iter: 27000, F1 GLF: 0.70616, best F1 for GLF: 0.71266
+iter: 27000, F1 LEV: 0.52235, best F1 for LEV: 0.62714
+iter: 27000, F1 MAG: 0.54518, best F1 for MAG: 0.58248
+iter: 27000, F1 MSA: 0.92075, best F1 for MSA: 0.93246
+iter: 27500, F1 EGY: 0.52145, best F1 for EGY: 0.64612
+iter: 27500, F1 GLF: 0.71001, best F1 for GLF: 0.71266
+iter: 27500, F1 LEV: 0.54137, best F1 for LEV: 0.62714
+iter: 27500, F1 MAG: 0.53974, best F1 for MAG: 0.58248
+iter: 27500, F1 MSA: 0.91913, best F1 for MSA: 0.93246
+iter: 28000, F1 EGY: 0.52649, best F1 for EGY: 0.64612
+iter: 28000, F1 GLF: 0.71228, best F1 for GLF: 0.71266
+iter: 28000, F1 LEV: 0.54713, best F1 for LEV: 0.62714
+iter: 28000, F1 MAG: 0.54855, best F1 for MAG: 0.58248
+iter: 28000, F1 MSA: 0.92005, best F1 for MSA: 0.93246
+iter: 28500, F1 EGY: 0.52568, best F1 for EGY: 0.64612
+iter: 28500, F1 GLF: 0.71207, best F1 for GLF: 0.71266
+iter: 28500, F1 LEV: 0.54709, best F1 for LEV: 0.62714
+iter: 28500, F1 MAG: 0.54374, best F1 for MAG: 0.58248
+iter: 28500, F1 MSA: 0.92077, best F1 for MSA: 0.93246
+iter: 29000, F1 EGY: 0.52781, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 29000, Macro F1: 0.71350
+iter: 29000, F1 GLF: 0.71350, best F1 for GLF: 0.71350
+iter: 29000, F1 LEV: 0.54410, best F1 for LEV: 0.62714
+iter: 29000, F1 MAG: 0.55405, best F1 for MAG: 0.58248
+iter: 29000, F1 MSA: 0.92334, best F1 for MSA: 0.93246
+iter: 29500, F1 EGY: 0.55140, best F1 for EGY: 0.64612
+
+##########     save the best model GLF.    #############
+
+iter: 29500, Macro F1: 0.71398
+iter: 29500, F1 GLF: 0.71398, best F1 for GLF: 0.71398
+iter: 29500, F1 LEV: 0.54909, best F1 for LEV: 0.62714
+iter: 29500, F1 MAG: 0.55398, best F1 for MAG: 0.58248
+iter: 29500, F1 MSA: 0.92474, best F1 for MSA: 0.93246
+iter: 30000, F1 EGY: 0.54741, best F1 for EGY: 0.64612
+iter: 30000, F1 GLF: 0.70750, best F1 for GLF: 0.71398
+iter: 30000, F1 LEV: 0.52557, best F1 for LEV: 0.62714
+iter: 30000, F1 MAG: 0.55280, best F1 for MAG: 0.58248
+iter: 30000, F1 MSA: 0.92067, best F1 for MSA: 0.93246
+iter: 30500, F1 EGY: 0.55120, best F1 for EGY: 0.64612
+iter: 30500, F1 GLF: 0.71161, best F1 for GLF: 0.71398
+iter: 30500, F1 LEV: 0.54817, best F1 for LEV: 0.62714
+iter: 30500, F1 MAG: 0.54865, best F1 for MAG: 0.58248
+iter: 30500, F1 MSA: 0.92067, best F1 for MSA: 0.93246
+iter: 31000, F1 EGY: 0.55289, best F1 for EGY: 0.64612
+iter: 31000, F1 GLF: 0.70709, best F1 for GLF: 0.71398
+iter: 31000, F1 LEV: 0.54656, best F1 for LEV: 0.62714
+iter: 31000, F1 MAG: 0.55392, best F1 for MAG: 0.58248
+iter: 31000, F1 MSA: 0.92082, best F1 for MSA: 0.93246
+iter: 31500, F1 EGY: 0.54969, best F1 for EGY: 0.64612
+iter: 31500, F1 GLF: 0.70863, best F1 for GLF: 0.71398
+iter: 31500, F1 LEV: 0.54757, best F1 for LEV: 0.62714
+iter: 31500, F1 MAG: 0.55297, best F1 for MAG: 0.58248
+iter: 31500, F1 MSA: 0.92485, best F1 for MSA: 0.93246
+iter: 32000, F1 EGY: 0.54978, best F1 for EGY: 0.64612
+iter: 32000, F1 GLF: 0.70536, best F1 for GLF: 0.71398
+iter: 32000, F1 LEV: 0.54617, best F1 for LEV: 0.62714
+iter: 32000, F1 MAG: 0.55417, best F1 for MAG: 0.58248
+iter: 32000, F1 MSA: 0.92485, best F1 for MSA: 0.93246
+iter: 32500, F1 EGY: 0.54722, best F1 for EGY: 0.64612
+iter: 32500, F1 GLF: 0.70663, best F1 for GLF: 0.71398
+iter: 32500, F1 LEV: 0.54650, best F1 for LEV: 0.62714
+iter: 32500, F1 MAG: 0.55151, best F1 for MAG: 0.58248
+iter: 32500, F1 MSA: 0.92485, best F1 for MSA: 0.93246
+iter: 33000, F1 EGY: 0.55236, best F1 for EGY: 0.64612
+iter: 33000, F1 GLF: 0.70474, best F1 for GLF: 0.71398
+iter: 33000, F1 LEV: 0.54415, best F1 for LEV: 0.62714
+iter: 33000, F1 MAG: 0.55220, best F1 for MAG: 0.58248
+iter: 33000, F1 MSA: 0.92153, best F1 for MSA: 0.93246
+iter: 33500, F1 EGY: 0.54945, best F1 for EGY: 0.64612
+iter: 33500, F1 GLF: 0.70430, best F1 for GLF: 0.71398
+iter: 33500, F1 LEV: 0.54260, best F1 for LEV: 0.62714
+iter: 33500, F1 MAG: 0.54928, best F1 for MAG: 0.58248
+iter: 33500, F1 MSA: 0.92158, best F1 for MSA: 0.93246
+iter: 34000, F1 EGY: 0.54876, best F1 for EGY: 0.64612
+iter: 34000, F1 GLF: 0.70695, best F1 for GLF: 0.71398
+iter: 34000, F1 LEV: 0.54339, best F1 for LEV: 0.62714
+iter: 34000, F1 MAG: 0.54765, best F1 for MAG: 0.58248
+iter: 34000, F1 MSA: 0.92039, best F1 for MSA: 0.93246
+iter: 34500, F1 EGY: 0.54766, best F1 for EGY: 0.64612
+iter: 34500, F1 GLF: 0.70595, best F1 for GLF: 0.71398
+iter: 34500, F1 LEV: 0.54368, best F1 for LEV: 0.62714
+iter: 34500, F1 MAG: 0.50281, best F1 for MAG: 0.58248
+iter: 34500, F1 MSA: 0.92067, best F1 for MSA: 0.93246
+iter: 35000, F1 EGY: 0.60108, best F1 for EGY: 0.64612
+iter: 35000, F1 GLF: 0.70549, best F1 for GLF: 0.71398
+iter: 35000, F1 LEV: 0.54237, best F1 for LEV: 0.62714
+iter: 35000, F1 MAG: 0.50703, best F1 for MAG: 0.58248
+iter: 35000, F1 MSA: 0.92292, best F1 for MSA: 0.93246
+iter: 35500, F1 EGY: 0.55095, best F1 for EGY: 0.64612
+iter: 35500, F1 GLF: 0.70347, best F1 for GLF: 0.71398
+iter: 35500, F1 LEV: 0.54257, best F1 for LEV: 0.62714
+iter: 35500, F1 MAG: 0.54990, best F1 for MAG: 0.58248
+iter: 35500, F1 MSA: 0.92325, best F1 for MSA: 0.93246
+iter: 36000, F1 EGY: 0.55055, best F1 for EGY: 0.64612
+iter: 36000, F1 GLF: 0.70452, best F1 for GLF: 0.71398
+iter: 36000, F1 LEV: 0.54318, best F1 for LEV: 0.62714
+iter: 36000, F1 MAG: 0.55073, best F1 for MAG: 0.58248
+iter: 36000, F1 MSA: 0.92214, best F1 for MSA: 0.93246
+iter: 36500, F1 EGY: 0.55095, best F1 for EGY: 0.64612
+iter: 36500, F1 GLF: 0.70390, best F1 for GLF: 0.71398
+iter: 36500, F1 LEV: 0.54265, best F1 for LEV: 0.62714
+iter: 36500, F1 MAG: 0.55073, best F1 for MAG: 0.58248
+iter: 36500, F1 MSA: 0.92276, best F1 for MSA: 0.93246
+iter: 37000, F1 EGY: 0.54946, best F1 for EGY: 0.64612
+iter: 37000, F1 GLF: 0.70387, best F1 for GLF: 0.71398
+iter: 37000, F1 LEV: 0.54148, best F1 for LEV: 0.62714
+iter: 37000, F1 MAG: 0.55111, best F1 for MAG: 0.58248
+iter: 37000, F1 MSA: 0.92188, best F1 for MSA: 0.93246
+iter: 37500, F1 EGY: 0.55163, best F1 for EGY: 0.64612
+iter: 37500, F1 GLF: 0.70392, best F1 for GLF: 0.71398
+iter: 37500, F1 LEV: 0.54667, best F1 for LEV: 0.62714
+iter: 37500, F1 MAG: 0.55135, best F1 for MAG: 0.58248
+iter: 37500, F1 MSA: 0.92268, best F1 for MSA: 0.93246
+iter: 38000, F1 EGY: 0.55237, best F1 for EGY: 0.64612
+iter: 38000, F1 GLF: 0.70392, best F1 for GLF: 0.71398
+iter: 38000, F1 LEV: 0.54250, best F1 for LEV: 0.62714
+iter: 38000, F1 MAG: 0.55330, best F1 for MAG: 0.58248
+iter: 38000, F1 MSA: 0.92268, best F1 for MSA: 0.93246
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.decoder.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+30662
+Training started with cuda
+iter: 00500, F1 EGY: 0.44311, best F1 for EGY: 0.64612
+iter: 00500, F1 GLF: 0.58452, best F1 for GLF: 0.71398
+iter: 00500, F1 LEV: 0.46717, best F1 for LEV: 0.62714
+iter: 00500, F1 MAG: 0.49969, best F1 for MAG: 0.58248
+iter: 00500, F1 MSA: 0.66487, best F1 for MSA: 0.93246
+iter: 01000, F1 EGY: 0.54365, best F1 for EGY: 0.64612
+iter: 01000, F1 GLF: 0.70397, best F1 for GLF: 0.71398
+iter: 01000, F1 LEV: 0.56528, best F1 for LEV: 0.62714
+iter: 01000, F1 MAG: 0.53777, best F1 for MAG: 0.58248
+iter: 01000, F1 MSA: 0.81339, best F1 for MSA: 0.93246
+iter: 01500, F1 EGY: 0.54359, best F1 for EGY: 0.64612
+iter: 01500, F1 GLF: 0.69377, best F1 for GLF: 0.71398
+iter: 01500, F1 LEV: 0.53966, best F1 for LEV: 0.62714
+iter: 01500, F1 MAG: 0.51033, best F1 for MAG: 0.58248
+iter: 01500, F1 MSA: 0.86481, best F1 for MSA: 0.93246
+iter: 02000, F1 EGY: 0.54656, best F1 for EGY: 0.64612
+iter: 02000, F1 GLF: 0.65977, best F1 for GLF: 0.71398
+iter: 02000, F1 LEV: 0.54084, best F1 for LEV: 0.62714
+iter: 02000, F1 MAG: 0.50624, best F1 for MAG: 0.58248
+iter: 02000, F1 MSA: 0.87003, best F1 for MSA: 0.93246
+iter: 02500, F1 EGY: 0.54208, best F1 for EGY: 0.64612
+iter: 02500, F1 GLF: 0.66427, best F1 for GLF: 0.71398
+iter: 02500, F1 LEV: 0.54200, best F1 for LEV: 0.62714
+iter: 02500, F1 MAG: 0.51001, best F1 for MAG: 0.58248
+iter: 02500, F1 MSA: 0.87263, best F1 for MSA: 0.93246
+iter: 03000, F1 EGY: 0.53861, best F1 for EGY: 0.64612
+iter: 03000, F1 GLF: 0.66363, best F1 for GLF: 0.71398
+iter: 03000, F1 LEV: 0.53867, best F1 for LEV: 0.62714
+iter: 03000, F1 MAG: 0.50992, best F1 for MAG: 0.58248
+iter: 03000, F1 MSA: 0.87199, best F1 for MSA: 0.93246
+iter: 03500, F1 EGY: 0.53746, best F1 for EGY: 0.64612
+iter: 03500, F1 GLF: 0.66393, best F1 for GLF: 0.71398
+iter: 03500, F1 LEV: 0.54028, best F1 for LEV: 0.62714
+iter: 03500, F1 MAG: 0.50996, best F1 for MAG: 0.58248
+iter: 03500, F1 MSA: 0.87094, best F1 for MSA: 0.93246
+iter: 04000, F1 EGY: 0.53843, best F1 for EGY: 0.64612
+iter: 04000, F1 GLF: 0.65730, best F1 for GLF: 0.71398
+iter: 04000, F1 LEV: 0.53972, best F1 for LEV: 0.62714
+iter: 04000, F1 MAG: 0.52958, best F1 for MAG: 0.58248
+iter: 04000, F1 MSA: 0.87059, best F1 for MSA: 0.93246
+iter: 04500, F1 EGY: 0.54360, best F1 for EGY: 0.64612
+iter: 04500, F1 GLF: 0.65871, best F1 for GLF: 0.71398
+iter: 04500, F1 LEV: 0.55002, best F1 for LEV: 0.62714
+iter: 04500, F1 MAG: 0.53017, best F1 for MAG: 0.58248
+iter: 04500, F1 MSA: 0.87351, best F1 for MSA: 0.93246
+iter: 05000, F1 EGY: 0.53257, best F1 for EGY: 0.64612
+iter: 05000, F1 GLF: 0.65514, best F1 for GLF: 0.71398
+iter: 05000, F1 LEV: 0.54621, best F1 for LEV: 0.62714
+iter: 05000, F1 MAG: 0.52739, best F1 for MAG: 0.58248
+iter: 05000, F1 MSA: 0.87274, best F1 for MSA: 0.93246
+iter: 05500, F1 EGY: 0.53620, best F1 for EGY: 0.64612
+iter: 05500, F1 GLF: 0.64788, best F1 for GLF: 0.71398
+iter: 05500, F1 LEV: 0.55190, best F1 for LEV: 0.62714
+iter: 05500, F1 MAG: 0.50919, best F1 for MAG: 0.58248
+iter: 05500, F1 MSA: 0.87323, best F1 for MSA: 0.93246
+iter: 06000, F1 EGY: 0.53370, best F1 for EGY: 0.64612
+iter: 06000, F1 GLF: 0.64859, best F1 for GLF: 0.71398
+iter: 06000, F1 LEV: 0.53778, best F1 for LEV: 0.62714
+iter: 06000, F1 MAG: 0.55487, best F1 for MAG: 0.58248
+iter: 06000, F1 MSA: 0.88110, best F1 for MSA: 0.93246
+iter: 06500, F1 EGY: 0.52886, best F1 for EGY: 0.64612
+iter: 06500, F1 GLF: 0.68170, best F1 for GLF: 0.71398
+iter: 06500, F1 LEV: 0.52994, best F1 for LEV: 0.62714
+iter: 06500, F1 MAG: 0.53813, best F1 for MAG: 0.58248
+iter: 06500, F1 MSA: 0.87586, best F1 for MSA: 0.93246
+iter: 07000, F1 EGY: 0.52484, best F1 for EGY: 0.64612
+iter: 07000, F1 GLF: 0.68626, best F1 for GLF: 0.71398
+iter: 07000, F1 LEV: 0.52318, best F1 for LEV: 0.62714
+iter: 07000, F1 MAG: 0.52820, best F1 for MAG: 0.58248
+iter: 07000, F1 MSA: 0.87162, best F1 for MSA: 0.93246
+iter: 07500, F1 EGY: 0.53843, best F1 for EGY: 0.64612
+iter: 07500, F1 GLF: 0.66860, best F1 for GLF: 0.71398
+iter: 07500, F1 LEV: 0.52243, best F1 for LEV: 0.62714
+iter: 07500, F1 MAG: 0.52546, best F1 for MAG: 0.58248
+iter: 07500, F1 MSA: 0.86477, best F1 for MSA: 0.93246
+iter: 08000, F1 EGY: 0.53579, best F1 for EGY: 0.64612
+iter: 08000, F1 GLF: 0.64961, best F1 for GLF: 0.71398
+iter: 08000, F1 LEV: 0.53283, best F1 for LEV: 0.62714
+iter: 08000, F1 MAG: 0.52637, best F1 for MAG: 0.58248
+iter: 08000, F1 MSA: 0.88019, best F1 for MSA: 0.93246
+iter: 08500, F1 EGY: 0.55281, best F1 for EGY: 0.64612
+iter: 08500, F1 GLF: 0.69896, best F1 for GLF: 0.71398
+iter: 08500, F1 LEV: 0.53493, best F1 for LEV: 0.62714
+iter: 08500, F1 MAG: 0.52692, best F1 for MAG: 0.58248
+iter: 08500, F1 MSA: 0.86792, best F1 for MSA: 0.93246
+iter: 09000, F1 EGY: 0.57413, best F1 for EGY: 0.64612
+iter: 09000, F1 GLF: 0.66285, best F1 for GLF: 0.71398
+iter: 09000, F1 LEV: 0.53222, best F1 for LEV: 0.62714
+iter: 09000, F1 MAG: 0.51731, best F1 for MAG: 0.58248
+iter: 09000, F1 MSA: 0.87021, best F1 for MSA: 0.93246
+iter: 09500, F1 EGY: 0.54971, best F1 for EGY: 0.64612
+iter: 09500, F1 GLF: 0.67315, best F1 for GLF: 0.71398
+iter: 09500, F1 LEV: 0.53784, best F1 for LEV: 0.62714
+iter: 09500, F1 MAG: 0.52988, best F1 for MAG: 0.58248
+iter: 09500, F1 MSA: 0.87013, best F1 for MSA: 0.93246
+slurmstepd: error: *** JOB 29272 ON node14 CANCELLED AT 2022-02-25T11:45:58 ***

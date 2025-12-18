@@ -1,0 +1,106 @@
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at qarib/bert-base-qarib were not used when initializing BertModel: ['cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+675
+Training started with cuda
+/home/aelmekki/.conda/envs/tabnet/lib/python3.7/site-packages/transformers/optimization.py:309: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use thePyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: ADJ seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: DET seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: NOUN seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: PART seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: ADV seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: PRON seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: V seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: PREP seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: NEG_PART seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: PUNC seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: PROG_PART seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: NSUFF seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: CONJ seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: HASH seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: EMOT seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: MENTION seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: FUT_PART seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: NUM seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: FOREIGN seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: CASE seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: URL seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: WB seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: TB seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+/home/aelmekki/.local/lib/python3.7/site-packages/seqeval/metrics/sequence_labeling.py:171: UserWarning: ABBREV seems not to be NE tag.
+  warnings.warn('{} seems not to be NE tag.'.format(chunk))
+
+##########     save the best model EGY.    #############
+
+iter: 00500, Macro F1: 0.52113
+iter: 00500, F1 EGY: 0.52113, best F1 for EGY: 0.52113
+
+##########     save the best model GLF.    #############
+
+iter: 00500, Macro F1: 0.66610
+iter: 00500, F1 GLF: 0.66610, best F1 for GLF: 0.66610
+
+##########     save the best model LEV.    #############
+
+iter: 00500, Macro F1: 0.58459
+iter: 00500, F1 LEV: 0.58459, best F1 for LEV: 0.58459
+
+##########     save the best model MAG.    #############
+
+iter: 00500, Macro F1: 0.58459
+iter: 00500, F1 MAG: 0.51644, best F1 for MAG: 0.51644
+
+##########     save the best model MSA.    #############
+
+iter: 00500, Macro F1: 0.82287
+iter: 00500, F1 MSA: 0.82287, best F1 for MSA: 0.82287
+--------------------------------------
+Test on data/POS-tagging/egy
+The final F1 on the Test set is 0.5528655988976845
+The final accuracy on the Test set is 0.7987072945521699
+--------------------------------------
+Test on data/POS-tagging/glf
+The final F1 on the Test set is 0.6514492417722706
+The final accuracy on the Test set is 0.8267522211253702
+--------------------------------------
+Test on data/POS-tagging/lev
+The final F1 on the Test set is 0.5334593089747016
+The final accuracy on the Test set is 0.7768714011516314
+--------------------------------------
+Test on data/POS-tagging/mag
+The final F1 on the Test set is 0.5781057845485152
+The final accuracy on the Test set is 0.7764350453172205
+--------------------------------------
+Test on data/POS-tagging/msa
+The final F1 on the Test set is 0.7990901966608089
+The final accuracy on the Test set is 0.950162074554295

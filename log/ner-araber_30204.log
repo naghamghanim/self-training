@@ -1,0 +1,614 @@
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+3814
+3000
+Training started with cuda
+/home/aelmekki/.conda/envs/tabnet/lib/python3.7/site-packages/transformers/optimization.py:309: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use thePyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+
+##########     save the best model MSA.    #############
+
+iter: 00500, Macro F1: 0.54938
+iter: 00500, F1 MSA: 0.54938, best F1 for MSA: 0.54938
+
+##########     save the best model DA.    #############
+
+iter: 00500, Macro F1: 0.43893
+iter: 00500, F1 DA: 0.43893, best F1 for DA: 0.43893
+
+##########     save the best model MSA.    #############
+
+iter: 01000, Macro F1: 0.64604
+iter: 01000, F1 MSA: 0.64604, best F1 for MSA: 0.64604
+
+##########     save the best model DA.    #############
+
+iter: 01000, Macro F1: 0.58529
+iter: 01000, F1 DA: 0.58529, best F1 for DA: 0.58529
+
+##########     save the best model MSA.    #############
+
+iter: 01500, Macro F1: 0.67590
+iter: 01500, F1 MSA: 0.67590, best F1 for MSA: 0.67590
+iter: 01500, F1 DA: 0.56164, best F1 for DA: 0.58529
+iter: 02000, F1 MSA: 0.67253, best F1 for MSA: 0.67590
+iter: 02000, F1 DA: 0.56169, best F1 for DA: 0.58529
+
+##########     save the best model MSA.    #############
+
+iter: 02500, Macro F1: 0.67844
+iter: 02500, F1 MSA: 0.67844, best F1 for MSA: 0.67844
+
+##########     save the best model DA.    #############
+
+iter: 02500, Macro F1: 0.59546
+iter: 02500, F1 DA: 0.59546, best F1 for DA: 0.59546
+
+##########     save the best model MSA.    #############
+
+iter: 03000, Macro F1: 0.68666
+iter: 03000, F1 MSA: 0.68666, best F1 for MSA: 0.68666
+iter: 03000, F1 DA: 0.59019, best F1 for DA: 0.59546
+iter: 03500, F1 MSA: 0.67979, best F1 for MSA: 0.68666
+iter: 03500, F1 DA: 0.57008, best F1 for DA: 0.59546
+iter: 04000, F1 MSA: 0.68425, best F1 for MSA: 0.68666
+iter: 04000, F1 DA: 0.56863, best F1 for DA: 0.59546
+iter: 04500, F1 MSA: 0.68393, best F1 for MSA: 0.68666
+iter: 04500, F1 DA: 0.57061, best F1 for DA: 0.59546
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+22084
+Training started with cuda
+iter: 00500, F1 MSA: 0.64242, best F1 for MSA: 0.68666
+iter: 00500, F1 DA: 0.55014, best F1 for DA: 0.59546
+iter: 01000, F1 MSA: 0.66828, best F1 for MSA: 0.68666
+iter: 01000, F1 DA: 0.57839, best F1 for DA: 0.59546
+
+##########     save the best model MSA.    #############
+
+iter: 01500, Macro F1: 0.68881
+iter: 01500, F1 MSA: 0.68881, best F1 for MSA: 0.68881
+
+##########     save the best model DA.    #############
+
+iter: 01500, Macro F1: 0.61184
+iter: 01500, F1 DA: 0.61184, best F1 for DA: 0.61184
+
+##########     save the best model MSA.    #############
+
+iter: 02000, Macro F1: 0.69673
+iter: 02000, F1 MSA: 0.69673, best F1 for MSA: 0.69673
+iter: 02000, F1 DA: 0.60950, best F1 for DA: 0.61184
+iter: 02500, F1 MSA: 0.69038, best F1 for MSA: 0.69673
+
+##########     save the best model DA.    #############
+
+iter: 02500, Macro F1: 0.61510
+iter: 02500, F1 DA: 0.61510, best F1 for DA: 0.61510
+iter: 03000, F1 MSA: 0.69604, best F1 for MSA: 0.69673
+iter: 03000, F1 DA: 0.61101, best F1 for DA: 0.61510
+iter: 03500, F1 MSA: 0.69424, best F1 for MSA: 0.69673
+iter: 03500, F1 DA: 0.60991, best F1 for DA: 0.61510
+iter: 04000, F1 MSA: 0.69152, best F1 for MSA: 0.69673
+iter: 04000, F1 DA: 0.61087, best F1 for DA: 0.61510
+
+##########     save the best model MSA.    #############
+
+iter: 04500, Macro F1: 0.70627
+iter: 04500, F1 MSA: 0.70627, best F1 for MSA: 0.70627
+iter: 04500, F1 DA: 0.59341, best F1 for DA: 0.61510
+iter: 05000, F1 MSA: 0.70137, best F1 for MSA: 0.70627
+
+##########     save the best model DA.    #############
+
+iter: 05000, Macro F1: 0.63407
+iter: 05000, F1 DA: 0.63407, best F1 for DA: 0.63407
+
+##########     save the best model MSA.    #############
+
+iter: 05500, Macro F1: 0.70794
+iter: 05500, F1 MSA: 0.70794, best F1 for MSA: 0.70794
+iter: 05500, F1 DA: 0.61898, best F1 for DA: 0.63407
+iter: 06000, F1 MSA: 0.70545, best F1 for MSA: 0.70794
+iter: 06000, F1 DA: 0.62588, best F1 for DA: 0.63407
+iter: 06500, F1 MSA: 0.68624, best F1 for MSA: 0.70794
+iter: 06500, F1 DA: 0.62161, best F1 for DA: 0.63407
+iter: 07000, F1 MSA: 0.70117, best F1 for MSA: 0.70794
+iter: 07000, F1 DA: 0.61274, best F1 for DA: 0.63407
+iter: 07500, F1 MSA: 0.68498, best F1 for MSA: 0.70794
+iter: 07500, F1 DA: 0.62122, best F1 for DA: 0.63407
+iter: 08000, F1 MSA: 0.70276, best F1 for MSA: 0.70794
+iter: 08000, F1 DA: 0.62267, best F1 for DA: 0.63407
+
+##########     save the best model MSA.    #############
+
+iter: 08500, Macro F1: 0.70875
+iter: 08500, F1 MSA: 0.70875, best F1 for MSA: 0.70875
+iter: 08500, F1 DA: 0.62329, best F1 for DA: 0.63407
+iter: 09000, F1 MSA: 0.70376, best F1 for MSA: 0.70875
+iter: 09000, F1 DA: 0.62546, best F1 for DA: 0.63407
+iter: 09500, F1 MSA: 0.69265, best F1 for MSA: 0.70875
+iter: 09500, F1 DA: 0.59696, best F1 for DA: 0.63407
+iter: 10000, F1 MSA: 0.70478, best F1 for MSA: 0.70875
+iter: 10000, F1 DA: 0.61006, best F1 for DA: 0.63407
+iter: 10500, F1 MSA: 0.68678, best F1 for MSA: 0.70875
+iter: 10500, F1 DA: 0.61333, best F1 for DA: 0.63407
+iter: 11000, F1 MSA: 0.70691, best F1 for MSA: 0.70875
+
+##########     save the best model DA.    #############
+
+iter: 11000, Macro F1: 0.63966
+iter: 11000, F1 DA: 0.63966, best F1 for DA: 0.63966
+iter: 11500, F1 MSA: 0.69325, best F1 for MSA: 0.70875
+
+##########     save the best model DA.    #############
+
+iter: 11500, Macro F1: 0.64505
+iter: 11500, F1 DA: 0.64505, best F1 for DA: 0.64505
+iter: 12000, F1 MSA: 0.69021, best F1 for MSA: 0.70875
+
+##########     save the best model DA.    #############
+
+iter: 12000, Macro F1: 0.64597
+iter: 12000, F1 DA: 0.64597, best F1 for DA: 0.64597
+iter: 12500, F1 MSA: 0.68409, best F1 for MSA: 0.70875
+iter: 12500, F1 DA: 0.60087, best F1 for DA: 0.64597
+iter: 13000, F1 MSA: 0.69807, best F1 for MSA: 0.70875
+iter: 13000, F1 DA: 0.60753, best F1 for DA: 0.64597
+iter: 13500, F1 MSA: 0.68254, best F1 for MSA: 0.70875
+iter: 13500, F1 DA: 0.61537, best F1 for DA: 0.64597
+
+##########     save the best model MSA.    #############
+
+iter: 14000, Macro F1: 0.72463
+iter: 14000, F1 MSA: 0.72463, best F1 for MSA: 0.72463
+
+##########     save the best model DA.    #############
+
+iter: 14000, Macro F1: 0.65315
+iter: 14000, F1 DA: 0.65315, best F1 for DA: 0.65315
+iter: 14500, F1 MSA: 0.69531, best F1 for MSA: 0.72463
+iter: 14500, F1 DA: 0.61755, best F1 for DA: 0.65315
+iter: 15000, F1 MSA: 0.68898, best F1 for MSA: 0.72463
+iter: 15000, F1 DA: 0.62304, best F1 for DA: 0.65315
+iter: 15500, F1 MSA: 0.70045, best F1 for MSA: 0.72463
+iter: 15500, F1 DA: 0.61567, best F1 for DA: 0.65315
+iter: 16000, F1 MSA: 0.69001, best F1 for MSA: 0.72463
+iter: 16000, F1 DA: 0.62931, best F1 for DA: 0.65315
+iter: 16500, F1 MSA: 0.70223, best F1 for MSA: 0.72463
+iter: 16500, F1 DA: 0.62946, best F1 for DA: 0.65315
+iter: 17000, F1 MSA: 0.71117, best F1 for MSA: 0.72463
+iter: 17000, F1 DA: 0.63259, best F1 for DA: 0.65315
+iter: 17500, F1 MSA: 0.71092, best F1 for MSA: 0.72463
+iter: 17500, F1 DA: 0.63256, best F1 for DA: 0.65315
+iter: 18000, F1 MSA: 0.70921, best F1 for MSA: 0.72463
+iter: 18000, F1 DA: 0.64101, best F1 for DA: 0.65315
+iter: 18500, F1 MSA: 0.70684, best F1 for MSA: 0.72463
+iter: 18500, F1 DA: 0.62894, best F1 for DA: 0.65315
+iter: 19000, F1 MSA: 0.70215, best F1 for MSA: 0.72463
+iter: 19000, F1 DA: 0.63092, best F1 for DA: 0.65315
+iter: 19500, F1 MSA: 0.70356, best F1 for MSA: 0.72463
+iter: 19500, F1 DA: 0.64113, best F1 for DA: 0.65315
+iter: 20000, F1 MSA: 0.70087, best F1 for MSA: 0.72463
+iter: 20000, F1 DA: 0.62773, best F1 for DA: 0.65315
+iter: 20500, F1 MSA: 0.71083, best F1 for MSA: 0.72463
+iter: 20500, F1 DA: 0.63975, best F1 for DA: 0.65315
+iter: 21000, F1 MSA: 0.70258, best F1 for MSA: 0.72463
+iter: 21000, F1 DA: 0.61942, best F1 for DA: 0.65315
+iter: 21500, F1 MSA: 0.71602, best F1 for MSA: 0.72463
+iter: 21500, F1 DA: 0.63101, best F1 for DA: 0.65315
+iter: 22000, F1 MSA: 0.69716, best F1 for MSA: 0.72463
+iter: 22000, F1 DA: 0.61209, best F1 for DA: 0.65315
+iter: 22500, F1 MSA: 0.70889, best F1 for MSA: 0.72463
+iter: 22500, F1 DA: 0.63466, best F1 for DA: 0.65315
+iter: 23000, F1 MSA: 0.70700, best F1 for MSA: 0.72463
+iter: 23000, F1 DA: 0.63354, best F1 for DA: 0.65315
+iter: 23500, F1 MSA: 0.70630, best F1 for MSA: 0.72463
+iter: 23500, F1 DA: 0.63733, best F1 for DA: 0.65315
+iter: 24000, F1 MSA: 0.70301, best F1 for MSA: 0.72463
+iter: 24000, F1 DA: 0.63062, best F1 for DA: 0.65315
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+iter: 24500, F1 MSA: 0.72025, best F1 for MSA: 0.72463
+iter: 24500, F1 DA: 0.64460, best F1 for DA: 0.65315
+28514
+Training started with cuda
+iter: 00500, F1 MSA: 0.70382, best F1 for MSA: 0.72463
+iter: 00500, F1 DA: 0.59767, best F1 for DA: 0.65315
+iter: 01000, F1 MSA: 0.71396, best F1 for MSA: 0.72463
+iter: 01000, F1 DA: 0.64342, best F1 for DA: 0.65315
+iter: 01500, F1 MSA: 0.71431, best F1 for MSA: 0.72463
+iter: 01500, F1 DA: 0.63922, best F1 for DA: 0.65315
+iter: 02000, F1 MSA: 0.71492, best F1 for MSA: 0.72463
+iter: 02000, F1 DA: 0.63304, best F1 for DA: 0.65315
+iter: 02500, F1 MSA: 0.72081, best F1 for MSA: 0.72463
+iter: 02500, F1 DA: 0.64446, best F1 for DA: 0.65315
+iter: 03000, F1 MSA: 0.71309, best F1 for MSA: 0.72463
+iter: 03000, F1 DA: 0.62519, best F1 for DA: 0.65315
+iter: 03500, F1 MSA: 0.71949, best F1 for MSA: 0.72463
+
+##########     save the best model DA.    #############
+
+iter: 03500, Macro F1: 0.65620
+iter: 03500, F1 DA: 0.65620, best F1 for DA: 0.65620
+iter: 04000, F1 MSA: 0.71904, best F1 for MSA: 0.72463
+iter: 04000, F1 DA: 0.63163, best F1 for DA: 0.65620
+iter: 04500, F1 MSA: 0.71984, best F1 for MSA: 0.72463
+iter: 04500, F1 DA: 0.65589, best F1 for DA: 0.65620
+
+##########     save the best model MSA.    #############
+
+iter: 05000, Macro F1: 0.72899
+iter: 05000, F1 MSA: 0.72899, best F1 for MSA: 0.72899
+
+##########     save the best model DA.    #############
+
+iter: 05000, Macro F1: 0.65966
+iter: 05000, F1 DA: 0.65966, best F1 for DA: 0.65966
+iter: 05500, F1 MSA: 0.71699, best F1 for MSA: 0.72899
+iter: 05500, F1 DA: 0.64076, best F1 for DA: 0.65966
+iter: 06000, F1 MSA: 0.72166, best F1 for MSA: 0.72899
+iter: 06000, F1 DA: 0.65546, best F1 for DA: 0.65966
+
+##########     save the best model MSA.    #############
+
+iter: 06500, Macro F1: 0.73196
+iter: 06500, F1 MSA: 0.73196, best F1 for MSA: 0.73196
+
+##########     save the best model DA.    #############
+
+iter: 06500, Macro F1: 0.66101
+iter: 06500, F1 DA: 0.66101, best F1 for DA: 0.66101
+iter: 07000, F1 MSA: 0.71996, best F1 for MSA: 0.73196
+iter: 07000, F1 DA: 0.65593, best F1 for DA: 0.66101
+iter: 07500, F1 MSA: 0.72393, best F1 for MSA: 0.73196
+iter: 07500, F1 DA: 0.64618, best F1 for DA: 0.66101
+iter: 08000, F1 MSA: 0.72586, best F1 for MSA: 0.73196
+iter: 08000, F1 DA: 0.64677, best F1 for DA: 0.66101
+iter: 08500, F1 MSA: 0.71765, best F1 for MSA: 0.73196
+
+##########     save the best model DA.    #############
+
+iter: 08500, Macro F1: 0.66105
+iter: 08500, F1 DA: 0.66105, best F1 for DA: 0.66105
+iter: 09000, F1 MSA: 0.71876, best F1 for MSA: 0.73196
+
+##########     save the best model DA.    #############
+
+iter: 09000, Macro F1: 0.67468
+iter: 09000, F1 DA: 0.67468, best F1 for DA: 0.67468
+iter: 09500, F1 MSA: 0.72036, best F1 for MSA: 0.73196
+iter: 09500, F1 DA: 0.63288, best F1 for DA: 0.67468
+
+##########     save the best model MSA.    #############
+
+iter: 10000, Macro F1: 0.73406
+iter: 10000, F1 MSA: 0.73406, best F1 for MSA: 0.73406
+iter: 10000, F1 DA: 0.66781, best F1 for DA: 0.67468
+iter: 10500, F1 MSA: 0.71705, best F1 for MSA: 0.73406
+iter: 10500, F1 DA: 0.64094, best F1 for DA: 0.67468
+iter: 11000, F1 MSA: 0.71506, best F1 for MSA: 0.73406
+iter: 11000, F1 DA: 0.65738, best F1 for DA: 0.67468
+iter: 11500, F1 MSA: 0.72105, best F1 for MSA: 0.73406
+iter: 11500, F1 DA: 0.64883, best F1 for DA: 0.67468
+iter: 12000, F1 MSA: 0.72649, best F1 for MSA: 0.73406
+iter: 12000, F1 DA: 0.65814, best F1 for DA: 0.67468
+iter: 12500, F1 MSA: 0.70590, best F1 for MSA: 0.73406
+iter: 12500, F1 DA: 0.64920, best F1 for DA: 0.67468
+iter: 13000, F1 MSA: 0.71707, best F1 for MSA: 0.73406
+iter: 13000, F1 DA: 0.64787, best F1 for DA: 0.67468
+iter: 13500, F1 MSA: 0.70390, best F1 for MSA: 0.73406
+iter: 13500, F1 DA: 0.62999, best F1 for DA: 0.67468
+iter: 14000, F1 MSA: 0.72160, best F1 for MSA: 0.73406
+iter: 14000, F1 DA: 0.64845, best F1 for DA: 0.67468
+iter: 14500, F1 MSA: 0.70576, best F1 for MSA: 0.73406
+iter: 14500, F1 DA: 0.64654, best F1 for DA: 0.67468
+iter: 15000, F1 MSA: 0.71715, best F1 for MSA: 0.73406
+iter: 15000, F1 DA: 0.64255, best F1 for DA: 0.67468
+iter: 15500, F1 MSA: 0.71754, best F1 for MSA: 0.73406
+iter: 15500, F1 DA: 0.65248, best F1 for DA: 0.67468
+iter: 16000, F1 MSA: 0.71739, best F1 for MSA: 0.73406
+iter: 16000, F1 DA: 0.65734, best F1 for DA: 0.67468
+iter: 16500, F1 MSA: 0.71528, best F1 for MSA: 0.73406
+iter: 16500, F1 DA: 0.64995, best F1 for DA: 0.67468
+iter: 17000, F1 MSA: 0.72588, best F1 for MSA: 0.73406
+iter: 17000, F1 DA: 0.66519, best F1 for DA: 0.67468
+iter: 17500, F1 MSA: 0.71463, best F1 for MSA: 0.73406
+iter: 17500, F1 DA: 0.66708, best F1 for DA: 0.67468
+iter: 18000, F1 MSA: 0.72285, best F1 for MSA: 0.73406
+iter: 18000, F1 DA: 0.66237, best F1 for DA: 0.67468
+iter: 18500, F1 MSA: 0.73079, best F1 for MSA: 0.73406
+iter: 18500, F1 DA: 0.66094, best F1 for DA: 0.67468
+
+##########     save the best model MSA.    #############
+
+iter: 19000, Macro F1: 0.73508
+iter: 19000, F1 MSA: 0.73508, best F1 for MSA: 0.73508
+iter: 19000, F1 DA: 0.66504, best F1 for DA: 0.67468
+iter: 19500, F1 MSA: 0.72695, best F1 for MSA: 0.73508
+iter: 19500, F1 DA: 0.66258, best F1 for DA: 0.67468
+iter: 20000, F1 MSA: 0.72053, best F1 for MSA: 0.73508
+iter: 20000, F1 DA: 0.66706, best F1 for DA: 0.67468
+iter: 20500, F1 MSA: 0.72124, best F1 for MSA: 0.73508
+iter: 20500, F1 DA: 0.65716, best F1 for DA: 0.67468
+iter: 21000, F1 MSA: 0.72813, best F1 for MSA: 0.73508
+iter: 21000, F1 DA: 0.66922, best F1 for DA: 0.67468
+iter: 21500, F1 MSA: 0.72309, best F1 for MSA: 0.73508
+iter: 21500, F1 DA: 0.65952, best F1 for DA: 0.67468
+iter: 22000, F1 MSA: 0.72641, best F1 for MSA: 0.73508
+iter: 22000, F1 DA: 0.66118, best F1 for DA: 0.67468
+iter: 22500, F1 MSA: 0.72778, best F1 for MSA: 0.73508
+iter: 22500, F1 DA: 0.66101, best F1 for DA: 0.67468
+iter: 23000, F1 MSA: 0.71972, best F1 for MSA: 0.73508
+iter: 23000, F1 DA: 0.65533, best F1 for DA: 0.67468
+iter: 23500, F1 MSA: 0.72694, best F1 for MSA: 0.73508
+iter: 23500, F1 DA: 0.65668, best F1 for DA: 0.67468
+iter: 24000, F1 MSA: 0.72125, best F1 for MSA: 0.73508
+iter: 24000, F1 DA: 0.65436, best F1 for DA: 0.67468
+iter: 24500, F1 MSA: 0.72359, best F1 for MSA: 0.73508
+iter: 24500, F1 DA: 0.65234, best F1 for DA: 0.67468
+iter: 25000, F1 MSA: 0.72434, best F1 for MSA: 0.73508
+iter: 25000, F1 DA: 0.64088, best F1 for DA: 0.67468
+iter: 25500, F1 MSA: 0.72740, best F1 for MSA: 0.73508
+iter: 25500, F1 DA: 0.65787, best F1 for DA: 0.67468
+iter: 26000, F1 MSA: 0.72180, best F1 for MSA: 0.73508
+iter: 26000, F1 DA: 0.66146, best F1 for DA: 0.67468
+iter: 26500, F1 MSA: 0.72113, best F1 for MSA: 0.73508
+iter: 26500, F1 DA: 0.66005, best F1 for DA: 0.67468
+iter: 27000, F1 MSA: 0.72476, best F1 for MSA: 0.73508
+iter: 27000, F1 DA: 0.63820, best F1 for DA: 0.67468
+iter: 27500, F1 MSA: 0.71703, best F1 for MSA: 0.73508
+iter: 27500, F1 DA: 0.64239, best F1 for DA: 0.67468
+iter: 28000, F1 MSA: 0.72077, best F1 for MSA: 0.73508
+iter: 28000, F1 DA: 0.66019, best F1 for DA: 0.67468
+iter: 28500, F1 MSA: 0.72584, best F1 for MSA: 0.73508
+iter: 28500, F1 DA: 0.65682, best F1 for DA: 0.67468
+iter: 29000, F1 MSA: 0.72004, best F1 for MSA: 0.73508
+iter: 29000, F1 DA: 0.65791, best F1 for DA: 0.67468
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+iter: 29500, F1 MSA: 0.71874, best F1 for MSA: 0.73508
+iter: 29500, F1 DA: 0.66801, best F1 for DA: 0.67468
+29452
+Training started with cuda
+iter: 00500, F1 MSA: 0.69412, best F1 for MSA: 0.73508
+iter: 00500, F1 DA: 0.65195, best F1 for DA: 0.67468
+iter: 01000, F1 MSA: 0.71752, best F1 for MSA: 0.73508
+iter: 01000, F1 DA: 0.66773, best F1 for DA: 0.67468
+iter: 01500, F1 MSA: 0.72377, best F1 for MSA: 0.73508
+iter: 01500, F1 DA: 0.65809, best F1 for DA: 0.67468
+iter: 02000, F1 MSA: 0.72684, best F1 for MSA: 0.73508
+iter: 02000, F1 DA: 0.66124, best F1 for DA: 0.67468
+iter: 02500, F1 MSA: 0.72449, best F1 for MSA: 0.73508
+iter: 02500, F1 DA: 0.66198, best F1 for DA: 0.67468
+iter: 03000, F1 MSA: 0.72730, best F1 for MSA: 0.73508
+
+##########     save the best model DA.    #############
+
+iter: 03000, Macro F1: 0.67514
+iter: 03000, F1 DA: 0.67514, best F1 for DA: 0.67514
+iter: 03500, F1 MSA: 0.72254, best F1 for MSA: 0.73508
+iter: 03500, F1 DA: 0.66713, best F1 for DA: 0.67514
+iter: 04000, F1 MSA: 0.70336, best F1 for MSA: 0.73508
+iter: 04000, F1 DA: 0.65687, best F1 for DA: 0.67514
+iter: 04500, F1 MSA: 0.72202, best F1 for MSA: 0.73508
+iter: 04500, F1 DA: 0.66374, best F1 for DA: 0.67514
+iter: 05000, F1 MSA: 0.72067, best F1 for MSA: 0.73508
+iter: 05000, F1 DA: 0.67369, best F1 for DA: 0.67514
+iter: 05500, F1 MSA: 0.72256, best F1 for MSA: 0.73508
+iter: 05500, F1 DA: 0.65395, best F1 for DA: 0.67514
+iter: 06000, F1 MSA: 0.71816, best F1 for MSA: 0.73508
+iter: 06000, F1 DA: 0.65710, best F1 for DA: 0.67514
+iter: 06500, F1 MSA: 0.72980, best F1 for MSA: 0.73508
+iter: 06500, F1 DA: 0.66558, best F1 for DA: 0.67514
+
+##########     save the best model MSA.    #############
+
+iter: 07000, Macro F1: 0.75008
+iter: 07000, F1 MSA: 0.75008, best F1 for MSA: 0.75008
+iter: 07000, F1 DA: 0.67488, best F1 for DA: 0.67514
+iter: 07500, F1 MSA: 0.73484, best F1 for MSA: 0.75008
+iter: 07500, F1 DA: 0.65732, best F1 for DA: 0.67514
+iter: 08000, F1 MSA: 0.72903, best F1 for MSA: 0.75008
+iter: 08000, F1 DA: 0.66987, best F1 for DA: 0.67514
+iter: 08500, F1 MSA: 0.74104, best F1 for MSA: 0.75008
+iter: 08500, F1 DA: 0.65470, best F1 for DA: 0.67514
+iter: 09000, F1 MSA: 0.71544, best F1 for MSA: 0.75008
+iter: 09000, F1 DA: 0.66255, best F1 for DA: 0.67514
+iter: 09500, F1 MSA: 0.73220, best F1 for MSA: 0.75008
+iter: 09500, F1 DA: 0.65713, best F1 for DA: 0.67514
+iter: 10000, F1 MSA: 0.73209, best F1 for MSA: 0.75008
+iter: 10000, F1 DA: 0.66236, best F1 for DA: 0.67514
+iter: 10500, F1 MSA: 0.72959, best F1 for MSA: 0.75008
+iter: 10500, F1 DA: 0.66208, best F1 for DA: 0.67514
+iter: 11000, F1 MSA: 0.72070, best F1 for MSA: 0.75008
+
+##########     save the best model DA.    #############
+
+iter: 11000, Macro F1: 0.67853
+iter: 11000, F1 DA: 0.67853, best F1 for DA: 0.67853
+iter: 11500, F1 MSA: 0.74220, best F1 for MSA: 0.75008
+iter: 11500, F1 DA: 0.66856, best F1 for DA: 0.67853
+iter: 12000, F1 MSA: 0.73632, best F1 for MSA: 0.75008
+iter: 12000, F1 DA: 0.66863, best F1 for DA: 0.67853
+iter: 12500, F1 MSA: 0.71594, best F1 for MSA: 0.75008
+iter: 12500, F1 DA: 0.63448, best F1 for DA: 0.67853
+iter: 13000, F1 MSA: 0.71589, best F1 for MSA: 0.75008
+iter: 13000, F1 DA: 0.66251, best F1 for DA: 0.67853
+iter: 13500, F1 MSA: 0.72450, best F1 for MSA: 0.75008
+iter: 13500, F1 DA: 0.63420, best F1 for DA: 0.67853
+iter: 14000, F1 MSA: 0.72410, best F1 for MSA: 0.75008
+iter: 14000, F1 DA: 0.66755, best F1 for DA: 0.67853
+iter: 14500, F1 MSA: 0.72639, best F1 for MSA: 0.75008
+iter: 14500, F1 DA: 0.67009, best F1 for DA: 0.67853
+iter: 15000, F1 MSA: 0.73051, best F1 for MSA: 0.75008
+iter: 15000, F1 DA: 0.66885, best F1 for DA: 0.67853
+iter: 15500, F1 MSA: 0.73390, best F1 for MSA: 0.75008
+iter: 15500, F1 DA: 0.67509, best F1 for DA: 0.67853
+iter: 16000, F1 MSA: 0.72802, best F1 for MSA: 0.75008
+iter: 16000, F1 DA: 0.67345, best F1 for DA: 0.67853
+iter: 16500, F1 MSA: 0.73450, best F1 for MSA: 0.75008
+iter: 16500, F1 DA: 0.66822, best F1 for DA: 0.67853
+iter: 17000, F1 MSA: 0.72530, best F1 for MSA: 0.75008
+iter: 17000, F1 DA: 0.66211, best F1 for DA: 0.67853
+iter: 17500, F1 MSA: 0.73026, best F1 for MSA: 0.75008
+iter: 17500, F1 DA: 0.66174, best F1 for DA: 0.67853
+iter: 18000, F1 MSA: 0.73100, best F1 for MSA: 0.75008
+iter: 18000, F1 DA: 0.66902, best F1 for DA: 0.67853
+iter: 18500, F1 MSA: 0.72394, best F1 for MSA: 0.75008
+iter: 18500, F1 DA: 0.66560, best F1 for DA: 0.67853
+iter: 19000, F1 MSA: 0.71885, best F1 for MSA: 0.75008
+iter: 19000, F1 DA: 0.67821, best F1 for DA: 0.67853
+iter: 19500, F1 MSA: 0.71770, best F1 for MSA: 0.75008
+iter: 19500, F1 DA: 0.66777, best F1 for DA: 0.67853
+iter: 20000, F1 MSA: 0.72620, best F1 for MSA: 0.75008
+iter: 20000, F1 DA: 0.66371, best F1 for DA: 0.67853
+iter: 20500, F1 MSA: 0.72256, best F1 for MSA: 0.75008
+iter: 20500, F1 DA: 0.66712, best F1 for DA: 0.67853
+iter: 21000, F1 MSA: 0.72189, best F1 for MSA: 0.75008
+iter: 21000, F1 DA: 0.67523, best F1 for DA: 0.67853
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at aubmindlab/bert-base-arabertv02-twitter were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at aubmindlab/bert-base-arabertv02-twitter and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+iter: 21500, F1 MSA: 0.72562, best F1 for MSA: 0.75008
+iter: 21500, F1 DA: 0.66596, best F1 for DA: 0.67853
+29458
+Training started with cuda
+iter: 00500, F1 MSA: 0.67864, best F1 for MSA: 0.75008
+iter: 00500, F1 DA: 0.64728, best F1 for DA: 0.67853
+iter: 01000, F1 MSA: 0.73399, best F1 for MSA: 0.75008
+iter: 01000, F1 DA: 0.67319, best F1 for DA: 0.67853
+iter: 01500, F1 MSA: 0.73567, best F1 for MSA: 0.75008
+iter: 01500, F1 DA: 0.66986, best F1 for DA: 0.67853
+iter: 02000, F1 MSA: 0.74449, best F1 for MSA: 0.75008
+
+##########     save the best model DA.    #############
+
+iter: 02000, Macro F1: 0.68051
+iter: 02000, F1 DA: 0.68051, best F1 for DA: 0.68051
+
+##########     save the best model MSA.    #############
+
+iter: 02500, Macro F1: 0.75786
+iter: 02500, F1 MSA: 0.75786, best F1 for MSA: 0.75786
+iter: 02500, F1 DA: 0.67620, best F1 for DA: 0.68051
+iter: 03000, F1 MSA: 0.73542, best F1 for MSA: 0.75786
+iter: 03000, F1 DA: 0.66968, best F1 for DA: 0.68051
+iter: 03500, F1 MSA: 0.75241, best F1 for MSA: 0.75786
+iter: 03500, F1 DA: 0.65394, best F1 for DA: 0.68051
+iter: 04000, F1 MSA: 0.74848, best F1 for MSA: 0.75786
+iter: 04000, F1 DA: 0.66270, best F1 for DA: 0.68051
+iter: 04500, F1 MSA: 0.74418, best F1 for MSA: 0.75786
+iter: 04500, F1 DA: 0.67504, best F1 for DA: 0.68051
+iter: 05000, F1 MSA: 0.75179, best F1 for MSA: 0.75786
+iter: 05000, F1 DA: 0.65827, best F1 for DA: 0.68051
+iter: 05500, F1 MSA: 0.73243, best F1 for MSA: 0.75786
+iter: 05500, F1 DA: 0.66840, best F1 for DA: 0.68051
+iter: 06000, F1 MSA: 0.74780, best F1 for MSA: 0.75786
+iter: 06000, F1 DA: 0.65864, best F1 for DA: 0.68051
+iter: 06500, F1 MSA: 0.72334, best F1 for MSA: 0.75786
+iter: 06500, F1 DA: 0.67460, best F1 for DA: 0.68051
+iter: 07000, F1 MSA: 0.75009, best F1 for MSA: 0.75786
+iter: 07000, F1 DA: 0.67524, best F1 for DA: 0.68051
+iter: 07500, F1 MSA: 0.74060, best F1 for MSA: 0.75786
+iter: 07500, F1 DA: 0.67723, best F1 for DA: 0.68051
+iter: 08000, F1 MSA: 0.75581, best F1 for MSA: 0.75786
+
+##########     save the best model DA.    #############
+
+iter: 08000, Macro F1: 0.69426
+iter: 08000, F1 DA: 0.69426, best F1 for DA: 0.69426
+iter: 08500, F1 MSA: 0.72798, best F1 for MSA: 0.75786
+iter: 08500, F1 DA: 0.66167, best F1 for DA: 0.69426
+iter: 09000, F1 MSA: 0.72059, best F1 for MSA: 0.75786
+iter: 09000, F1 DA: 0.63764, best F1 for DA: 0.69426
+iter: 09500, F1 MSA: 0.74745, best F1 for MSA: 0.75786
+iter: 09500, F1 DA: 0.66917, best F1 for DA: 0.69426
+iter: 10000, F1 MSA: 0.74259, best F1 for MSA: 0.75786
+iter: 10000, F1 DA: 0.64827, best F1 for DA: 0.69426
+iter: 10500, F1 MSA: 0.75390, best F1 for MSA: 0.75786
+iter: 10500, F1 DA: 0.64672, best F1 for DA: 0.69426
+iter: 11000, F1 MSA: 0.73191, best F1 for MSA: 0.75786
+iter: 11000, F1 DA: 0.65016, best F1 for DA: 0.69426
+iter: 11500, F1 MSA: 0.75203, best F1 for MSA: 0.75786
+iter: 11500, F1 DA: 0.64824, best F1 for DA: 0.69426
+iter: 12000, F1 MSA: 0.74960, best F1 for MSA: 0.75786
+iter: 12000, F1 DA: 0.65142, best F1 for DA: 0.69426
+iter: 12500, F1 MSA: 0.75422, best F1 for MSA: 0.75786
+iter: 12500, F1 DA: 0.65023, best F1 for DA: 0.69426
+iter: 13000, F1 MSA: 0.74292, best F1 for MSA: 0.75786
+iter: 13000, F1 DA: 0.65865, best F1 for DA: 0.69426
+iter: 13500, F1 MSA: 0.74447, best F1 for MSA: 0.75786
+iter: 13500, F1 DA: 0.65131, best F1 for DA: 0.69426
+iter: 14000, F1 MSA: 0.75106, best F1 for MSA: 0.75786
+iter: 14000, F1 DA: 0.66054, best F1 for DA: 0.69426
+iter: 14500, F1 MSA: 0.75289, best F1 for MSA: 0.75786
+iter: 14500, F1 DA: 0.64357, best F1 for DA: 0.69426
+iter: 15000, F1 MSA: 0.73351, best F1 for MSA: 0.75786
+iter: 15000, F1 DA: 0.63603, best F1 for DA: 0.69426
+iter: 15500, F1 MSA: 0.73642, best F1 for MSA: 0.75786
+iter: 15500, F1 DA: 0.63936, best F1 for DA: 0.69426
+iter: 16000, F1 MSA: 0.74329, best F1 for MSA: 0.75786
+iter: 16000, F1 DA: 0.65646, best F1 for DA: 0.69426
+iter: 16500, F1 MSA: 0.73992, best F1 for MSA: 0.75786
+iter: 16500, F1 DA: 0.64268, best F1 for DA: 0.69426
+iter: 17000, F1 MSA: 0.73259, best F1 for MSA: 0.75786
+iter: 17000, F1 DA: 0.65852, best F1 for DA: 0.69426
+iter: 17500, F1 MSA: 0.73891, best F1 for MSA: 0.75786
+iter: 17500, F1 DA: 0.65311, best F1 for DA: 0.69426
+iter: 18000, F1 MSA: 0.75309, best F1 for MSA: 0.75786
+iter: 18000, F1 DA: 0.65736, best F1 for DA: 0.69426
+iter: 18500, F1 MSA: 0.74346, best F1 for MSA: 0.75786
+iter: 18500, F1 DA: 0.66443, best F1 for DA: 0.69426
+--------------------------------------
+Test on data/NER/Darwish-MSA
+The final F1 on the Test set is 0.7625035375152217
+The final accuracy on the Test set is 0.9765629199591463
+--------------------------------------
+Test on data/NER/Darwish-DA
+The final F1 on the Test set is 0.7153268463073852
+The final accuracy on the Test set is 0.9851553737547007

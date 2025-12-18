@@ -1,0 +1,189 @@
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+3814
+3000
+Training started with cuda
+/home/aelmekki/.conda/envs/tabnet/lib/python3.7/site-packages/transformers/optimization.py:309: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use thePyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+
+##########     save the best model MSA.    #############
+
+iter: 00500, Macro F1: 0.66467
+iter: 00500, F1 MSA: 0.66467, best F1 for MSA: 0.66467
+
+##########     save the best model MSA.    #############
+
+iter: 01000, Macro F1: 0.69055
+iter: 01000, F1 MSA: 0.69055, best F1 for MSA: 0.69055
+iter: 01500, F1 MSA: 0.69020, best F1 for MSA: 0.69055
+iter: 02000, F1 MSA: 0.68442, best F1 for MSA: 0.69055
+iter: 02500, F1 MSA: 0.69002, best F1 for MSA: 0.69055
+iter: 03000, F1 MSA: 0.68464, best F1 for MSA: 0.69055
+iter: 03500, F1 MSA: 0.67899, best F1 for MSA: 0.69055
+iter: 04000, F1 MSA: 0.67704, best F1 for MSA: 0.69055
+iter: 04500, F1 MSA: 0.67186, best F1 for MSA: 0.69055
+iter: 05000, F1 MSA: 0.68824, best F1 for MSA: 0.69055
+iter: 05500, F1 MSA: 0.67347, best F1 for MSA: 0.69055
+iter: 06000, F1 MSA: 0.67406, best F1 for MSA: 0.69055
+iter: 06500, F1 MSA: 0.66527, best F1 for MSA: 0.69055
+iter: 07000, F1 MSA: 0.66305, best F1 for MSA: 0.69055
+iter: 07500, F1 MSA: 0.67102, best F1 for MSA: 0.69055
+iter: 08000, F1 MSA: 0.68406, best F1 for MSA: 0.69055
+iter: 08500, F1 MSA: 0.67908, best F1 for MSA: 0.69055
+iter: 09000, F1 MSA: 0.67196, best F1 for MSA: 0.69055
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+iter: 09500, F1 MSA: 0.67762, best F1 for MSA: 0.69055
+20382
+Training started with cuda
+iter: 00500, F1 MSA: 0.60824, best F1 for MSA: 0.69055
+
+##########     save the best model MSA.    #############
+
+iter: 01000, Macro F1: 0.70872
+iter: 01000, F1 MSA: 0.70872, best F1 for MSA: 0.70872
+iter: 01500, F1 MSA: 0.69476, best F1 for MSA: 0.70872
+iter: 02000, F1 MSA: 0.69300, best F1 for MSA: 0.70872
+iter: 02500, F1 MSA: 0.70816, best F1 for MSA: 0.70872
+iter: 03000, F1 MSA: 0.69121, best F1 for MSA: 0.70872
+iter: 03500, F1 MSA: 0.66510, best F1 for MSA: 0.70872
+iter: 04000, F1 MSA: 0.67997, best F1 for MSA: 0.70872
+iter: 04500, F1 MSA: 0.69039, best F1 for MSA: 0.70872
+iter: 05000, F1 MSA: 0.69771, best F1 for MSA: 0.70872
+iter: 05500, F1 MSA: 0.68602, best F1 for MSA: 0.70872
+iter: 06000, F1 MSA: 0.68014, best F1 for MSA: 0.70872
+iter: 06500, F1 MSA: 0.67573, best F1 for MSA: 0.70872
+iter: 07000, F1 MSA: 0.68732, best F1 for MSA: 0.70872
+iter: 07500, F1 MSA: 0.69289, best F1 for MSA: 0.70872
+iter: 08000, F1 MSA: 0.68965, best F1 for MSA: 0.70872
+iter: 08500, F1 MSA: 0.67439, best F1 for MSA: 0.70872
+iter: 09000, F1 MSA: 0.68355, best F1 for MSA: 0.70872
+iter: 09500, F1 MSA: 0.67840, best F1 for MSA: 0.70872
+iter: 10000, F1 MSA: 0.69313, best F1 for MSA: 0.70872
+iter: 10500, F1 MSA: 0.67675, best F1 for MSA: 0.70872
+iter: 11000, F1 MSA: 0.69315, best F1 for MSA: 0.70872
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+iter: 11500, F1 MSA: 0.67740, best F1 for MSA: 0.70872
+22180
+Training started with cuda
+iter: 00500, F1 MSA: 0.59506, best F1 for MSA: 0.70872
+iter: 01000, F1 MSA: 0.67530, best F1 for MSA: 0.70872
+iter: 01500, F1 MSA: 0.69423, best F1 for MSA: 0.70872
+iter: 02000, F1 MSA: 0.69791, best F1 for MSA: 0.70872
+
+##########     save the best model MSA.    #############
+
+iter: 02500, Macro F1: 0.71226
+iter: 02500, F1 MSA: 0.71226, best F1 for MSA: 0.71226
+iter: 03000, F1 MSA: 0.69604, best F1 for MSA: 0.71226
+iter: 03500, F1 MSA: 0.67837, best F1 for MSA: 0.71226
+iter: 04000, F1 MSA: 0.69292, best F1 for MSA: 0.71226
+iter: 04500, F1 MSA: 0.66874, best F1 for MSA: 0.71226
+iter: 05000, F1 MSA: 0.67999, best F1 for MSA: 0.71226
+iter: 05500, F1 MSA: 0.64367, best F1 for MSA: 0.71226
+iter: 06000, F1 MSA: 0.67064, best F1 for MSA: 0.71226
+iter: 06500, F1 MSA: 0.67920, best F1 for MSA: 0.71226
+iter: 07000, F1 MSA: 0.66699, best F1 for MSA: 0.71226
+iter: 07500, F1 MSA: 0.66697, best F1 for MSA: 0.71226
+iter: 08000, F1 MSA: 0.67382, best F1 for MSA: 0.71226
+iter: 08500, F1 MSA: 0.67312, best F1 for MSA: 0.71226
+iter: 09000, F1 MSA: 0.67683, best F1 for MSA: 0.71226
+iter: 09500, F1 MSA: 0.64645, best F1 for MSA: 0.71226
+iter: 10000, F1 MSA: 0.67068, best F1 for MSA: 0.71226
+iter: 10500, F1 MSA: 0.66543, best F1 for MSA: 0.71226
+iter: 11000, F1 MSA: 0.66664, best F1 for MSA: 0.71226
+iter: 11500, F1 MSA: 0.64824, best F1 for MSA: 0.71226
+iter: 12000, F1 MSA: 0.65534, best F1 for MSA: 0.71226
+iter: 12500, F1 MSA: 0.66358, best F1 for MSA: 0.71226
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+iter: 13000, F1 MSA: 0.66638, best F1 for MSA: 0.71226
+25913
+Training started with cuda
+iter: 00500, F1 MSA: 0.66784, best F1 for MSA: 0.71226
+iter: 01000, F1 MSA: 0.69641, best F1 for MSA: 0.71226
+iter: 01500, F1 MSA: 0.70089, best F1 for MSA: 0.71226
+iter: 02000, F1 MSA: 0.68789, best F1 for MSA: 0.71226
+iter: 02500, F1 MSA: 0.68273, best F1 for MSA: 0.71226
+iter: 03000, F1 MSA: 0.69275, best F1 for MSA: 0.71226
+iter: 03500, F1 MSA: 0.69620, best F1 for MSA: 0.71226
+iter: 04000, F1 MSA: 0.70091, best F1 for MSA: 0.71226
+iter: 04500, F1 MSA: 0.69362, best F1 for MSA: 0.71226
+iter: 05000, F1 MSA: 0.70708, best F1 for MSA: 0.71226
+iter: 05500, F1 MSA: 0.69284, best F1 for MSA: 0.71226
+iter: 06000, F1 MSA: 0.68022, best F1 for MSA: 0.71226
+iter: 06500, F1 MSA: 0.68670, best F1 for MSA: 0.71226
+iter: 07000, F1 MSA: 0.68711, best F1 for MSA: 0.71226
+iter: 07500, F1 MSA: 0.67696, best F1 for MSA: 0.71226
+iter: 08000, F1 MSA: 0.70207, best F1 for MSA: 0.71226
+iter: 08500, F1 MSA: 0.67958, best F1 for MSA: 0.71226
+iter: 09000, F1 MSA: 0.64708, best F1 for MSA: 0.71226
+iter: 09500, F1 MSA: 0.66797, best F1 for MSA: 0.71226
+iter: 10000, F1 MSA: 0.69453, best F1 for MSA: 0.71226
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at UBC-NLP/MARBERT were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+iter: 10500, F1 MSA: 0.67727, best F1 for MSA: 0.71226
+25913
+Training started with cuda
+iter: 00500, F1 MSA: 0.66221, best F1 for MSA: 0.71226
+iter: 01000, F1 MSA: 0.70977, best F1 for MSA: 0.71226
+
+##########     save the best model MSA.    #############
+
+iter: 01500, Macro F1: 0.71584
+iter: 01500, F1 MSA: 0.71584, best F1 for MSA: 0.71584
+iter: 02000, F1 MSA: 0.70488, best F1 for MSA: 0.71584
+iter: 02500, F1 MSA: 0.69389, best F1 for MSA: 0.71584
+iter: 03000, F1 MSA: 0.70165, best F1 for MSA: 0.71584
+iter: 03500, F1 MSA: 0.67563, best F1 for MSA: 0.71584
+iter: 04000, F1 MSA: 0.68469, best F1 for MSA: 0.71584
+iter: 04500, F1 MSA: 0.69656, best F1 for MSA: 0.71584
+iter: 05000, F1 MSA: 0.67369, best F1 for MSA: 0.71584
+iter: 05500, F1 MSA: 0.68107, best F1 for MSA: 0.71584
+iter: 06000, F1 MSA: 0.69083, best F1 for MSA: 0.71584
+iter: 06500, F1 MSA: 0.67380, best F1 for MSA: 0.71584
+iter: 07000, F1 MSA: 0.69649, best F1 for MSA: 0.71584
+iter: 07500, F1 MSA: 0.69607, best F1 for MSA: 0.71584
+iter: 08000, F1 MSA: 0.68217, best F1 for MSA: 0.71584
+iter: 08500, F1 MSA: 0.69005, best F1 for MSA: 0.71584
+iter: 09000, F1 MSA: 0.69296, best F1 for MSA: 0.71584
+iter: 09500, F1 MSA: 0.67804, best F1 for MSA: 0.71584
+iter: 10000, F1 MSA: 0.68215, best F1 for MSA: 0.71584
+iter: 10500, F1 MSA: 0.65654, best F1 for MSA: 0.71584
+iter: 11000, F1 MSA: 0.68654, best F1 for MSA: 0.71584
+iter: 11500, F1 MSA: 0.68787, best F1 for MSA: 0.71584
+iter: 12000, F1 MSA: 0.68223, best F1 for MSA: 0.71584
+--------------------------------------
+Test on data/NER/Darwish-MSA
+The final F1 on the Test set is 0.7087897063033801
+The final accuracy on the Test set is 0.9711336881148201
+--------------------------------------
+Test on data/NER/Darwish-DA
+Traceback (most recent call last):
+  File "launcher.py", line 444, in <module>
+    state_dict = torch.load(open(os.path.join(args.output_dir, paths_for_best_models[test_exp][0]), 'rb'))
+KeyError: 'data/NER/Darwish-DA'
