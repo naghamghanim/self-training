@@ -151,7 +151,7 @@ if __name__ == "__main__":
     parser.add_argument('--self_training', action='store_true', default=False)
     parser.add_argument('--mmd', action='store_true', default=False)
     parser.add_argument('--debug', action='store_true', default=False)
-    parser.add_argument('--unlabeled_data_dir', type=str, default='/rep/nhamad/Wojood-data/Wojood/CONLL-files/')
+    parser.add_argument('--unlabeled_data_dir', type=str, default='/content/self-training/CONLL-files/')
     parser.add_argument('--indomain', action='store_true', default=False)
     parser.add_argument('--erroranalysis', action='store_true', default=False)
     parser.add_argument('--coral', action='store_true', default=False)
@@ -227,7 +227,7 @@ if __name__ == "__main__":
                                            dropout_p=args.dropout, device=device)
     if args.task_name == "ner": 
         # here take the valid PCMA 
-        test_datasets =  ['/rep/nhamad/Wojood-data/Wojood/CONLL-files']
+        test_datasets =  ['/content/self-training/CONLL-files']
     if args.task_name == "pos":
         test_datasets =  ['data/POS-tagging/egy', 'data/POS-tagging/glf','data/POS-tagging/lev','data/POS-tagging/mag','data/POS-tagging/msa']
     val_dataloader = []
@@ -450,7 +450,7 @@ if __name__ == "__main__":
     #after finished all self-training runs, do a final test on the test set
     if args.task_name == "ner":
         paths_for_best_models = {
-        '/rep/nhamad/AdaSL/domain-Ad/self-fixedK/' : [f'base_model-self-PCMA-science-{ran}.pt', f'model-self-PCMA-science-{ran}.pt'],
+        '/content/self-training/domain-Ad/self-fixedK/' : [f'base_model-self-{ran}.pt', f'model-self-{ran}.pt'],
         
         }
     
