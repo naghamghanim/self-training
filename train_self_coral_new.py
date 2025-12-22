@@ -96,7 +96,8 @@ def sequence_labeling_test(loader, model, classifier, label_list,with_segs, erro
     report = accuracy_score(y_true, y_pred)
     f1 = f1_score(y_true, y_pred, average='macro')
     logging.info("\n" + classification_report(y_true, y_pred, scheme=IOB2, digits=4))
-
+    print("Classification report done \n")
+    print(classification_report(y_true, y_pred, scheme=IOB2, digits=4))
     metrics = {
         "micro_f1": f1_score(y_true, y_pred, average="micro", scheme=IOB2),
         "macro_f1": f1_score(y_true, y_pred, average="macro", scheme=IOB2),
