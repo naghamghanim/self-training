@@ -134,7 +134,7 @@ def pickle_object(obj,filename):
 
 def compute_class_proto_labeled(base_network, classifier, features, num_labels,
                                 batch_size=16, device='cuda', with_segs=True):
-    base_network.eval()
+    base_network.eval()# set eval mode for inference
     classifier.eval()
 
     all_input_ids = torch.tensor([f.input_ids for f in features], dtype=torch.long)
@@ -145,8 +145,8 @@ def compute_class_proto_labeled(base_network, classifier, features, num_labels,
     all_segments_indices_mask = torch.tensor(
         [f.segments_indices_mask for f in features], dtype=torch.bool)
 
-    sum_conf = torch.zeros(num_labels, device=device)
-    cnt_conf = torch.zeros(num_labels, device=device)
+    sum_conf = torch.zeros(num_labels, device=device) # total confidence per class
+    cnt_conf = torch.zeros(num_labels, device=device) # token count per class
 
     for idx in range(0, all_input_ids.size(0), batch_size):
         input_ids = all_input_ids[idx:idx+batch_size].to(device)
@@ -166,13 +166,15 @@ def compute_class_proto_labeled(base_network, classifier, features, num_labels,
                 with_segs=with_segs,
                 is_source=True
             )
-            logits = classifier(feats, labels=None)
+            logits = classifier(feats, labels=None) #[B, L, num_labels] [8,128,45]
 
-        probs, preds = torch.nn.functional.softmax(logits, dim=-1).max(dim=-1)  # B x L
-
+        #probs, preds = torch.nn.functional.softmax(logits, dim=-1).max(dim=-1)  # B x L
+        #probs: confidence in the predicted label     [8,128]     
+        #preds: predicted predicted label id (argmax)         [8,128]
         # only real tokens
-        mask = segments_mask_ids
-        correct = (preds == label_ids) & mask
+        probs_all = torch.nn.functional.softmax(logits, dim=-1) 
+        '''mask = segments_mask_ids
+        correct = (preds == label_ids) & mask #conrrect size [B x L]    [8,128]
 
         if correct.any():
             probs_flat = probs[correct]         # [N]
@@ -181,7 +183,20 @@ def compute_class_proto_labeled(base_network, classifier, features, num_labels,
             # accumulate sum and count per class
             one_vec = torch.ones_like(probs_flat, device=device)
             sum_conf.scatter_add_(0, labels_flat, probs_flat)
-            cnt_conf.scatter_add_(0, labels_flat, one_vec)
+            cnt_conf.scatter_add_(0, labels_flat, one_vec)'''
+        gold_ids = label_ids.clamp(min=0, max=num_labels - 1)            # safety
+        p_gold = probs_all.gather(dim=-1, index=gold_ids.unsqueeze(-1)).squeeze(-1)  # [B, L]
+
+        mask = segments_mask_ids                                         # [B, L] bool
+        valid = mask                                                     # optionally also exclude IGNORE here
+
+        if valid.any():
+            p_flat = p_gold[valid]                                       # [N]
+            y_flat = gold_ids[valid]                                     # [N]
+
+            one_vec = torch.ones_like(p_flat, device=device)             # [N]
+            sum_conf.scatter_add_(0, y_flat, p_flat)
+            cnt_conf.scatter_add_(0, y_flat, one_vec)
 
     proto = torch.zeros_like(sum_conf)
     valid = cnt_conf > 0
