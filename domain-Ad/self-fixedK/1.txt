@@ -1,0 +1,1368 @@
+ Number of valid sentences  4320
+number of train examples  29905
+number of unlababled for self-training examples  823
+Selected features for DANN self-training 823
+Training started with cuda
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 00500, Macro F1: 0.03995
+namespace(micro_f1=0.20545977011494254, macro_f1=0.03994984995404829, weights_f1=0.16195146712668815, precision=0.24069571722461194, recall=0.17922294944993733, accuracy=0.7741171720138023)
+Evaluation metrics
+micro_f1  : 0.2055
+macro_f1  : 0.0399
+weights_f1: 0.1620
+precision : 0.2407
+recall    : 0.1792
+accuracy  : 0.7741
+iter: 00500, F1 self-PCMA-science: 0.03995, best F1 for self-PCMA-science: 0.03995
+namespace(micro_f1=0.20545977011494254, macro_f1=0.03994984995404829, weights_f1=0.16195146712668815, precision=0.24069571722461194, recall=0.17922294944993733, accuracy=0.7741171720138023)
+Evaluation metrics
+micro_f1  : 0.2055
+macro_f1  : 0.0399
+weights_f1: 0.1620
+precision : 0.2407
+recall    : 0.1792
+accuracy  : 0.7741
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 01000, Macro F1: 0.24901
+namespace(micro_f1=0.6524681245102928, macro_f1=0.249005770850091, weights_f1=0.6219488944075023, precision=0.6678331875182268, recall=0.6377941790836931, accuracy=0.9036230820057265)
+Evaluation metrics
+micro_f1  : 0.6525
+macro_f1  : 0.2490
+weights_f1: 0.6219
+precision : 0.6678
+recall    : 0.6378
+accuracy  : 0.9036
+iter: 01000, F1 self-PCMA-science: 0.24901, best F1 for self-PCMA-science: 0.24901
+namespace(micro_f1=0.6524681245102928, macro_f1=0.249005770850091, weights_f1=0.6219488944075023, precision=0.6678331875182268, recall=0.6377941790836931, accuracy=0.9036230820057265)
+Evaluation metrics
+micro_f1  : 0.6525
+macro_f1  : 0.2490
+weights_f1: 0.6219
+precision : 0.6678
+recall    : 0.6378
+accuracy  : 0.9036
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 01500, Macro F1: 0.34450
+namespace(micro_f1=0.7443609022556392, macro_f1=0.34450262839282647, weights_f1=0.7329511805158071, precision=0.7442572741194488, recall=0.7444645592535859, accuracy=0.9281991043242053)
+Evaluation metrics
+micro_f1  : 0.7444
+macro_f1  : 0.3445
+weights_f1: 0.7330
+precision : 0.7443
+recall    : 0.7445
+accuracy  : 0.9282
+iter: 01500, F1 self-PCMA-science: 0.34450, best F1 for self-PCMA-science: 0.34450
+namespace(micro_f1=0.7443609022556392, macro_f1=0.34450262839282647, weights_f1=0.7329511805158071, precision=0.7442572741194488, recall=0.7444645592535859, accuracy=0.9281991043242053)
+Evaluation metrics
+micro_f1  : 0.7444
+macro_f1  : 0.3445
+weights_f1: 0.7330
+precision : 0.7443
+recall    : 0.7445
+accuracy  : 0.9282
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 02000, Macro F1: 0.42311
+namespace(micro_f1=0.767174515235457, macro_f1=0.4231137619006487, weights_f1=0.7557868507615343, precision=0.763052762088442, recall=0.7713410388525275, accuracy=0.9343109903824977)
+Evaluation metrics
+micro_f1  : 0.7672
+macro_f1  : 0.4231
+weights_f1: 0.7558
+precision : 0.7631
+recall    : 0.7713
+accuracy  : 0.9343
+iter: 02000, F1 self-PCMA-science: 0.42311, best F1 for self-PCMA-science: 0.42311
+namespace(micro_f1=0.767174515235457, macro_f1=0.4231137619006487, weights_f1=0.7557868507615343, precision=0.763052762088442, recall=0.7713410388525275, accuracy=0.9343109903824977)
+Evaluation metrics
+micro_f1  : 0.7672
+macro_f1  : 0.4231
+weights_f1: 0.7558
+precision : 0.7631
+recall    : 0.7713
+accuracy  : 0.9343
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 02500, Macro F1: 0.51987
+namespace(micro_f1=0.7999168341534411, macro_f1=0.5198659203610786, weights_f1=0.7954546278320463, precision=0.7962196467991169, recall=0.8036485169196491, accuracy=0.9446993612803759)
+Evaluation metrics
+micro_f1  : 0.7999
+macro_f1  : 0.5199
+weights_f1: 0.7955
+precision : 0.7962
+recall    : 0.8036
+accuracy  : 0.9447
+iter: 02500, F1 self-PCMA-science: 0.51987, best F1 for self-PCMA-science: 0.51987
+namespace(micro_f1=0.7999168341534411, macro_f1=0.5198659203610786, weights_f1=0.7954546278320463, precision=0.7962196467991169, recall=0.8036485169196491, accuracy=0.9446993612803759)
+Evaluation metrics
+micro_f1  : 0.7999
+macro_f1  : 0.5199
+weights_f1: 0.7955
+precision : 0.7962
+recall    : 0.8036
+accuracy  : 0.9447
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 03000, Macro F1: 0.58231
+namespace(micro_f1=0.808649976123883, macro_f1=0.5823085573002127, weights_f1=0.809608407354164, precision=0.792591602032629, recall=0.8253725107923687, accuracy=0.9460942662065928)
+Evaluation metrics
+micro_f1  : 0.8086
+macro_f1  : 0.5823
+weights_f1: 0.8096
+precision : 0.7926
+recall    : 0.8254
+accuracy  : 0.9461
+iter: 03000, F1 self-PCMA-science: 0.58231, best F1 for self-PCMA-science: 0.58231
+namespace(micro_f1=0.808649976123883, macro_f1=0.5823085573002127, weights_f1=0.809608407354164, precision=0.792591602032629, recall=0.8253725107923687, accuracy=0.9460942662065928)
+Evaluation metrics
+micro_f1  : 0.8086
+macro_f1  : 0.5823
+weights_f1: 0.8096
+precision : 0.7926
+recall    : 0.8254
+accuracy  : 0.9461
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 03500, Macro F1: 0.58395
+namespace(micro_f1=0.8240549828178695, macro_f1=0.5839532046555004, weights_f1=0.8215069810607261, precision=0.8135432216040168, recall=0.8348419440189389, accuracy=0.9508112473386683)
+Evaluation metrics
+micro_f1  : 0.8241
+macro_f1  : 0.5840
+weights_f1: 0.8215
+precision : 0.8135
+recall    : 0.8348
+accuracy  : 0.9508
+iter: 03500, F1 self-PCMA-science: 0.58395, best F1 for self-PCMA-science: 0.58395
+namespace(micro_f1=0.8240549828178695, macro_f1=0.5839532046555004, weights_f1=0.8215069810607261, precision=0.8135432216040168, recall=0.8348419440189389, accuracy=0.9508112473386683)
+Evaluation metrics
+micro_f1  : 0.8241
+macro_f1  : 0.5840
+weights_f1: 0.8215
+precision : 0.8135
+recall    : 0.8348
+accuracy  : 0.9508
+iter: 04000, F1 self-PCMA-science: 0.56423, best F1 for self-PCMA-science: 0.58395
+namespace(micro_f1=0.8127283597953897, macro_f1=0.5642264594026863, weights_f1=0.8190516054914414, precision=0.7770579268292683, recall=0.8518312212783735, accuracy=0.9452132736216137)
+Evaluation metrics
+micro_f1  : 0.8127
+macro_f1  : 0.5642
+weights_f1: 0.8191
+precision : 0.7771
+recall    : 0.8518
+accuracy  : 0.9452
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 04500, Macro F1: 0.61331
+namespace(micro_f1=0.8137649063032367, macro_f1=0.6133074056189527, weights_f1=0.8142502071808577, precision=0.79677074993328, recall=0.8314997911154435, accuracy=0.9466448865722047)
+Evaluation metrics
+micro_f1  : 0.8138
+macro_f1  : 0.6133
+weights_f1: 0.8143
+precision : 0.7968
+recall    : 0.8315
+accuracy  : 0.9466
+iter: 04500, F1 self-PCMA-science: 0.61331, best F1 for self-PCMA-science: 0.61331
+namespace(micro_f1=0.8137649063032367, macro_f1=0.6133074056189527, weights_f1=0.8142502071808577, precision=0.79677074993328, recall=0.8314997911154435, accuracy=0.9466448865722047)
+Evaluation metrics
+micro_f1  : 0.8138
+macro_f1  : 0.6133
+weights_f1: 0.8143
+precision : 0.7968
+recall    : 0.8315
+accuracy  : 0.9466
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 05000, Macro F1: 0.63472
+namespace(micro_f1=0.8115384615384614, macro_f1=0.6347160760970212, weights_f1=0.8133836901217886, precision=0.8006504946469711, recall=0.8227266397437683, accuracy=0.9482783936568534)
+Evaluation metrics
+micro_f1  : 0.8115
+macro_f1  : 0.6347
+weights_f1: 0.8134
+precision : 0.8007
+recall    : 0.8227
+accuracy  : 0.9483
+iter: 05000, F1 self-PCMA-science: 0.63472, best F1 for self-PCMA-science: 0.63472
+namespace(micro_f1=0.8115384615384614, macro_f1=0.6347160760970212, weights_f1=0.8133836901217886, precision=0.8006504946469711, recall=0.8227266397437683, accuracy=0.9482783936568534)
+Evaluation metrics
+micro_f1  : 0.8115
+macro_f1  : 0.6347
+weights_f1: 0.8134
+precision : 0.8007
+recall    : 0.8227
+accuracy  : 0.9483
+iter: 05500, F1 self-PCMA-science: 0.57301, best F1 for self-PCMA-science: 0.63472
+namespace(micro_f1=0.8149277475805383, macro_f1=0.5730104603151416, weights_f1=0.8207205013545052, precision=0.7776091081593928, recall=0.8560089124077427, accuracy=0.9477277732912415)
+Evaluation metrics
+micro_f1  : 0.8149
+macro_f1  : 0.5730
+weights_f1: 0.8207
+precision : 0.7776
+recall    : 0.8560
+accuracy  : 0.9477
+iter: 06000, F1 self-PCMA-science: 0.54765, best F1 for self-PCMA-science: 0.63472
+namespace(micro_f1=0.8054616736514804, macro_f1=0.5476486691942164, weights_f1=0.806341009069812, precision=0.782608695652174, recall=0.8296894582927169, accuracy=0.9453233976947361)
+Evaluation metrics
+micro_f1  : 0.8055
+macro_f1  : 0.5476
+weights_f1: 0.8063
+precision : 0.7826
+recall    : 0.8297
+accuracy  : 0.9453
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 06500, Macro F1: 0.64754
+namespace(micro_f1=0.835928961748634, macro_f1=0.6475436966397277, weights_f1=0.8386941229995989, precision=0.8203512535192385, recall=0.8521097340203314, accuracy=0.9525915865208134)
+Evaluation metrics
+micro_f1  : 0.8359
+macro_f1  : 0.6475
+weights_f1: 0.8387
+precision : 0.8204
+recall    : 0.8521
+accuracy  : 0.9526
+iter: 06500, F1 self-PCMA-science: 0.64754, best F1 for self-PCMA-science: 0.64754
+namespace(micro_f1=0.835928961748634, macro_f1=0.6475436966397277, weights_f1=0.8386941229995989, precision=0.8203512535192385, recall=0.8521097340203314, accuracy=0.9525915865208134)
+Evaluation metrics
+micro_f1  : 0.8359
+macro_f1  : 0.6475
+weights_f1: 0.8387
+precision : 0.8204
+recall    : 0.8521
+accuracy  : 0.9526
+iter: 07000, F1 self-PCMA-science: 0.63078, best F1 for self-PCMA-science: 0.64754
+namespace(micro_f1=0.8158495634654129, macro_f1=0.6307768686222905, weights_f1=0.8212001329681016, precision=0.7879102347905046, recall=0.8458431973262777, accuracy=0.9449746714631818)
+Evaluation metrics
+micro_f1  : 0.8158
+macro_f1  : 0.6308
+weights_f1: 0.8212
+precision : 0.7879
+recall    : 0.8458
+accuracy  : 0.9450
+iter: 07500, F1 self-PCMA-science: 0.62391, best F1 for self-PCMA-science: 0.64754
+namespace(micro_f1=0.81570916810402, macro_f1=0.6239138235894957, weights_f1=0.8251111941387664, precision=0.7789180286329659, recall=0.8561481687787216, accuracy=0.9418911974157551)
+Evaluation metrics
+micro_f1  : 0.8157
+macro_f1  : 0.6239
+weights_f1: 0.8251
+precision : 0.7789
+recall    : 0.8561
+accuracy  : 0.9419
+iter: 08000, F1 self-PCMA-science: 0.64422, best F1 for self-PCMA-science: 0.64754
+namespace(micro_f1=0.8028226353643642, macro_f1=0.6442241215170298, weights_f1=0.8121057756769638, precision=0.7828503374354903, recall=0.8238406907116, accuracy=0.9457271859628514)
+Evaluation metrics
+micro_f1  : 0.8028
+macro_f1  : 0.6442
+weights_f1: 0.8121
+precision : 0.7829
+recall    : 0.8238
+accuracy  : 0.9457
+iter: 08500, F1 self-PCMA-science: 0.62761, best F1 for self-PCMA-science: 0.64754
+namespace(micro_f1=0.8324873096446701, macro_f1=0.6276096884585423, weights_f1=0.833470086348267, precision=0.8098498814853832, recall=0.8564266815206796, accuracy=0.9534542250936054)
+Evaluation metrics
+micro_f1  : 0.8325
+macro_f1  : 0.6276
+weights_f1: 0.8335
+precision : 0.8098
+recall    : 0.8564
+accuracy  : 0.9535
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 09000, Macro F1: 0.65943
+namespace(micro_f1=0.8125125594480541, macro_f1=0.6594297782664656, weights_f1=0.8102049644455591, precision=0.7827826535880227, recall=0.844589889987467, accuracy=0.9499853167902503)
+Evaluation metrics
+micro_f1  : 0.8125
+macro_f1  : 0.6594
+weights_f1: 0.8102
+precision : 0.7828
+recall    : 0.8446
+accuracy  : 0.9500
+iter: 09000, F1 self-PCMA-science: 0.65943, best F1 for self-PCMA-science: 0.65943
+namespace(micro_f1=0.8125125594480541, macro_f1=0.6594297782664656, weights_f1=0.8102049644455591, precision=0.7827826535880227, recall=0.844589889987467, accuracy=0.9499853167902503)
+Evaluation metrics
+micro_f1  : 0.8125
+macro_f1  : 0.6594
+weights_f1: 0.8102
+precision : 0.7828
+recall    : 0.8446
+accuracy  : 0.9500
+iter: 09500, F1 self-PCMA-science: 0.65194, best F1 for self-PCMA-science: 0.65943
+namespace(micro_f1=0.8406674740950074, macro_f1=0.6519357292508582, weights_f1=0.8435967944196504, precision=0.8133055591719828, recall=0.8699345495056399, accuracy=0.9537295352764115)
+Evaluation metrics
+micro_f1  : 0.8407
+macro_f1  : 0.6519
+weights_f1: 0.8436
+precision : 0.8133
+recall    : 0.8699
+accuracy  : 0.9537
+iter: 10000, F1 self-PCMA-science: 0.62524, best F1 for self-PCMA-science: 0.65943
+namespace(micro_f1=0.8126082900173265, macro_f1=0.6252366375526148, weights_f1=0.8231970435690616, precision=0.7791693290734825, recall=0.849046093858794, accuracy=0.9397621320020556)
+Evaluation metrics
+micro_f1  : 0.8126
+macro_f1  : 0.6252
+weights_f1: 0.8232
+precision : 0.7792
+recall    : 0.8490
+accuracy  : 0.9398
+iter: 10500, F1 self-PCMA-science: 0.65660, best F1 for self-PCMA-science: 0.65943
+namespace(micro_f1=0.8521392761486162, macro_f1=0.6565955946347162, weights_f1=0.8537384651956693, precision=0.8406504065040651, recall=0.8639465255535441, accuracy=0.9576389398722561)
+Evaluation metrics
+micro_f1  : 0.8521
+macro_f1  : 0.6566
+weights_f1: 0.8537
+precision : 0.8407
+recall    : 0.8639
+accuracy  : 0.9576
+iter: 11000, F1 self-PCMA-science: 0.62305, best F1 for self-PCMA-science: 0.65943
+namespace(micro_f1=0.8402171672050031, macro_f1=0.6230519108782723, weights_f1=0.8404218618042772, precision=0.8294436906377205, recall=0.8512741957944576, accuracy=0.9546288818735775)
+Evaluation metrics
+micro_f1  : 0.8402
+macro_f1  : 0.6231
+weights_f1: 0.8404
+precision : 0.8294
+recall    : 0.8513
+accuracy  : 0.9546
+iter: 11500, F1 self-PCMA-science: 0.63458, best F1 for self-PCMA-science: 0.65943
+namespace(micro_f1=0.7962700182444759, macro_f1=0.6345838250006696, weights_f1=0.7981988130022662, precision=0.7734313468101864, recall=0.8204985378081047, accuracy=0.9437633066588357)
+Evaluation metrics
+micro_f1  : 0.7963
+macro_f1  : 0.6346
+weights_f1: 0.7982
+precision : 0.7734
+recall    : 0.8205
+accuracy  : 0.9438
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           iter: 22500, F1 self-PCMA-science: 0.00000, best F1 for self-PCMA-science: 0.68537
+namespace(micro_f1=0.0, macro_f1=0.0, weights_f1=0.0, precision=0.0, recall=0.0, accuracy=0.6426473827178621)
+Evaluation metrics
+micro_f1  : 0.0000
+macro_f1  : 0.0000
+weights_f1: 0.0000
+precision : 0.0000
+recall    : 0.0000
+accuracy  : 0.6426
+iter: 23000, F1 self-PCMA-science: 0.00000, best F1 for self-PCMA-science: 0.68537
+namespace(micro_f1=0.0, macro_f1=0.0, weights_f1=0.0, precision=0.0, recall=0.0, accuracy=0.6426473827178621)
+Evaluation metrics
+micro_f1  : 0.0000
+macro_f1  : 0.0000
+weights_f1: 0.0000
+precision : 0.0000
+recall    : 0.0000
+accuracy  : 0.6426
+iter: 23500, F1 self-PCMA-science: 0.00000, best F1 for self-PCMA-science: 0.68537
+namespace(micro_f1=0.0, macro_f1=0.0, weights_f1=0.0, precision=0.0, recall=0.0, accuracy=0.6426473827178621)
+Evaluation metrics
+micro_f1  : 0.0000
+macro_f1  : 0.0000
+weights_f1: 0.0000
+precision : 0.0000
+recall    : 0.0000
+accuracy  : 0.6426
+iter: 24000, F1 self-PCMA-science: 0.00000, best F1 for self-PCMA-science: 0.68537
+namespace(micro_f1=0.0, macro_f1=0.0, weights_f1=0.0, precision=0.0, recall=0.0, accuracy=0.6426473827178621)
+Evaluation metrics
+micro_f1  : 0.0000
+macro_f1  : 0.0000
+weights_f1: 0.0000
+precision : 0.0000
+recall    : 0.0000
+accuracy  : 0.6426
+Number of selected pseudo-labeled samples:  266
+Selected features for DANN self-training 266
+Training started with cuda
+iter: 00500, F1 self-PCMA-science: 0.18359, best F1 for self-PCMA-science: 0.68537
+namespace(micro_f1=0.647770972795898, macro_f1=0.18358565617082775, weights_f1=0.592465360213916, precision=0.6628771316134674, recall=0.633337975212366, accuracy=0.9149842155495191)
+Evaluation metrics
+micro_f1  : 0.6478
+macro_f1  : 0.1836
+weights_f1: 0.5925
+precision : 0.6629
+recall    : 0.6333
+accuracy  : 0.9150
+iter: 01000, F1 self-PCMA-science: 0.43345, best F1 for self-PCMA-science: 0.68537
+namespace(micro_f1=0.8205197072450146, macro_f1=0.43345484618865754, weights_f1=0.8182863991082798, precision=0.7922717842323651, recall=0.8508564266815207, accuracy=0.9509580794361647)
+Evaluation metrics
+micro_f1  : 0.8205
+macro_f1  : 0.4335
+weights_f1: 0.8183
+precision : 0.7923
+recall    : 0.8509
+accuracy  : 0.9510
+iter: 01500, F1 self-PCMA-science: 0.56137, best F1 for self-PCMA-science: 0.68537
+namespace(micro_f1=0.8482749252920403, macro_f1=0.5613721424473399, weights_f1=0.8496468687934071, precision=0.8279199257589819, recall=0.869656036763682, accuracy=0.955326334336686)
+Evaluation metrics
+micro_f1  : 0.8483
+macro_f1  : 0.5614
+weights_f1: 0.8496
+precision : 0.8279
+recall    : 0.8697
+accuracy  : 0.9553
+iter: 02000, F1 self-PCMA-science: 0.64339, best F1 for self-PCMA-science: 0.68537
+namespace(micro_f1=0.8650969529085872, macro_f1=0.6433914088441083, weights_f1=0.8652029879647798, precision=0.8604490976718556, recall=0.8697952931346609, accuracy=0.9603736876881286)
+Evaluation metrics
+micro_f1  : 0.8651
+macro_f1  : 0.6434
+weights_f1: 0.8652
+precision : 0.8604
+recall    : 0.8698
+accuracy  : 0.9604
+iter: 02500, F1 self-PCMA-science: 0.63613, best F1 for self-PCMA-science: 0.68537
+namespace(micro_f1=0.860596953759989, macro_f1=0.6361336100296601, weights_f1=0.8625017503522441, precision=0.8445040214477212, recall=0.8773151371675254, accuracy=0.958776888627854)
+Evaluation metrics
+micro_f1  : 0.8606
+macro_f1  : 0.6361
+weights_f1: 0.8625
+precision : 0.8445
+recall    : 0.8773
+accuracy  : 0.9588
+iter: 03000, F1 self-PCMA-science: 0.67449, best F1 for self-PCMA-science: 0.68537
+namespace(micro_f1=0.8685917127448972, macro_f1=0.6744917138583357, weights_f1=0.8695504178738938, precision=0.8519014461703267, recall=0.8859490321682217, accuracy=0.9620439027971515)
+Evaluation metrics
+micro_f1  : 0.8686
+macro_f1  : 0.6745
+weights_f1: 0.8696
+precision : 0.8519
+recall    : 0.8859
+accuracy  : 0.9620
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 03500, Macro F1: 0.69875
+namespace(micro_f1=0.8662038927453382, macro_f1=0.6987497348401666, weights_f1=0.8679294356645064, precision=0.8470650871822175, recall=0.8862275449101796, accuracy=0.9593642170178401)
+Evaluation metrics
+micro_f1  : 0.8662
+macro_f1  : 0.6987
+weights_f1: 0.8679
+precision : 0.8471
+recall    : 0.8862
+accuracy  : 0.9594
+iter: 03500, F1 self-PCMA-science: 0.69875, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8662038927453382, macro_f1=0.6987497348401666, weights_f1=0.8679294356645064, precision=0.8470650871822175, recall=0.8862275449101796, accuracy=0.9593642170178401)
+Evaluation metrics
+micro_f1  : 0.8662
+macro_f1  : 0.6987
+weights_f1: 0.8679
+precision : 0.8471
+recall    : 0.8862
+accuracy  : 0.9594
+iter: 04000, F1 self-PCMA-science: 0.65825, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8570261437908497, macro_f1=0.6582514942260109, weights_f1=0.859907479020184, precision=0.8384174770214466, recall=0.8764795989416516, accuracy=0.9573269216650759)
+Evaluation metrics
+micro_f1  : 0.8570
+macro_f1  : 0.6583
+weights_f1: 0.8599
+precision : 0.8384
+recall    : 0.8765
+accuracy  : 0.9573
+iter: 04500, F1 self-PCMA-science: 0.68049, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8544333807491701, macro_f1=0.6804904656724132, weights_f1=0.8577335521587648, precision=0.8318385650224215, recall=0.8782899317643782, accuracy=0.955326334336686)
+Evaluation metrics
+micro_f1  : 0.8544
+macro_f1  : 0.6805
+weights_f1: 0.8577
+precision : 0.8318
+recall    : 0.8783
+accuracy  : 0.9553
+iter: 05000, F1 self-PCMA-science: 0.61104, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8071623510617053, macro_f1=0.6110436239464194, weights_f1=0.8113331636481893, precision=0.7731446059678654, recall=0.844311377245509, accuracy=0.943029146171353)
+Evaluation metrics
+micro_f1  : 0.8072
+macro_f1  : 0.6110
+weights_f1: 0.8113
+precision : 0.7731
+recall    : 0.8443
+accuracy  : 0.9430
+iter: 05500, F1 self-PCMA-science: 0.64471, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8266394835202175, macro_f1=0.644708369187366, weights_f1=0.8297872252056778, precision=0.8072736925935758, recall=0.8469572482941095, accuracy=0.9487923059980912)
+Evaluation metrics
+micro_f1  : 0.8266
+macro_f1  : 0.6447
+weights_f1: 0.8298
+precision : 0.8073
+recall    : 0.8470
+accuracy  : 0.9488
+iter: 06000, F1 self-PCMA-science: 0.64695, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.838745033566242, macro_f1=0.6469474362308547, weights_f1=0.8404223386707304, precision=0.825401105568289, recall=0.8525275031332683, accuracy=0.9552529182879378)
+Evaluation metrics
+micro_f1  : 0.8387
+macro_f1  : 0.6469
+weights_f1: 0.8404
+precision : 0.8254
+recall    : 0.8525
+accuracy  : 0.9553
+iter: 06500, F1 self-PCMA-science: 0.67649, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8593621116304647, macro_f1=0.6764890507310701, weights_f1=0.8607334367321613, precision=0.8485136419166553, recall=0.8704915749895558, accuracy=0.9589787827619117)
+Evaluation metrics
+micro_f1  : 0.8594
+macro_f1  : 0.6765
+weights_f1: 0.8607
+precision : 0.8485
+recall    : 0.8705
+accuracy  : 0.9590
+iter: 07000, F1 self-PCMA-science: 0.65344, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8464149636300659, macro_f1=0.6534368906453957, weights_f1=0.8461862156990863, precision=0.8421560518334712, recall=0.8507171703105417, accuracy=0.9572718596285148)
+Evaluation metrics
+micro_f1  : 0.8464
+macro_f1  : 0.6534
+weights_f1: 0.8462
+precision : 0.8422
+recall    : 0.8507
+accuracy  : 0.9573
+iter: 07500, F1 self-PCMA-science: 0.60553, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.7860492767025564, macro_f1=0.6055302426000193, weights_f1=0.7905168525852804, precision=0.7476752953003267, recall=0.8285754073248851, accuracy=0.9424601717935541)
+Evaluation metrics
+micro_f1  : 0.7860
+macro_f1  : 0.6055
+weights_f1: 0.7905
+precision : 0.7477
+recall    : 0.8286
+accuracy  : 0.9425
+iter: 08000, F1 self-PCMA-science: 0.66242, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.832150655021834, macro_f1=0.6624244026470849, weights_f1=0.8350292698042667, precision=0.8157859531772576, recall=0.849185350229773, accuracy=0.9523162763380075)
+Evaluation metrics
+micro_f1  : 0.8322
+macro_f1  : 0.6624
+weights_f1: 0.8350
+precision : 0.8158
+recall    : 0.8492
+accuracy  : 0.9523
+iter: 08500, F1 self-PCMA-science: 0.66664, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8417261203851216, macro_f1=0.6666410467258468, weights_f1=0.8412778876778206, precision=0.8373759647188533, recall=0.8461217100682357, accuracy=0.9560972028485427)
+Evaluation metrics
+micro_f1  : 0.8417
+macro_f1  : 0.6666
+weights_f1: 0.8413
+precision : 0.8374
+recall    : 0.8461
+accuracy  : 0.9561
+iter: 09000, F1 self-PCMA-science: 0.66846, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8267684339648358, macro_f1=0.6684642730516052, weights_f1=0.8287941885496432, precision=0.8095555852128653, recall=0.8447291463584459, accuracy=0.9515086998017767)
+Evaluation metrics
+micro_f1  : 0.8268
+macro_f1  : 0.6685
+weights_f1: 0.8288
+precision : 0.8096
+recall    : 0.8447
+accuracy  : 0.9515
+iter: 09500, F1 self-PCMA-science: 0.68367, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8536669661989355, macro_f1=0.683674727189902, weights_f1=0.8530828770143105, precision=0.8475157836947571, recall=0.8599080907951538, accuracy=0.9568864253725865)
+Evaluation metrics
+micro_f1  : 0.8537
+macro_f1  : 0.6837
+weights_f1: 0.8531
+precision : 0.8475
+recall    : 0.8599
+accuracy  : 0.9569
+iter: 10000, F1 self-PCMA-science: 0.68611, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8514715947980834, macro_f1=0.6861149748762739, weights_f1=0.852170364685814, precision=0.8372593888814107, recall=0.8661746274892076, accuracy=0.9570883195066442)
+Evaluation metrics
+micro_f1  : 0.8515
+macro_f1  : 0.6861
+weights_f1: 0.8522
+precision : 0.8373
+recall    : 0.8662
+accuracy  : 0.9571
+iter: 10500, F1 self-PCMA-science: 0.64063, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8423645320197044, macro_f1=0.6406259251511736, weights_f1=0.8420690504045656, precision=0.8279757901815736, recall=0.8572622197465534, accuracy=0.9554915204463695)
+Evaluation metrics
+micro_f1  : 0.8424
+macro_f1  : 0.6406
+weights_f1: 0.8421
+precision : 0.8280
+recall    : 0.8573
+accuracy  : 0.9555
+iter: 11000, F1 self-PCMA-science: 0.68449, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8465485393719641, macro_f1=0.684491507045201, weights_f1=0.8481448358370722, precision=0.8320333512641205, recall=0.8615791672469015, accuracy=0.9569598414213347)
+Evaluation metrics
+micro_f1  : 0.8465
+macro_f1  : 0.6845
+weights_f1: 0.8481
+precision : 0.8320
+recall    : 0.8616
+accuracy  : 0.9570
+iter: 11500, F1 self-PCMA-science: 0.69826, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8622313203684748, macro_f1=0.6982639386296607, weights_f1=0.8621175331592081, precision=0.8453304789938453, recall=0.8798217518451469, accuracy=0.9591806768959694)
+Evaluation metrics
+micro_f1  : 0.8622
+macro_f1  : 0.6983
+weights_f1: 0.8621
+precision : 0.8453
+recall    : 0.8798
+accuracy  : 0.9592
+iter: 12000, F1 self-PCMA-science: 0.67184, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.853320657340758, macro_f1=0.6718377456990219, weights_f1=0.8554283322319336, precision=0.8327369118621604, recall=0.8749477788608829, accuracy=0.9582262682622421)
+Evaluation metrics
+micro_f1  : 0.8533
+macro_f1  : 0.6718
+weights_f1: 0.8554
+precision : 0.8327
+recall    : 0.8749
+accuracy  : 0.9582
+iter: 12500, F1 self-PCMA-science: 0.68853, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8489198796828, macro_f1=0.6885283930938378, weights_f1=0.8471425029429611, precision=0.8337585604941588, recall=0.8646428074084389, accuracy=0.9556567065560532)
+Evaluation metrics
+micro_f1  : 0.8489
+macro_f1  : 0.6885
+weights_f1: 0.8471
+precision : 0.8338
+recall    : 0.8646
+accuracy  : 0.9557
+iter: 13000, F1 self-PCMA-science: 0.64928, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8254483925549915, macro_f1=0.6492796406782458, weights_f1=0.8271260818040124, precision=0.803002370292336, recall=0.849185350229773, accuracy=0.9512700976433448)
+Evaluation metrics
+micro_f1  : 0.8254
+macro_f1  : 0.6493
+weights_f1: 0.8271
+precision : 0.8030
+recall    : 0.8492
+accuracy  : 0.9513
+iter: 13500, F1 self-PCMA-science: 0.66539, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8488547524345084, macro_f1=0.6653934662255289, weights_f1=0.8500601421068007, precision=0.8362383461694366, recall=0.8618576799888595, accuracy=0.9557851846413626)
+Evaluation metrics
+micro_f1  : 0.8489
+macro_f1  : 0.6654
+weights_f1: 0.8501
+precision : 0.8362
+recall    : 0.8619
+accuracy  : 0.9558
+iter: 14000, F1 self-PCMA-science: 0.63379, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8453141091658084, macro_f1=0.6337945062880156, weights_f1=0.846156943648236, precision=0.8336944745395449, recall=0.8572622197465534, accuracy=0.9564275750679099)
+Evaluation metrics
+micro_f1  : 0.8453
+macro_f1  : 0.6338
+weights_f1: 0.8462
+precision : 0.8337
+recall    : 0.8573
+accuracy  : 0.9564
+Number of selected pseudo-labeled samples:  456
+Selected features for DANN self-training 456
+Training started with cuda
+iter: 00500, F1 self-PCMA-science: 0.32612, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.7837323177366703, macro_f1=0.3261187167879376, weights_f1=0.7574019741331177, precision=0.7659178519207763, recall=0.8023952095808383, accuracy=0.9405697085382865)
+Evaluation metrics
+micro_f1  : 0.7837
+macro_f1  : 0.3261
+weights_f1: 0.7574
+precision : 0.7659
+recall    : 0.8024
+accuracy  : 0.9406
+iter: 01000, F1 self-PCMA-science: 0.50795, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8418501312866087, macro_f1=0.5079469155540894, weights_f1=0.8452815506683248, precision=0.8149113660062565, recall=0.8706308313605348, accuracy=0.9565927611775934)
+Evaluation metrics
+micro_f1  : 0.8419
+macro_f1  : 0.5079
+weights_f1: 0.8453
+precision : 0.8149
+recall    : 0.8706
+accuracy  : 0.9566
+iter: 01500, F1 self-PCMA-science: 0.59524, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8651074245308675, macro_f1=0.595243656519411, weights_f1=0.8654984862250572, precision=0.8452238607679022, recall=0.8859490321682217, accuracy=0.9606489978709346)
+Evaluation metrics
+micro_f1  : 0.8651
+macro_f1  : 0.5952
+weights_f1: 0.8655
+precision : 0.8452
+recall    : 0.8859
+accuracy  : 0.9606
+iter: 02000, F1 self-PCMA-science: 0.62042, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8616638370118845, macro_f1=0.6204179253140584, weights_f1=0.8630565587028327, precision=0.8409331919406151, recall=0.8834424174906002, accuracy=0.9594743410909625)
+Evaluation metrics
+micro_f1  : 0.8617
+macro_f1  : 0.6204
+weights_f1: 0.8631
+precision : 0.8409
+recall    : 0.8834
+accuracy  : 0.9595
+iter: 02500, F1 self-PCMA-science: 0.65779, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8701147056803352, macro_f1=0.6577857795517348, weights_f1=0.87029526295713, precision=0.8584982380048793, recall=0.8820498537808105, accuracy=0.9626862932236987)
+Evaluation metrics
+micro_f1  : 0.8701
+macro_f1  : 0.6578
+weights_f1: 0.8703
+precision : 0.8585
+recall    : 0.8820
+accuracy  : 0.9627
+iter: 03000, F1 self-PCMA-science: 0.69232, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8648759483288907, macro_f1=0.692319672152388, weights_f1=0.8653892945430479, precision=0.8492617449664429, recall=0.8810750591839577, accuracy=0.9607040599074957)
+Evaluation metrics
+micro_f1  : 0.8649
+macro_f1  : 0.6923
+weights_f1: 0.8654
+precision : 0.8493
+recall    : 0.8811
+accuracy  : 0.9607
+iter: 03500, F1 self-PCMA-science: 0.68517, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8657322770668291, macro_f1=0.6851706238561777, weights_f1=0.868816361373449, precision=0.8425144965735372, recall=0.8902659796685698, accuracy=0.9574737537625725)
+Evaluation metrics
+micro_f1  : 0.8657
+macro_f1  : 0.6852
+weights_f1: 0.8688
+precision : 0.8425
+recall    : 0.8903
+accuracy  : 0.9575
+iter: 04000, F1 self-PCMA-science: 0.68401, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8654003826182017, macro_f1=0.6840080549938113, weights_f1=0.8661925681880219, precision=0.849496981891348, recall=0.8819105974098315, accuracy=0.9600433154687614)
+Evaluation metrics
+micro_f1  : 0.8654
+macro_f1  : 0.6840
+weights_f1: 0.8662
+precision : 0.8495
+recall    : 0.8819
+accuracy  : 0.9600
+iter: 04500, F1 self-PCMA-science: 0.68885, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8665244028360982, macro_f1=0.688852252612753, weights_f1=0.8676669929294313, precision=0.8567928124149197, recall=0.8764795989416516, accuracy=0.9605388737978122)
+Evaluation metrics
+micro_f1  : 0.8665
+macro_f1  : 0.6889
+weights_f1: 0.8677
+precision : 0.8568
+recall    : 0.8765
+accuracy  : 0.9605
+iter: 05000, F1 self-PCMA-science: 0.67409, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8599264204932552, macro_f1=0.6740884154678628, weights_f1=0.860556231780801, precision=0.8418033880218754, recall=0.8788469572482941, accuracy=0.9594559870787754)
+Evaluation metrics
+micro_f1  : 0.8599
+macro_f1  : 0.6741
+weights_f1: 0.8606
+precision : 0.8418
+recall    : 0.8788
+accuracy  : 0.9595
+iter: 05500, F1 self-PCMA-science: 0.66621, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8428725701943846, macro_f1=0.6662106353457359, weights_f1=0.8457565844689957, precision=0.8178127046496398, recall=0.869516780392703, accuracy=0.9542250936054621)
+Evaluation metrics
+micro_f1  : 0.8429
+macro_f1  : 0.6662
+weights_f1: 0.8458
+precision : 0.8178
+recall    : 0.8695
+accuracy  : 0.9542
+iter: 06000, F1 self-PCMA-science: 0.67387, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8464247020585048, macro_f1=0.6738651257730053, weights_f1=0.8500732581731453, precision=0.8237775141689733, recall=0.8703523186185768, accuracy=0.9552529182879378)
+Evaluation metrics
+micro_f1  : 0.8464
+macro_f1  : 0.6739
+weights_f1: 0.8501
+precision : 0.8238
+recall    : 0.8704
+accuracy  : 0.9553
+iter: 06500, F1 self-PCMA-science: 0.66898, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8428649237472767, macro_f1=0.6689780694490629, weights_f1=0.8450346812301083, precision=0.8245637405088584, recall=0.8619969363598384, accuracy=0.9551244402026283)
+Evaluation metrics
+micro_f1  : 0.8429
+macro_f1  : 0.6690
+weights_f1: 0.8450
+precision : 0.8246
+recall    : 0.8620
+accuracy  : 0.9551
+iter: 07000, F1 self-PCMA-science: 0.67356, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8566178972439605, macro_f1=0.6735551441820133, weights_f1=0.8600857391076558, precision=0.8376364120308757, recall=0.8764795989416516, accuracy=0.9569231333969606)
+Evaluation metrics
+micro_f1  : 0.8566
+macro_f1  : 0.6736
+weights_f1: 0.8601
+precision : 0.8376
+recall    : 0.8765
+accuracy  : 0.9569
+iter: 07500, F1 self-PCMA-science: 0.67249, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8498541285026121, macro_f1=0.6724930644414281, weights_f1=0.8542853625064448, precision=0.8286583752315427, recall=0.8721626514413034, accuracy=0.9545371118126422)
+Evaluation metrics
+micro_f1  : 0.8499
+macro_f1  : 0.6725
+weights_f1: 0.8543
+precision : 0.8287
+recall    : 0.8722
+accuracy  : 0.9545
+iter: 08000, F1 self-PCMA-science: 0.63432, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8415794802564968, macro_f1=0.6343247221796459, weights_f1=0.8443266170832356, precision=0.8166099030652345, recall=0.8681242166829133, accuracy=0.9539130753982821)
+Evaluation metrics
+micro_f1  : 0.8416
+macro_f1  : 0.6343
+weights_f1: 0.8443
+precision : 0.8166
+recall    : 0.8681
+accuracy  : 0.9539
+iter: 08500, F1 self-PCMA-science: 0.67912, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8567858382506075, macro_f1=0.6791178157341106, weights_f1=0.855652564088491, precision=0.854235880398671, recall=0.859351065311238, accuracy=0.9579693120916233)
+Evaluation metrics
+micro_f1  : 0.8568
+macro_f1  : 0.6791
+weights_f1: 0.8557
+precision : 0.8542
+recall    : 0.8594
+accuracy  : 0.9580
+iter: 09000, F1 self-PCMA-science: 0.65776, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8432595435542457, macro_f1=0.6577555509182593, weights_f1=0.8439412408915793, precision=0.8302294197031039, recall=0.8567051942626375, accuracy=0.9549041920563835)
+Evaluation metrics
+micro_f1  : 0.8433
+macro_f1  : 0.6578
+weights_f1: 0.8439
+precision : 0.8302
+recall    : 0.8567
+accuracy  : 0.9549
+iter: 09500, F1 self-PCMA-science: 0.63808, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8316992359185882, macro_f1=0.6380808620812227, weights_f1=0.8345047359687898, precision=0.8083596214511041, recall=0.8564266815206796, accuracy=0.9521143822039498)
+Evaluation metrics
+micro_f1  : 0.8317
+macro_f1  : 0.6381
+weights_f1: 0.8345
+precision : 0.8084
+recall    : 0.8564
+accuracy  : 0.9521
+iter: 10000, F1 self-PCMA-science: 0.69227, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8618647569205344, macro_f1=0.6922702796380813, weights_f1=0.8617596709091776, precision=0.8524724152022886, recall=0.8714663695864086, accuracy=0.9592540929447178)
+Evaluation metrics
+micro_f1  : 0.8619
+macro_f1  : 0.6923
+weights_f1: 0.8618
+precision : 0.8525
+recall    : 0.8715
+accuracy  : 0.9593
+iter: 10500, F1 self-PCMA-science: 0.62803, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8209045226130653, macro_f1=0.6280276726137733, weights_f1=0.8207476625445169, precision=0.7910640495867769, recall=0.8530845286171842, accuracy=0.9507745393142941)
+Evaluation metrics
+micro_f1  : 0.8209
+macro_f1  : 0.6280
+weights_f1: 0.8207
+precision : 0.7911
+recall    : 0.8531
+accuracy  : 0.9508
+Number of selected pseudo-labeled samples:  456
+Selected features for DANN self-training 456
+Training started with cuda
+iter: 00500, F1 self-PCMA-science: 0.32968, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.7726784755770263, macro_f1=0.3296800840086936, weights_f1=0.7517862692539456, precision=0.7455651948724589, recall=0.8018381840969224, accuracy=0.9450297334997431)
+Evaluation metrics
+micro_f1  : 0.7727
+macro_f1  : 0.3297
+weights_f1: 0.7518
+precision : 0.7456
+recall    : 0.8018
+accuracy  : 0.9450
+iter: 01000, F1 self-PCMA-science: 0.54819, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8596132897603486, macro_f1=0.5481864347099088, weights_f1=0.8596442322298409, precision=0.8409484481150926, recall=0.8791254699902521, accuracy=0.9598597753468908)
+Evaluation metrics
+micro_f1  : 0.8596
+macro_f1  : 0.5482
+weights_f1: 0.8596
+precision : 0.8409
+recall    : 0.8791
+accuracy  : 0.9599
+iter: 01500, F1 self-PCMA-science: 0.60553, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8609549610565526, macro_f1=0.6055299461875709, weights_f1=0.8639247375136857, precision=0.8380801687763713, recall=0.8851134939423478, accuracy=0.9575288157991337)
+Evaluation metrics
+micro_f1  : 0.8610
+macro_f1  : 0.6055
+weights_f1: 0.8639
+precision : 0.8381
+recall    : 0.8851
+accuracy  : 0.9575
+iter: 02000, F1 self-PCMA-science: 0.68328, best F1 for self-PCMA-science: 0.69875
+namespace(micro_f1=0.8707845953895617, macro_f1=0.6832815341083249, weights_f1=0.8716046405082439, precision=0.8557407905350901, recall=0.8863668012811586, accuracy=0.9617318845899714)
+Evaluation metrics
+micro_f1  : 0.8708
+macro_f1  : 0.6833
+weights_f1: 0.8716
+precision : 0.8557
+recall    : 0.8864
+accuracy  : 0.9617
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 02500, Macro F1: 0.71224
+namespace(micro_f1=0.8702342047930284, macro_f1=0.7122433398098645, weights_f1=0.8714362539956432, precision=0.8513387504995338, recall=0.8899874669266119, accuracy=0.9606306438587475)
+Evaluation metrics
+micro_f1  : 0.8702
+macro_f1  : 0.7122
+weights_f1: 0.8714
+precision : 0.8513
+recall    : 0.8900
+accuracy  : 0.9606
+iter: 02500, F1 self-PCMA-science: 0.71224, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8702342047930284, macro_f1=0.7122433398098645, weights_f1=0.8714362539956432, precision=0.8513387504995338, recall=0.8899874669266119, accuracy=0.9606306438587475)
+Evaluation metrics
+micro_f1  : 0.8702
+macro_f1  : 0.7122
+weights_f1: 0.8714
+precision : 0.8513
+recall    : 0.8900
+accuracy  : 0.9606
+iter: 03000, F1 self-PCMA-science: 0.70354, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8698003327787022, macro_f1=0.7035409709899981, weights_f1=0.8702006580999695, precision=0.8660775921579456, recall=0.8735552151510931, accuracy=0.9605939358343734)
+Evaluation metrics
+micro_f1  : 0.8698
+macro_f1  : 0.7035
+weights_f1: 0.8702
+precision : 0.8661
+recall    : 0.8736
+accuracy  : 0.9606
+iter: 03500, F1 self-PCMA-science: 0.70979, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8652080888950239, macro_f1=0.709788774733156, weights_f1=0.8660359718487471, precision=0.8576902025177887, recall=0.8728589332961983, accuracy=0.9597680052859555)
+Evaluation metrics
+micro_f1  : 0.8652
+macro_f1  : 0.7098
+weights_f1: 0.8660
+precision : 0.8577
+recall    : 0.8729
+accuracy  : 0.9598
+iter: 04000, F1 self-PCMA-science: 0.68812, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8519155375197744, macro_f1=0.688122495160112, weights_f1=0.8553233795963241, precision=0.8416689317749388, recall=0.8624147054727754, accuracy=0.9553630423610602)
+Evaluation metrics
+micro_f1  : 0.8519
+macro_f1  : 0.6881
+weights_f1: 0.8553
+precision : 0.8417
+recall    : 0.8624
+accuracy  : 0.9554
+iter: 04500, F1 self-PCMA-science: 0.67335, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8581574813904255, macro_f1=0.6733489984523473, weights_f1=0.8595968957417153, precision=0.8419994639506835, recall=0.8749477788608829, accuracy=0.9582813302988034)
+Evaluation metrics
+micro_f1  : 0.8582
+macro_f1  : 0.6733
+weights_f1: 0.8596
+precision : 0.8420
+recall    : 0.8749
+accuracy  : 0.9583
+iter: 05000, F1 self-PCMA-science: 0.70904, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8674901740595171, macro_f1=0.7090395166374975, weights_f1=0.8655283827332972, precision=0.8744870524975237, recall=0.8606043726500487, accuracy=0.9612730342852948)
+Evaluation metrics
+micro_f1  : 0.8675
+macro_f1  : 0.7090
+weights_f1: 0.8655
+precision : 0.8745
+recall    : 0.8606
+accuracy  : 0.9613
+iter: 05500, F1 self-PCMA-science: 0.67422, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8451691146745722, macro_f1=0.67421631588504, weights_f1=0.8496065912723437, precision=0.8186920767523822, recall=0.8734159587801142, accuracy=0.9529586667645548)
+Evaluation metrics
+micro_f1  : 0.8452
+macro_f1  : 0.6742
+weights_f1: 0.8496
+precision : 0.8187
+recall    : 0.8734
+accuracy  : 0.9530
+iter: 06000, F1 self-PCMA-science: 0.67346, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8402773103587534, macro_f1=0.6734606589549412, weights_f1=0.8426853056722295, precision=0.8131839499739447, recall=0.869238267650745, accuracy=0.9531238528742383)
+Evaluation metrics
+micro_f1  : 0.8403
+macro_f1  : 0.6735
+weights_f1: 0.8427
+precision : 0.8132
+recall    : 0.8692
+accuracy  : 0.9531
+iter: 06500, F1 self-PCMA-science: 0.69185, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.841968201754386, macro_f1=0.6918525726890467, weights_f1=0.8426375752649279, precision=0.8289029820537039, recall=0.8554518869238268, accuracy=0.9545187578004551)
+Evaluation metrics
+micro_f1  : 0.8420
+macro_f1  : 0.6919
+weights_f1: 0.8426
+precision : 0.8289
+recall    : 0.8555
+accuracy  : 0.9545
+iter: 07000, F1 self-PCMA-science: 0.64271, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8410975527539944, macro_f1=0.6427110284837587, weights_f1=0.8437749072774451, precision=0.8152117093570308, recall=0.8686812421668292, accuracy=0.955326334336686)
+Evaluation metrics
+micro_f1  : 0.8411
+macro_f1  : 0.6427
+weights_f1: 0.8438
+precision : 0.8152
+recall    : 0.8687
+accuracy  : 0.9553
+iter: 07500, F1 self-PCMA-science: 0.60086, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8350357166700048, macro_f1=0.6008557646929853, weights_f1=0.8371610091415496, precision=0.802000512952039, recall=0.8709093441024927, accuracy=0.9520042581308275)
+Evaluation metrics
+micro_f1  : 0.8350
+macro_f1  : 0.6009
+weights_f1: 0.8372
+precision : 0.8020
+recall    : 0.8709
+accuracy  : 0.9520
+iter: 08000, F1 self-PCMA-science: 0.65300, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8414235069539132, macro_f1=0.6530033972627158, weights_f1=0.843077479654818, precision=0.8242286630158943, recall=0.859351065311238, accuracy=0.9547940679832612)
+Evaluation metrics
+micro_f1  : 0.8414
+macro_f1  : 0.6530
+weights_f1: 0.8431
+precision : 0.8242
+recall    : 0.8594
+accuracy  : 0.9548
+iter: 08500, F1 self-PCMA-science: 0.67335, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.849804271684637, macro_f1=0.673348745199701, weights_f1=0.8489495237209642, precision=0.8383468834688347, recall=0.8615791672469015, accuracy=0.9563174509947875)
+Evaluation metrics
+micro_f1  : 0.8498
+macro_f1  : 0.6733
+weights_f1: 0.8489
+precision : 0.8383
+recall    : 0.8616
+accuracy  : 0.9563
+iter: 09000, F1 self-PCMA-science: 0.70201, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8559693318729462, macro_f1=0.70201130689167, weights_f1=0.8565968809484369, precision=0.8417934563080651, recall=0.8706308313605348, accuracy=0.9573636296894501)
+Evaluation metrics
+micro_f1  : 0.8560
+macro_f1  : 0.7020
+weights_f1: 0.8566
+precision : 0.8418
+recall    : 0.8706
+accuracy  : 0.9574
+iter: 09500, F1 self-PCMA-science: 0.65400, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8270030868339819, macro_f1=0.6540011517102425, weights_f1=0.8313435454117227, precision=0.7980831498510556, recall=0.8580977579724273, accuracy=0.9494714044490126)
+Evaluation metrics
+micro_f1  : 0.8270
+macro_f1  : 0.6540
+weights_f1: 0.8313
+precision : 0.7981
+recall    : 0.8581
+accuracy  : 0.9495
+iter: 10000, F1 self-PCMA-science: 0.65670, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8423658872077029, macro_f1=0.6567012988939023, weights_f1=0.842978068613698, precision=0.8321782850930833, recall=0.8528060158752263, accuracy=0.9552896263123118)
+Evaluation metrics
+micro_f1  : 0.8424
+macro_f1  : 0.6567
+weights_f1: 0.8430
+precision : 0.8322
+recall    : 0.8528
+accuracy  : 0.9553
+iter: 10500, F1 self-PCMA-science: 0.70444, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8554929381479163, macro_f1=0.704436757606018, weights_f1=0.8544902006646174, precision=0.8548387096774194, recall=0.8561481687787216, accuracy=0.9589420747375377)
+Evaluation metrics
+micro_f1  : 0.8555
+macro_f1  : 0.7044
+weights_f1: 0.8545
+precision : 0.8548
+recall    : 0.8561
+accuracy  : 0.9589
+iter: 11000, F1 self-PCMA-science: 0.67666, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.839342487992965, macro_f1=0.676662465396595, weights_f1=0.8408857679548538, precision=0.8161010260457774, recall=0.8639465255535441, accuracy=0.9551611482270024)
+Evaluation metrics
+micro_f1  : 0.8393
+macro_f1  : 0.6767
+weights_f1: 0.8409
+precision : 0.8161
+recall    : 0.8639
+accuracy  : 0.9552
+iter: 11500, F1 self-PCMA-science: 0.66331, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8271638174720689, macro_f1=0.6633054425877818, weights_f1=0.832066265463399, precision=0.8004428813338543, recall=0.8557303996657847, accuracy=0.9492144482783936)
+Evaluation metrics
+micro_f1  : 0.8272
+macro_f1  : 0.6633
+weights_f1: 0.8321
+precision : 0.8004
+recall    : 0.8557
+accuracy  : 0.9492
+iter: 12000, F1 self-PCMA-science: 0.68311, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8412260020208825, macro_f1=0.6831077919322422, weights_f1=0.8451637880126682, precision=0.8147181628392485, recall=0.869516780392703, accuracy=0.9522061522648851)
+Evaluation metrics
+micro_f1  : 0.8412
+macro_f1  : 0.6831
+weights_f1: 0.8452
+precision : 0.8147
+recall    : 0.8695
+accuracy  : 0.9522
+iter: 12500, F1 self-PCMA-science: 0.68615, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8624494551435816, macro_f1=0.6861531250391438, weights_f1=0.8623710973195158, precision=0.8491228070175438, recall=0.8762010861996936, accuracy=0.9598597753468908)
+Evaluation metrics
+micro_f1  : 0.8624
+macro_f1  : 0.6862
+weights_f1: 0.8624
+precision : 0.8491
+recall    : 0.8762
+accuracy  : 0.9599
+iter: 13000, F1 self-PCMA-science: 0.68712, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8493633161744785, macro_f1=0.6871183481567789, weights_f1=0.8508414250077039, precision=0.8268495318475537, recall=0.8731374460381562, accuracy=0.9543902797151458)
+Evaluation metrics
+micro_f1  : 0.8494
+macro_f1  : 0.6871
+weights_f1: 0.8508
+precision : 0.8268
+recall    : 0.8731
+accuracy  : 0.9544
+Number of selected pseudo-labeled samples:  570
+Selected features for DANN self-training 570
+Training started with cuda
+iter: 00500, F1 self-PCMA-science: 0.29518, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.774097807757167, macro_f1=0.29518141688247157, weights_f1=0.7470117831942467, precision=0.750654107796965, recall=0.7990530566773429, accuracy=0.9440019088172674)
+Evaluation metrics
+micro_f1  : 0.7741
+macro_f1  : 0.2952
+weights_f1: 0.7470
+precision : 0.7507
+recall    : 0.7991
+accuracy  : 0.9440
+iter: 01000, F1 self-PCMA-science: 0.55736, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8645284825275252, macro_f1=0.5573646715541138, weights_f1=0.864712122503738, precision=0.8493684493415748, recall=0.8802395209580839, accuracy=0.9596028191762719)
+Evaluation metrics
+micro_f1  : 0.8645
+macro_f1  : 0.5574
+weights_f1: 0.8647
+precision : 0.8494
+recall    : 0.8802
+accuracy  : 0.9596
+iter: 01500, F1 self-PCMA-science: 0.60332, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8570851020820699, macro_f1=0.603321309198739, weights_f1=0.8606090014417633, precision=0.8302872062663186, recall=0.8856705194262637, accuracy=0.9565927611775934)
+Evaluation metrics
+micro_f1  : 0.8571
+macro_f1  : 0.6033
+weights_f1: 0.8606
+precision : 0.8303
+recall    : 0.8857
+accuracy  : 0.9566
+iter: 02000, F1 self-PCMA-science: 0.62197, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8703502579418951, macro_f1=0.6219717594038389, weights_f1=0.8724957232767833, precision=0.8490266189908622, recall=0.8927725943461914, accuracy=0.960190147566258)
+Evaluation metrics
+micro_f1  : 0.8704
+macro_f1  : 0.6220
+weights_f1: 0.8725
+precision : 0.8490
+recall    : 0.8928
+accuracy  : 0.9602
+iter: 02500, F1 self-PCMA-science: 0.66975, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.873628269721858, macro_f1=0.6697532747062652, weights_f1=0.8736380751957509, precision=0.8660372194854954, recall=0.8813535719259156, accuracy=0.9619521327362162)
+Evaluation metrics
+micro_f1  : 0.8736
+macro_f1  : 0.6698
+weights_f1: 0.8736
+precision : 0.8660
+recall    : 0.8814
+accuracy  : 0.9620
+iter: 03000, F1 self-PCMA-science: 0.68901, best F1 for self-PCMA-science: 0.71224
+namespace(micro_f1=0.8671885729982146, macro_f1=0.6890103363658311, weights_f1=0.8686059963570458, precision=0.8554396423248882, recall=0.879264726361231, accuracy=0.9600616694809485)
+Evaluation metrics
+micro_f1  : 0.8672
+macro_f1  : 0.6890
+weights_f1: 0.8686
+precision : 0.8554
+recall    : 0.8793
+accuracy  : 0.9601
+
+##########     save the best model self-PCMA-science.    #############
+
+iter: 03500, Macro F1: 0.71424
+namespace(micro_f1=0.854754298919323, macro_f1=0.7142388229586183, weights_f1=0.8560393620220207, precision=0.8348380244291025, recall=0.8756440607157777, accuracy=0.9583731003597387)
+Evaluation metrics
+micro_f1  : 0.8548
+macro_f1  : 0.7142
+weights_f1: 0.8560
+precision : 0.8348
+recall    : 0.8756
+accuracy  : 0.9584
+iter: 03500, F1 self-PCMA-science: 0.71424, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.854754298919323, macro_f1=0.7142388229586183, weights_f1=0.8560393620220207, precision=0.8348380244291025, recall=0.8756440607157777, accuracy=0.9583731003597387)
+Evaluation metrics
+micro_f1  : 0.8548
+macro_f1  : 0.7142
+weights_f1: 0.8560
+precision : 0.8348
+recall    : 0.8756
+accuracy  : 0.9584
+iter: 04000, F1 self-PCMA-science: 0.70156, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8484475447955137, macro_f1=0.7015551841861571, weights_f1=0.8479656377283572, precision=0.8336245128342965, recall=0.8638072691825651, accuracy=0.9555649364951179)
+Evaluation metrics
+micro_f1  : 0.8484
+macro_f1  : 0.7016
+weights_f1: 0.8480
+precision : 0.8336
+recall    : 0.8638
+accuracy  : 0.9556
+iter: 04500, F1 self-PCMA-science: 0.70408, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8647349629222741, macro_f1=0.7040789101731514, weights_f1=0.8656526977791912, precision=0.8529053230394149, recall=0.8768973680545885, accuracy=0.9593642170178401)
+Evaluation metrics
+micro_f1  : 0.8647
+macro_f1  : 0.7041
+weights_f1: 0.8657
+precision : 0.8529
+recall    : 0.8769
+accuracy  : 0.9594
+iter: 05000, F1 self-PCMA-science: 0.69830, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8646456314016636, macro_f1=0.6982995631087466, weights_f1=0.8653291699864476, precision=0.8537876730925875, recall=0.8757833170867567, accuracy=0.9596028191762719)
+Evaluation metrics
+micro_f1  : 0.8646
+macro_f1  : 0.6983
+weights_f1: 0.8653
+precision : 0.8538
+recall    : 0.8758
+accuracy  : 0.9596
+iter: 05500, F1 self-PCMA-science: 0.68910, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8546219628071128, macro_f1=0.6891029838640714, weights_f1=0.854600594093476, precision=0.8335760624917251, recall=0.8767581116836095, accuracy=0.9577490639453785)
+Evaluation metrics
+micro_f1  : 0.8546
+macro_f1  : 0.6891
+weights_f1: 0.8546
+precision : 0.8336
+recall    : 0.8768
+accuracy  : 0.9577
+iter: 06000, F1 self-PCMA-science: 0.66025, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8510376843255052, macro_f1=0.6602508781951603, weights_f1=0.8528098764169824, precision=0.834739520557118, recall=0.8679849603119343, accuracy=0.9562807429704133)
+Evaluation metrics
+micro_f1  : 0.8510
+macro_f1  : 0.6603
+weights_f1: 0.8528
+precision : 0.8347
+recall    : 0.8680
+accuracy  : 0.9563
+iter: 06500, F1 self-PCMA-science: 0.66573, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8428111587982833, macro_f1=0.6657273837086327, weights_f1=0.8460657436170461, precision=0.8128314577674298, recall=0.8750870352318618, accuracy=0.9526650025695617)
+Evaluation metrics
+micro_f1  : 0.8428
+macro_f1  : 0.6657
+weights_f1: 0.8461
+precision : 0.8128
+recall    : 0.8751
+accuracy  : 0.9527
+iter: 07000, F1 self-PCMA-science: 0.64737, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8328839106686026, macro_f1=0.6473682625276476, weights_f1=0.8320377197646734, precision=0.8271079373798407, recall=0.8387411224063501, accuracy=0.9544269877395198)
+Evaluation metrics
+micro_f1  : 0.8329
+macro_f1  : 0.6474
+weights_f1: 0.8320
+precision : 0.8271
+recall    : 0.8387
+accuracy  : 0.9544
+iter: 07500, F1 self-PCMA-science: 0.63265, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8322989746357258, macro_f1=0.6326460547380555, weights_f1=0.8346886534978435, precision=0.807143791704828, recall=0.8590725525692801, accuracy=0.951306805667719)
+Evaluation metrics
+micro_f1  : 0.8323
+macro_f1  : 0.6326
+weights_f1: 0.8347
+precision : 0.8071
+recall    : 0.8591
+accuracy  : 0.9513
+iter: 08000, F1 self-PCMA-science: 0.67985, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8356610169491525, macro_f1=0.6798513153176159, weights_f1=0.8382863068459708, precision=0.8142423041352886, recall=0.8582370143434062, accuracy=0.95273841861831)
+Evaluation metrics
+micro_f1  : 0.8357
+macro_f1  : 0.6799
+weights_f1: 0.8383
+precision : 0.8142
+recall    : 0.8582
+accuracy  : 0.9527
+iter: 08500, F1 self-PCMA-science: 0.68649, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8491435646969802, macro_f1=0.6864917775749113, weights_f1=0.8498022185942837, precision=0.8390429581294182, recall=0.859490321682217, accuracy=0.95505102415388)
+Evaluation metrics
+micro_f1  : 0.8491
+macro_f1  : 0.6865
+weights_f1: 0.8498
+precision : 0.8390
+recall    : 0.8595
+accuracy  : 0.9551
+iter: 09000, F1 self-PCMA-science: 0.63713, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8218066822494156, macro_f1=0.6371346402561207, weights_f1=0.8223536067358781, precision=0.8115410726408689, recall=0.8323353293413174, accuracy=0.951013141472726)
+Evaluation metrics
+micro_f1  : 0.8218
+macro_f1  : 0.6371
+weights_f1: 0.8224
+precision : 0.8115
+recall    : 0.8323
+accuracy  : 0.9510
+iter: 09500, F1 self-PCMA-science: 0.60526, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.794021093804568, macro_f1=0.6052570491002264, weights_f1=0.7927394719863656, precision=0.79652466367713, recall=0.7915332126444785, accuracy=0.9442772190000734)
+Evaluation metrics
+micro_f1  : 0.7940
+macro_f1  : 0.6053
+weights_f1: 0.7927
+precision : 0.7965
+recall    : 0.7915
+accuracy  : 0.9443
+iter: 10000, F1 self-PCMA-science: 0.66699, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8406092751257991, macro_f1=0.6669888319041002, weights_f1=0.8413509933074254, precision=0.8213953488372093, recall=0.8607436290210277, accuracy=0.9546472358857646)
+Evaluation metrics
+micro_f1  : 0.8406
+macro_f1  : 0.6670
+weights_f1: 0.8414
+precision : 0.8214
+recall    : 0.8607
+accuracy  : 0.9546
+iter: 10500, F1 self-PCMA-science: 0.62845, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8474996555999448, macro_f1=0.6284474816475826, weights_f1=0.8479429405552685, precision=0.8384898459860979, recall=0.8567051942626375, accuracy=0.957895896042875)
+Evaluation metrics
+micro_f1  : 0.8475
+macro_f1  : 0.6284
+weights_f1: 0.8479
+precision : 0.8385
+recall    : 0.8567
+accuracy  : 0.9579
+iter: 11000, F1 self-PCMA-science: 0.64103, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8430781595338558, macro_f1=0.64102959503444, weights_f1=0.8476557458146925, precision=0.8121290322580645, recall=0.8764795989416516, accuracy=0.9538396593495339)
+Evaluation metrics
+micro_f1  : 0.8431
+macro_f1  : 0.6410
+weights_f1: 0.8477
+precision : 0.8121
+recall    : 0.8765
+accuracy  : 0.9538
+iter: 11500, F1 self-PCMA-science: 0.65291, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8486752253482654, macro_f1=0.6529117306761515, weights_f1=0.8531765651015566, precision=0.8326410290767787, recall=0.8653390892633338, accuracy=0.9549409000807576)
+Evaluation metrics
+micro_f1  : 0.8487
+macro_f1  : 0.6529
+weights_f1: 0.8532
+precision : 0.8326
+recall    : 0.8653
+accuracy  : 0.9549
+iter: 12000, F1 self-PCMA-science: 0.65056, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.839135819457823, macro_f1=0.6505573424070771, weights_f1=0.8429197992065921, precision=0.8293213654290765, recall=0.849185350229773, accuracy=0.9519859041186404)
+Evaluation metrics
+micro_f1  : 0.8391
+macro_f1  : 0.6506
+weights_f1: 0.8429
+precision : 0.8293
+recall    : 0.8492
+accuracy  : 0.9520
+iter: 12500, F1 self-PCMA-science: 0.67399, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8378050424700014, macro_f1=0.6739932847826392, weights_f1=0.8415209707370264, precision=0.811969162419966, recall=0.8653390892633338, accuracy=0.9536194112032891)
+Evaluation metrics
+micro_f1  : 0.8378
+macro_f1  : 0.6740
+weights_f1: 0.8415
+precision : 0.8120
+recall    : 0.8653
+accuracy  : 0.9536
+iter: 13000, F1 self-PCMA-science: 0.67374, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8349646547036433, macro_f1=0.6737355526638222, weights_f1=0.8381794281709818, precision=0.8155623423184172, recall=0.8553126305528478, accuracy=0.95073783128992)
+Evaluation metrics
+micro_f1  : 0.8350
+macro_f1  : 0.6737
+weights_f1: 0.8382
+precision : 0.8156
+recall    : 0.8553
+accuracy  : 0.9507
+iter: 13500, F1 self-PCMA-science: 0.68263, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8476631693691238, macro_f1=0.6826299431958538, weights_f1=0.8498949305322341, precision=0.8297985861011071, recall=0.8663138838601866, accuracy=0.9537478892885984)
+Evaluation metrics
+micro_f1  : 0.8477
+macro_f1  : 0.6826
+weights_f1: 0.8499
+precision : 0.8298
+recall    : 0.8663
+accuracy  : 0.9537
+iter: 14000, F1 self-PCMA-science: 0.65740, best F1 for self-PCMA-science: 0.71424
+namespace(micro_f1=0.8536054421768707, macro_f1=0.6574048409664689, weights_f1=0.8548391764322034, precision=0.8344194706742918, recall=0.8736944715220721, accuracy=0.9575104617869467)
+Evaluation metrics
+micro_f1  : 0.8536
+macro_f1  : 0.6574
+weights_f1: 0.8548
+precision : 0.8344
+recall    : 0.8737
+accuracy  : 0.9575
+Number of selected pseudo-labeled samples:  610
+--------------------------------------
+number of test (labeled) - target 341
+The final F1 on the Test set is 0.5972024240912452
+The final accuracy on the Test set is 0.886858137510879
+namespace(micro_f1=0.6182336182336183, macro_f1=0.5972024240912452, weights_f1=0.5901335816784158, precision=0.6575757575757576, recall=0.5833333333333334, accuracy=0.886858137510879)
+Evaluation metrics
+micro_f1  : 0.6182
+macro_f1  : 0.5972
+weights_f1: 0.5901
+precision : 0.6576
+recall    : 0.5833
+accuracy  : 0.8869
