@@ -316,7 +316,7 @@ if __name__ == "__main__":
     gtpl_prototypes = None            # ρ_{t-1}(c), shape [num_labels]
 
 
-    for run in range(6):
+    for run in range(5):
         if args.indomain:
             num_train_optimization_steps = int(
                 (len(train_features)) / args.train_batch_size / args.gradient_accumulation_steps) * args.num_train_epochs
