@@ -266,7 +266,7 @@ def update_gtpl_thresholds(base_network, classifier,
                            train_features, selected_features_dann,
                            num_labels, base_tau,
                            prev_proto=None, prev_thresholds=None,
-                           batch_size=16, device='cuda', with_segs=True):
+                           batch_size=16, device='cuda',run=0, with_segs=True):
 
     # δ_B and δ_N
     proto_B = compute_class_proto_labeled(
@@ -283,9 +283,12 @@ def update_gtpl_thresholds(base_network, classifier,
 
     # ρ_t(c)
     has_N = proto_N > 0
+    #rho = proto_B.clone()
+    #rho[has_N] = 0.5 * (proto_B[has_N] + proto_N[has_N])
+    alpha0, alpha_min = 0.9, 0.6
+    alpha = max(alpha_min, alpha0 - 0.1 * run)  # run = 0,1,2,...
     rho = proto_B.clone()
-    rho[has_N] = 0.5 * (proto_B[has_N] + proto_N[has_N])
-
+    rho[has_N] = alpha * proto_B[has_N] + (1.0 - alpha) * proto_N[has_N]
     # σ_t(c) = history smoothed prototype
     if prev_proto is not None:
         sigma = 0.5 * (rho + prev_proto)
@@ -298,10 +301,13 @@ def update_gtpl_thresholds(base_network, classifier,
         beta = sigma / max_sigma
     else:
         beta = torch.ones_like(sigma)
-
-    thresholds = (beta * base_tau).clamp(0.0, base_tau)
-    thresholds = torch.round(thresholds * 100.0) / 100.0  # 2 decimals
-
+    
+    IGNORE_ID = num_labels - 1
+    #thresholds = (beta * base_tau).clamp(0.0, base_tau)
+    #thresholds = torch.round(thresholds * 100.0) / 100.0  # 2 decimals
+    thresholds = (beta * base_tau).clamp(0.3, base_tau)
+    thresholds[IGNORE_ID] = base_tau
+    thresholds = torch.round(thresholds * 100.0) / 100.0
     return thresholds, rho
 
 def get_pseudo_labels_gtpl(base_network, classifier, features,
