@@ -505,7 +505,7 @@ if __name__ == "__main__":
             prev_proto=gtpl_prototypes,
             prev_thresholds=gtpl_thresholds,
             batch_size=args.eval_batch_size,
-            device=device,
+            device=device,run=run,
             with_segs=args.seg_true
         )
         print("GTPL Thresholds after run ", run)
