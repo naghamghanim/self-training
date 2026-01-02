@@ -285,7 +285,7 @@ def update_gtpl_thresholds(base_network, classifier,
     has_N = proto_N > 0
     #rho = proto_B.clone()
     #rho[has_N] = 0.5 * (proto_B[has_N] + proto_N[has_N])
-    alpha0, alpha_min = 0.9, 0.6
+    alpha0, alpha_min = 1.0, 0.2
     alpha = max(alpha_min, alpha0 - 0.1 * run)  # run = 0,1,2,...
     rho = proto_B.clone()
     rho[has_N] = alpha * proto_B[has_N] + (1.0 - alpha) * proto_N[has_N]
