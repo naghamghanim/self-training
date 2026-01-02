@@ -10,7 +10,7 @@ from seqeval.scheme import IOB2
 import numpy as np
 import torch
 import torch.nn as nn
-
+import json
 import pandas as pd
 
 import torch.optim as optim
@@ -133,6 +133,7 @@ def sequence_labeling_test(loader, model, classifier, label_list,with_segs, erro
     logging.info("\n" + classification_report(y_true, y_pred, scheme=IOB2, digits=4))
     print("Classification report done \n")
     print(classification_report(y_true, y_pred, scheme=IOB2, digits=4))
+    print("\n")
     metrics = {
         "micro_f1": f1_score(y_true, y_pred, average="micro", scheme=IOB2),
         "macro_f1": f1_score(y_true, y_pred, average="macro", scheme=IOB2),
@@ -264,7 +265,7 @@ if __name__ == "__main__":
                                            n_labels=num_labels, hidden_size=hidden_size,
                                            dropout_p=args.dropout, device=device)
     if args.task_name == "ner": 
-        # here take the valid PCMA 
+        # here take the valid Wojood 
         test_datasets =  ['/workspace/self-training/CONLL-files']
     if args.task_name == "pos":
         test_datasets =  ['data/POS-tagging/egy', 'data/POS-tagging/glf','data/POS-tagging/lev','data/POS-tagging/mag','data/POS-tagging/msa']
@@ -279,28 +280,100 @@ if __name__ == "__main__":
     
     triplet = False #not used
     if args.do_train:
-        #dir is /workspace/Konooz/Health-domain-cleaned as a source domain
+        #dir is /rep/nhamad/Konooz/Health-domain-cleaned as a source domain
         train_examples = data_processor.get_train_examples(args.data_dir)
         #print(len(train_examples))
         train_features, max_len_ids = data_processor.convert_examples_to_features(
             train_examples, label_list, args.max_seq_length, classifier.encode_word)
         print("number of train examples ", len(train_examples))
+        rows = []
+        for ex in train_examples:
+            rows.append({
+                "guid": getattr(ex, "guid", None),
+                "text_a": getattr(ex, "text_a", None),
+                "text_b": getattr(ex, "text_b", None),
+                # keep the label list in one CSV cell as JSON
+                "label": json.dumps(getattr(ex, "label", None), ensure_ascii=False),
+            })
 
+        df = pd.DataFrame(rows)
+        df.to_csv("/workspace/self-training/embeddings/train_examples.csv", index=False, encoding="utf-8-sig")
+        print("Saved: train_examples.csv", "Rows:", len(df))
+    
+   
+    rows = []
+    for f in train_features:
+        row = {
+            "sentence_id": getattr(f, "sentence_id", None),
+            "input_ids": getattr(f, "input_ids", None),
+            "input_mask": getattr(f, "input_mask", None),
+            "labels": getattr(f, "labels", None),
+            "segments": getattr(f, "segments", None),
+            "segments_indices_mask": getattr(f, "segments_indices_mask", None),
+            "segments_mask": getattr(f, "segments_mask", None),
+        }
+
+        # store lists as JSON strings inside CSV cells
+        for k, v in row.items():
+            if isinstance(v, (list, dict)):
+                row[k] = json.dumps(v, ensure_ascii=False)
+
+        rows.append(row)
+
+    df = pd.DataFrame(rows)
+    df.to_csv("/workspace/self-training/embeddings/train_features.csv", index=False, encoding="utf-8-sig")
+    print("Saved train_features.csv", df.shape)
 
     if args.self_training:
             # unlabaled_data is the histrory unlabaled /rep/nhamad/Konooz/History-domain-cleaned            
             # Load domain similarity scores (assuming CSV has columns: 'sentence_id' and 'domain_similarity')
-            #domain_sim_df = pd.read_csv('/rep/nhamad/AdaSL/Compute-domain-simirlaty/results/domain_similarity_health_history.csv')
+            #domain_sim_df = pd.read_csv('/workspace/Compute-domain-simirlaty/results/domain_similarity_health_history.csv')
             # Create a mapping from sentence index to domain similarity
             '''domain_similarities = {}
             for idx, row in domain_sim_df.iterrows():
                 domain_similarities[idx] = row['curriculum_score']
             #read the csv file and select the top N samples based on the curriculum score'''
             self_training_examples = data_processor.get_unlabeled_examples(args.unlabeled_data_dir)
+            rows = []
+            for ex in self_training_examples:
+                rows.append({
+                    "guid": getattr(ex, "guid", None),
+                    "text_a": getattr(ex, "text_a", None),
+                    "text_b": getattr(ex, "text_b", None),
+                    # keep the label list in one CSV cell as JSON
+                    "label": json.dumps(getattr(ex, "label", None), ensure_ascii=False),
+                })
+
+            df = pd.DataFrame(rows)
+            df.to_csv("/workspace/self-training/embeddings/self_training_examples.csv", index=False, encoding="utf-8-sig")
+            print("Saved: self_training_examples.csv", "Rows:", len(df))
+            
             self_training_features, _ = data_processor.convert_examples_to_features(self_training_examples, label_list, args.max_seq_length, classifier.encode_word)
             unlabeled_dataloader = load_data(self_training_features,batchsize = args.train_batch_size )
             len_train_unlabeled = len(unlabeled_dataloader)
             print("number of unlababled for self-training examples ", len(self_training_examples))
+            rows = []
+            for f in self_training_features:
+                row = {
+                    "sentence_id": getattr(f, "sentence_id", None),
+                    "input_ids": getattr(f, "input_ids", None),
+                    "input_mask": getattr(f, "input_mask", None),
+                    "labels": getattr(f, "labels", None),
+                    "segments": getattr(f, "segments", None),
+                    "segments_indices_mask": getattr(f, "segments_indices_mask", None),
+                    "segments_mask": getattr(f, "segments_mask", None),
+                }
+
+                # store lists as JSON strings inside CSV cells
+                for k, v in row.items():
+                    if isinstance(v, (list, dict)):
+                        row[k] = json.dumps(v, ensure_ascii=False)
+
+                rows.append(row)
+
+            df = pd.DataFrame(rows)
+            df.to_csv("/workspace/self-training/embeddings/self_training_features.csv", index=False, encoding="utf-8-sig")
+            print("inisally, Saved self_training_features.csv", df.shape)
             
 
     pseudo_labeled_instances = None
@@ -345,7 +418,7 @@ if __name__ == "__main__":
         #not executed in run 0.
         if run > 0:
             if args.task_name == "ner":
-                state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-self-PCMA-econ-{ran}.pt'), 'rb'))
+                state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{ran}.pt'), 'rb'))
             if args.task_name == "pos":
                 state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-GLF-{ran}.pt'), 'rb'))
             base_network.load_state_dict(state_dict)
@@ -377,7 +450,7 @@ if __name__ == "__main__":
         for i in range(num_iterations):
             if i == 0:
                 print(f"Training started with {device}")
-            if i % test_interval == 0 and i > 0:
+            if i % test_interval == 0 and i > 0: # each 500 iters test on the valid set
                 check_es = check_es + 500
                 base_network.train(False)
                 classifier.train(False)
@@ -389,7 +462,7 @@ if __name__ == "__main__":
                         check_es = 0
                         best_step = i
                         best_f1_msa = temp_f1_msa
-                        print("\n##########     save the best model self-PCMA-econ.    #############\n")
+                        print("\n##########     save the best model self-Wojood-econ.    #############\n")
                         log_str = "iter: {:05d}, Macro F1: {:.5f}".format(best_step, best_f1_msa)
                         print(log_str)
                         print(metrics)
@@ -398,9 +471,9 @@ if __name__ == "__main__":
                         print("Evaluation metrics")
                         for k, v in metrics_dict.items():
                             print(f"{k:10s}: {float(v):.4f}")
-                        torch.save(base_network.state_dict(), open(os.path.join(args.output_dir, f'base_model-self-PCMA-econ-{ran}.pt'), 'wb'))
-                        torch.save(classifier.state_dict(), open(os.path.join(args.output_dir, f'model-self-PCMA-econ-{ran}.pt'), 'wb'))
-                    log_str = "iter: {:05d}, F1 self-PCMA-econ: {:.5f}, best F1 for self-PCMA-econ: {:.5f}".format(i, temp_f1_msa,best_f1_msa)
+                        torch.save(base_network.state_dict(), open(os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{ran}.pt'), 'wb'))
+                        torch.save(classifier.state_dict(), open(os.path.join(args.output_dir, f'model-self-Wojood-econ-{ran}.pt'), 'wb'))
+                    log_str = "iter: {:05d}, F1 self-Wojood-econ: {:.5f}, best F1 for self-Wojood-econ: {:.5f}".format(i, temp_f1_msa,best_f1_msa)
                     print(log_str)
                     print(metrics)
                     metrics_dict = vars(metrics)
@@ -446,7 +519,7 @@ if __name__ == "__main__":
             bert_features, source_features = base_network(input_ids=tinput_ids, attention_mask=tattention_mask, segments = t_segments, segments_mask = t_segments_mask,segments_indices_mask= t_segments_indices_mask,with_segs = args.seg_true, is_source = True)
             
             train_loss = classifier(bert_features, labels_train, t_segments_mask)
-
+            #Lclass
             total_loss = train_loss          
             #print(total_loss)
             #tinput_ids, tattention_mask, labels_train, t_segments, t_segments_mask, t_segments_indices_mask            
@@ -477,14 +550,14 @@ if __name__ == "__main__":
             optimizer.step()
             scheduler.step()
 
-        if args.indomain:
+        if args.indomain: # 
             break
 
-        if args.task_name == "ner":
-            state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-self-PCMA-econ-{ran}.pt'), 'rb'))
+        if args.task_name == "ner": # best model from the valid set after each run
+            state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{ran}.pt'), 'rb'))
             base_network.load_state_dict(state_dict)
 
-            state_dict = torch.load(open(os.path.join(args.output_dir, f'model-self-PCMA-econ-{ran}.pt'), 'rb'))
+            state_dict = torch.load(open(os.path.join(args.output_dir, f'model-self-Wojood-econ-{ran}.pt'), 'rb'))
             classifier.load_state_dict(state_dict)
         if args.task_name == "pos":
             state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-GLF-{ran}.pt'), 'rb'))
@@ -514,7 +587,7 @@ if __name__ == "__main__":
         print(gtpl_prototypes)
         print("Selecting pseudo-labeled samples for next run ...")
         #selected_features_dann , _ = get_pseudo_labels_threshold(base_network, classifier, self_training_features, batch_size=args.eval_batch_size, threshold=args.threshold,device = device,with_segs = args.seg_true) # return the selected sentences that are above threshold
-        selected_features_dann, _ = get_pseudo_labels_gtpl(
+        selected_features_dann, not_selected_features_dann = get_pseudo_labels_gtpl(
                 base_network=base_network,
                 classifier=classifier,
                 features=self_training_features,
@@ -524,13 +597,64 @@ if __name__ == "__main__":
                 with_segs=args.seg_true
                     )
         print("Number of selected pseudo-labeled samples: ", len(selected_features_dann))
+
+
+        rows = []
+        for f in selected_features_dann:
+            row = {
+                    "sentence_id": getattr(f, "sentence_id", None),
+                    "input_ids": getattr(f, "input_ids", None),
+                    "input_mask": getattr(f, "input_mask", None),
+                    "labels": getattr(f, "labels", None),
+                    "segments": getattr(f, "segments", None),
+                    "segments_indices_mask": getattr(f, "segments_indices_mask", None),
+                    "segments_mask": getattr(f, "segments_mask", None),
+                }
+
+                # store lists as JSON strings inside CSV cells
+            for k, v in row.items():
+                if isinstance(v, (list, dict)):
+                        row[k] = json.dumps(v, ensure_ascii=False)
+
+            rows.append(row)
+
+        df = pd.DataFrame(rows)
+        df.to_csv(f"/workspace/self-training/embeddings/selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
+        print(f"Saved selected_features_dann-run{run}.csv", df.shape)
+
+
+        rows = []
+        for f in not_selected_features_dann:
+            row = {
+                    "sentence_id": getattr(f, "sentence_id", None),
+                    "input_ids": getattr(f, "input_ids", None),
+                    "input_mask": getattr(f, "input_mask", None),
+                    "labels": getattr(f, "labels", None),
+                    "segments": getattr(f, "segments", None),
+                    "segments_indices_mask": getattr(f, "segments_indices_mask", None),
+                    "segments_mask": getattr(f, "segments_mask", None),
+                }
+
+                # store lists as JSON strings inside CSV cells
+            for k, v in row.items():
+                if isinstance(v, (list, dict)):
+                        row[k] = json.dumps(v, ensure_ascii=False)
+
+            rows.append(row)
+
+        df = pd.DataFrame(rows)
+        df.to_csv(f"/workspace/self-training/embeddings/not_selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
+        print(f"Saved not_selected_features_dann-run{run}.csv", df.shape)
+
+
+
         log_class_thresholds(gtpl_thresholds, all_label_names, run)
         #selected_features_dann , _ = get_pseudo_labels_threshold_dom_sim(base_network, classifier, self_training_features, batch_size=args.eval_batch_size, threshold=args.threshold, domain_threshold=args.domain_threshold, device = device,with_segs = args.seg_true,domain_similarities=domain_similarities)
     
     #after finished all self-training runs, do a final test on the test set
     if args.task_name == "ner":
         paths_for_best_models = {
-        '/workspace/self-training/domain-Ad/variable-K/' : [f'base_model-self-PCMA-econ-{ran}.pt', f'model-self-PCMA-econ-{ran}.pt'],
+        '/rep/nhamad/AdaSL/domain-Ad/self-fixedK/' : [f'base_model-self-Wojood-econ-{ran}.pt', f'model-self-Wojood-econ-{ran}.pt'],
         
         }
     
@@ -545,8 +669,8 @@ if __name__ == "__main__":
         state_dict = torch.load(open(os.path.join(args.output_dir, paths_for_best_models[test_exp][1]), 'rb'))
         classifier.load_state_dict(state_dict)'''
 
-        base_path = os.path.join(args.output_dir, f'base_model-self-PCMA-econ-{ran}.pt')
-        clf_path  = os.path.join(args.output_dir, f'model-self-PCMA-econ-{ran}.pt')
+        base_path = os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{ran}.pt')
+        clf_path  = os.path.join(args.output_dir, f'model-self-Wojood-econ-{ran}.pt')
 
         base_state = torch.load(base_path, map_location=device)
         clf_state  = torch.load(clf_path,  map_location=device)
@@ -568,7 +692,7 @@ if __name__ == "__main__":
             temp_f1, report, y_truee, y_predd,metrics  = sequence_labeling_test(test_dataloader, base_network, classifier,label_list,with_segs = args.seg_true, error_analysis = True)
             test_texts = [i.text_a for i in test_examples]
             eanalysis = pd.DataFrame(zip(test_texts,y_truee,y_predd),columns = ['Text','True Labels', 'Predicted labels'])
-            eanalysis.to_csv(f'error_analysis/{args.exp_msg}_{test_exp.replace("/","_").replace("-","_")}.csv',index=False)
+            eanalysis.to_csv(f'/workspace/self-training/error_analysis/{args.exp_msg}_{test_exp.replace("/","_").replace("-","_")}.csv',index=False)
             print(metrics)
             metrics_dict = vars(metrics)
 
