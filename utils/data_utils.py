@@ -50,13 +50,14 @@ class InputExample(object):
 class InputFeatures(object):
     """A single set of features of data."""
 
-    def __init__(self, input_ids=None, labels=None, input_mask=None, segments=None, segments_mask=None, segments_indices_mask=None):
+    def __init__(self, input_ids=None, labels=None, input_mask=None, segments=None, segments_mask=None, segments_indices_mask=None, sentence_id=None):
         self.input_ids = input_ids
         self.input_mask = input_mask
         self.labels = labels
         self.segments = segments
         self.segments_mask = segments_mask
         self.segments_indices_mask = segments_indices_mask
+        self.sentence_id = sentence_id
 
 class SequenceClassificationProcessor:
    
@@ -255,6 +256,7 @@ class SequenceLabelingProcessor:
         max_str = None
         gt_128 = 0
         features = []
+        sentID=0
         for (ex_index, example) in enumerate(examples):
 
             textlist = example.text_a.split(' ')
@@ -263,10 +265,12 @@ class SequenceLabelingProcessor:
             token_ids = []
             word_segments = []
             segments_indices_mask = []
+            #sentenceid =[]
             num_tokens = 0
             ## [1,2,3] (word)  ==>  label
             ##
-            for i, word in enumerate(textlist):  
+            for i, word in enumerate(textlist):
+                #sentenceid.append(sentID)  
                 tokens = encode_method(word.strip())  # word token ids
                 if len(tokens) ==  0:
                     continue
@@ -364,7 +368,10 @@ class SequenceLabelingProcessor:
                               labels=label_ids,
                               segments=word_segments,
                              segments_mask = segments_mask,
-                             segments_indices_mask=segments_indices_mask))
+                             segments_indices_mask=segments_indices_mask,
+                             sentence_id=sentID)
+                             )
+            sentID+=1
         #print(f"The number of sentences with more than {max_seq_length} is {gt_128} / {len(examples)}")
         return features, max_len_ids
 
