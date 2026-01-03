@@ -248,6 +248,41 @@ if __name__ == "__main__":
         train_features, max_len_ids = data_processor.convert_examples_to_features(
             train_examples, label_list, args.max_seq_length, classifier.encode_word)
         print("number of train examples ", len(train_examples))
+        rows = []
+        for ex in train_examples:
+            rows.append({
+                "guid": getattr(ex, "guid", None),
+                "text_a": getattr(ex, "text_a", None),
+                "text_b": getattr(ex, "text_b", None),
+                # keep the label list in one CSV cell as JSON
+                "label": json.dumps(getattr(ex, "label", None), ensure_ascii=False),
+            })
+
+        df = pd.DataFrame(rows)
+        df.to_csv("/workspace/self-training/embeddings/train_examples.csv", index=False, encoding="utf-8-sig")
+        print("Saved: train_examples.csv", "Rows:", len(df))
+    rows = []
+    for f in train_features:
+        row = {
+            "sentence_id": getattr(f, "sentence_id", None),
+            "input_ids": getattr(f, "input_ids", None),
+            "input_mask": getattr(f, "input_mask", None),
+            "labels": getattr(f, "labels", None),
+            "segments": getattr(f, "segments", None),
+            "segments_indices_mask": getattr(f, "segments_indices_mask", None),
+            "segments_mask": getattr(f, "segments_mask", None),
+        }
+
+        # store lists as JSON strings inside CSV cells
+        for k, v in row.items():
+            if isinstance(v, (list, dict)):
+                row[k] = json.dumps(v, ensure_ascii=False)
+
+        rows.append(row)
+
+    df = pd.DataFrame(rows)
+    df.to_csv("/workspace/self-training/embeddings/train_features.csv", index=False, encoding="utf-8-sig")
+    print("Saved train_features.csv", df.shape)
 
 
     if args.self_training:
@@ -260,10 +295,46 @@ if __name__ == "__main__":
                 domain_similarities[idx] = row['curriculum_score']
             #read the csv file and select the top N samples based on the curriculum score'''
             self_training_examples = data_processor.get_unlabeled_examples(args.unlabeled_data_dir)
+            rows = []
+            for ex in self_training_examples:
+                rows.append({
+                    "guid": getattr(ex, "guid", None),
+                    "text_a": getattr(ex, "text_a", None),
+                    "text_b": getattr(ex, "text_b", None),
+                    # keep the label list in one CSV cell as JSON
+                    "label": json.dumps(getattr(ex, "label", None), ensure_ascii=False),
+                })
+
+            df = pd.DataFrame(rows)
+            df.to_csv("/workspace/self-training/embeddings/self_training_examples.csv", index=False, encoding="utf-8-sig")
+            print("Saved: self_training_examples.csv", "Rows:", len(df))
+            
             self_training_features, _ = data_processor.convert_examples_to_features(self_training_examples, label_list, args.max_seq_length, classifier.encode_word)
             unlabeled_dataloader = load_data(self_training_features,batchsize = args.train_batch_size )
             len_train_unlabeled = len(unlabeled_dataloader)
             print("number of unlababled for self-training examples ", len(self_training_examples))
+            rows = []
+            for f in self_training_features:
+                row = {
+                    "sentence_id": getattr(f, "sentence_id", None),
+                    "input_ids": getattr(f, "input_ids", None),
+                    "input_mask": getattr(f, "input_mask", None),
+                    "labels": getattr(f, "labels", None),
+                    "segments": getattr(f, "segments", None),
+                    "segments_indices_mask": getattr(f, "segments_indices_mask", None),
+                    "segments_mask": getattr(f, "segments_mask", None),
+                }
+
+                # store lists as JSON strings inside CSV cells
+                for k, v in row.items():
+                    if isinstance(v, (list, dict)):
+                        row[k] = json.dumps(v, ensure_ascii=False)
+
+                rows.append(row)
+
+            df = pd.DataFrame(rows)
+            df.to_csv("/workspace/self-training/embeddings/self_training_features.csv", index=False, encoding="utf-8-sig")
+            print("inisally, Saved self_training_features.csv", df.shape)
             
 
     pseudo_labeled_instances = None
@@ -446,8 +517,55 @@ if __name__ == "__main__":
             state_dict = torch.load(open(os.path.join(args.output_dir, f'model-GLF-{ran}.pt'), 'rb'))
             classifier.load_state_dict(state_dict)
 
-        selected_features_dann , _ = get_pseudo_labels_threshold(base_network, classifier, self_training_features, batch_size=args.eval_batch_size, threshold=args.threshold,device = device,with_segs = args.seg_true) # return the selected sentences that are above threshold
+        selected_features_dann , not_selected_features_dann = get_pseudo_labels_threshold(base_network, classifier, self_training_features, batch_size=args.eval_batch_size, threshold=args.threshold,device = device,with_segs = args.seg_true) # return the selected sentences that are above threshold
         print("Number of selected pseudo-labeled samples: ", len(selected_features_dann))
+        rows = []
+        for f in selected_features_dann:
+            row = {
+                    "sentence_id": getattr(f, "sentence_id", None),
+                    "input_ids": getattr(f, "input_ids", None),
+                    "input_mask": getattr(f, "input_mask", None),
+                    "labels": getattr(f, "labels", None),
+                    "segments": getattr(f, "segments", None),
+                    "segments_indices_mask": getattr(f, "segments_indices_mask", None),
+                    "segments_mask": getattr(f, "segments_mask", None),
+                }
+
+                # store lists as JSON strings inside CSV cells
+            for k, v in row.items():
+                if isinstance(v, (list, dict)):
+                        row[k] = json.dumps(v, ensure_ascii=False)
+
+            rows.append(row)
+
+        df = pd.DataFrame(rows)
+        df.to_csv(f"/workspace/self-training/embeddings/selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
+
+        rows = []
+        for f in not_selected_features_dann:
+            row = {
+                    "sentence_id": getattr(f, "sentence_id", None),
+                    "input_ids": getattr(f, "input_ids", None),
+                    "input_mask": getattr(f, "input_mask", None),
+                    "labels": getattr(f, "labels", None),
+                    "segments": getattr(f, "segments", None),
+                    "segments_indices_mask": getattr(f, "segments_indices_mask", None),
+                    "segments_mask": getattr(f, "segments_mask", None),
+                }
+
+                # store lists as JSON strings inside CSV cells
+            for k, v in row.items():
+                if isinstance(v, (list, dict)):
+                        row[k] = json.dumps(v, ensure_ascii=False)
+
+            rows.append(row)
+
+        df = pd.DataFrame(rows)
+        df.to_csv(f"/workspace/self-training/embeddings/not_selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
+        print(f"Saved not_selected_features_dann-run{run}.csv", df.shape)
+
+        
+        print(f"Saved selected_features_dann-run{run}.csv", df.shape)
     #after finished all self-training runs, do a final test on the test set
     if args.task_name == "ner":
         paths_for_best_models = {
@@ -489,7 +607,7 @@ if __name__ == "__main__":
             temp_f1, report, y_truee, y_predd,metrics  = sequence_labeling_test(test_dataloader, base_network, classifier,label_list,with_segs = args.seg_true, error_analysis = True)
             test_texts = [i.text_a for i in test_examples]
             eanalysis = pd.DataFrame(zip(test_texts,y_truee,y_predd),columns = ['Text','True Labels', 'Predicted labels'])
-            eanalysis.to_csv(f'error_analysis/{args.exp_msg}_{test_exp.replace("/","_").replace("-","_")}.csv',index=False)
+            eanalysis.to_csv(f'/workspace/self-training/error_analysis/{args.exp_msg}_{test_exp.replace("/","_").replace("-","_")}.csv',index=False)
             print(metrics)
             metrics_dict = vars(metrics)
 
