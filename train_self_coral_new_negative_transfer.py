@@ -527,7 +527,7 @@ if __name__ == "__main__":
                                                         labels=labels_train,
                                                         segments_mask=t_segments_mask,
                                                         apply_source_masking=True,
-                                                        drop_p=20.0,
+                                                        drop_p=10.0,
                                                         return_sentence_losses=True
                                                     )
 
