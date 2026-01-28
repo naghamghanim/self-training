@@ -188,7 +188,7 @@ if __name__ == "__main__":
     parser.add_argument('--self_training', action='store_true', default=False)
     parser.add_argument('--mmd', action='store_true', default=False)
     parser.add_argument('--debug', action='store_true', default=False)
-    parser.add_argument('--unlabeled_data_dir', type=str, default='/rep/nhamad/Wojood-data/Wojood/CONLL-files/')
+    parser.add_argument('--unlabeled_data_dir', type=str, default='/workspace/self-training/CONLL-files/')
     parser.add_argument('--indomain', action='store_true', default=False)
     parser.add_argument('--erroranalysis', action='store_true', default=False)
     parser.add_argument('--coral', action='store_true', default=False)
@@ -266,7 +266,7 @@ if __name__ == "__main__":
                                            dropout_p=args.dropout, device=device)
     if args.task_name == "ner": 
         # here take the valid Wojood 
-        test_datasets =  ['/rep/nhamad/Wojood-data/Wojood/CONLL-files']
+        test_datasets =  ['/workspace/self-training/CONLL-files']
     if args.task_name == "pos":
         test_datasets =  ['data/POS-tagging/egy', 'data/POS-tagging/glf','data/POS-tagging/lev','data/POS-tagging/mag','data/POS-tagging/msa']
     val_dataloader = []
@@ -297,7 +297,7 @@ if __name__ == "__main__":
             })
 
         df = pd.DataFrame(rows)
-        df.to_csv("/rep/nhamad/AdaSL/embeddings/train_examples.csv", index=False, encoding="utf-8-sig")
+        df.to_csv("/workspace/self-training/embeddings/train_examples.csv", index=False, encoding="utf-8-sig")
         print("Saved: train_examples.csv", "Rows:", len(df))
     
    
@@ -321,7 +321,7 @@ if __name__ == "__main__":
         rows.append(row)
 
     df = pd.DataFrame(rows)
-    df.to_csv("/rep/nhamad/AdaSL/embeddings/train_features.csv", index=False, encoding="utf-8-sig")
+    df.to_csv("//workspace/self-training/embeddings/train_features.csv", index=False, encoding="utf-8-sig")
     print("Saved train_features.csv", df.shape)
 
     if args.self_training:
@@ -345,7 +345,7 @@ if __name__ == "__main__":
                 })
 
             df = pd.DataFrame(rows)
-            df.to_csv("/rep/nhamad/AdaSL/embeddings/self_training_examples.csv", index=False, encoding="utf-8-sig")
+            df.to_csv("/workspace/self-training/embeddings/self_training_examples.csv", index=False, encoding="utf-8-sig")
             print("Saved: self_training_examples.csv", "Rows:", len(df))
             
             self_training_features, _ = data_processor.convert_examples_to_features(self_training_examples, label_list, args.max_seq_length, classifier.encode_word)
@@ -372,7 +372,7 @@ if __name__ == "__main__":
                 rows.append(row)
 
             df = pd.DataFrame(rows)
-            df.to_csv("/rep/nhamad/AdaSL/embeddings/self_training_features.csv", index=False, encoding="utf-8-sig")
+            df.to_csv("/workspace/self-training/embeddings/self_training_features.csv", index=False, encoding="utf-8-sig")
             print("inisally, Saved self_training_features.csv", df.shape)
             
 
@@ -638,7 +638,7 @@ if __name__ == "__main__":
             rows.append(row)
 
         df = pd.DataFrame(rows)
-        df.to_csv(f"/rep/nhamad/AdaSL/embeddings/selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
+        df.to_csv(f"/workspace/self-training/embeddings/selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
         print(f"Saved selected_features_dann-run{run}.csv", df.shape)
 
 
@@ -662,7 +662,7 @@ if __name__ == "__main__":
             rows.append(row)
 
         df = pd.DataFrame(rows)
-        df.to_csv(f"/rep/nhamad/AdaSL/embeddings/not_selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
+        df.to_csv(f"/workspace/self-training/embeddings/not_selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
         print(f"Saved not_selected_features_dann-run{run}.csv", df.shape)
 
 
@@ -673,7 +673,7 @@ if __name__ == "__main__":
     #after finished all self-training runs, do a final test on the test set
     if args.task_name == "ner":
         paths_for_best_models = {
-        '/rep/nhamad/AdaSL/domain-Ad/self-fixedK/' : [f'base_model-self-Wojood-econ-{ran}.pt', f'model-self-Wojood-econ-{ran}.pt'],
+        '/workspace/self-training/embeddings/domain-Ad/self-fixedK/' : [f'base_model-self-Wojood-econ-{ran}.pt', f'model-self-Wojood-econ-{ran}.pt'],
         
         }
     
