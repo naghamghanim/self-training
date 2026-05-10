@@ -285,7 +285,7 @@ def update_gtpl_thresholds(base_network, classifier,
     has_N = proto_N > 0
     #rho = proto_B.clone()
     #rho[has_N] = 0.5 * (proto_B[has_N] + proto_N[has_N])
-    alpha0, alpha_min = 1.0, 0.2
+    alpha0, alpha_min = 1.0, 0.7
     alpha = max(alpha_min, alpha0 - 0.1 * run)  # run = 0,1,2,...
     rho = proto_B.clone()
     rho[has_N] = alpha * proto_B[has_N] + (1.0 - alpha) * proto_N[has_N]
@@ -305,7 +305,7 @@ def update_gtpl_thresholds(base_network, classifier,
     IGNORE_ID = num_labels - 1
     #thresholds = (beta * base_tau).clamp(0.0, base_tau)
     #thresholds = torch.round(thresholds * 100.0) / 100.0  # 2 decimals
-    thresholds = (beta * base_tau).clamp(0.3, base_tau)
+    thresholds = (beta * base_tau).clamp(0.5, base_tau)
     thresholds[IGNORE_ID] = base_tau
     thresholds = torch.round(thresholds * 100.0) / 100.0
     return thresholds, rho
