@@ -135,7 +135,7 @@ if __name__ == "__main__":
                         help="trade off between supervised loss and self-training loss")
     parser.add_argument('--batch_size', type=int, default=36, help="training batch size")
     parser.add_argument('--cos_dist', type=str2bool, default=False, help="the classifier uses cosine similarity.")
-    parser.add_argument('--threshold', default=0.9, type=float, help="threshold of pseudo labels")
+    parser.add_argument('--threshold', default=0.8, type=float, help="threshold of pseudo labels")
     parser.add_argument('--label_interval', type=int, default=200, help="interval of two continuous pseudo label phase")
     parser.add_argument('--stop_step', type=int, default=0, help="stop steps")
     parser.add_argument('--final_log', type=str, default=None, help="final_log file")
@@ -166,6 +166,8 @@ if __name__ == "__main__":
                     help="Weight for confidence in combined scoring")
     parser.add_argument("--domain_weight", default=0.3, type=float,
                     help="Weight for domain similarity in combined scoring")
+    parser.add_argument("--domain", default="domain", type=str,
+                    help="Weight for domain similarity in combined scoring")
     
     args = parser.parse_args()
 
@@ -191,6 +193,7 @@ if __name__ == "__main__":
 
     config["loss"] = {"trade_off": args.trade_off}
     config["threshold"] = args.threshold
+    config["domain"] = args.domain
 
     best_val_f1_msa = 0.0
     best_val_f1_da = 0.0    
@@ -228,7 +231,7 @@ if __name__ == "__main__":
                                            dropout_p=args.dropout, device=device)
     if args.task_name == "ner": 
         # here take the valid PCMA 
-        test_datasets =  ['/workspace/self-training/CONLL-files']
+        test_datasets =  ['/workspace/self-training/CONLL-files/MSA', '/workspace/self-training/CONLL-files/DA']
     if args.task_name == "pos":
         test_datasets =  ['data/POS-tagging/egy', 'data/POS-tagging/glf','data/POS-tagging/lev','data/POS-tagging/mag','data/POS-tagging/msa']
     val_dataloader = []
@@ -257,9 +260,9 @@ if __name__ == "__main__":
                 # keep the label list in one CSV cell as JSON
                 "label": json.dumps(getattr(ex, "label", None), ensure_ascii=False),
             })
-
+        
         df = pd.DataFrame(rows)
-        df.to_csv("/workspace/self-training/embeddings/train_examples.csv", index=False, encoding="utf-8-sig")
+        df.to_csv(f"/workspace/self-training/embeddings/train_examples_{config['domain']}.csv", index=False, encoding="utf-8-sig")
         print("Saved: train_examples.csv", "Rows:", len(df))
     rows = []
     for f in train_features:
@@ -281,7 +284,7 @@ if __name__ == "__main__":
         rows.append(row)
 
     df = pd.DataFrame(rows)
-    df.to_csv("/workspace/self-training/embeddings/train_features.csv", index=False, encoding="utf-8-sig")
+    df.to_csv(f"/workspace/self-training/embeddings/train_features_{config['domain']}.csv", index=False, encoding="utf-8-sig")
     print("Saved train_features.csv", df.shape)
 
 
@@ -294,7 +297,7 @@ if __name__ == "__main__":
             for idx, row in domain_sim_df.iterrows():
                 domain_similarities[idx] = row['curriculum_score']
             #read the csv file and select the top N samples based on the curriculum score'''
-            self_training_examples = data_processor.get_unlabeled_examples(args.unlabeled_data_dir)
+            self_training_examples = data_processor.get_unlabeled_examples(args.unlabeled_data_dir,domain = args.domain,length=100000)
             rows = []
             for ex in self_training_examples:
                 rows.append({
@@ -306,7 +309,7 @@ if __name__ == "__main__":
                 })
 
             df = pd.DataFrame(rows)
-            df.to_csv("/workspace/self-training/embeddings/self_training_examples.csv", index=False, encoding="utf-8-sig")
+            df.to_csv(f"/workspace/self-training/embeddings/self_training_examples_{config['domain']}.csv", index=False, encoding="utf-8-sig")
             print("Saved: self_training_examples.csv", "Rows:", len(df))
             
             self_training_features, _ = data_processor.convert_examples_to_features(self_training_examples, label_list, args.max_seq_length, classifier.encode_word)
@@ -333,7 +336,7 @@ if __name__ == "__main__":
                 rows.append(row)
 
             df = pd.DataFrame(rows)
-            df.to_csv("/workspace/self-training/embeddings/self_training_features.csv", index=False, encoding="utf-8-sig")
+            df.to_csv(f"/workspace/self-training/embeddings/self_training_features_{config['domain']}.csv", index=False, encoding="utf-8-sig")
             print("inisally, Saved self_training_features.csv", df.shape)
             
 
@@ -539,7 +542,7 @@ if __name__ == "__main__":
             rows.append(row)
 
         df = pd.DataFrame(rows)
-        df.to_csv(f"/workspace/self-training/embeddings/selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
+        df.to_csv(f"/workspace/self-training/embeddings/selected_features_{config['domain']}_dann-run{run}.csv", index=False, encoding="utf-8-sig")
 
         rows = []
         for f in not_selected_features_dann:
@@ -561,11 +564,11 @@ if __name__ == "__main__":
             rows.append(row)
 
         df = pd.DataFrame(rows)
-        df.to_csv(f"/workspace/self-training/embeddings/not_selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
-        print(f"Saved not_selected_features_dann-run{run}.csv", df.shape)
+        df.to_csv(f"/workspace/self-training/embeddings/not_selected_features_{config['domain']}_dann-run{run}.csv", index=False, encoding="utf-8-sig")
+        print(f"Saved not_selected_features_{config['domain']}_dann-run{run}.csv", df.shape)
 
         
-        print(f"Saved selected_features_dann-run{run}.csv", df.shape)
+        print(f"Saved selected_features_{config['domain']}_dann-run{run}.csv", df.shape)
     #after finished all self-training runs, do a final test on the test set
     if args.task_name == "ner":
         paths_for_best_models = {
@@ -597,7 +600,7 @@ if __name__ == "__main__":
         classifier.to(device)
 
 
-        test_examples = data_processor.get_test_examples(test_exp)
+        test_examples = data_processor.get_test_examples(test_exp,domain = args.domain)
         test_features, _ = data_processor.convert_examples_to_features(
                 test_examples, label_list, args.max_seq_length, classifier.encode_word)
         print("number of test (labeled) - target", len(test_features))
