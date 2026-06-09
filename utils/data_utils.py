@@ -164,16 +164,16 @@ class SequenceLabelingProcessor:
         return self._create_examples(
             self._read_file(os.path.join(data_dir, "valid.txt")), "valid")
 
-    def get_test_examples(self, data_dir):
+    def get_test_examples(self, data_dir, domain=None):
         """See base class."""
         return self._create_examples(
             #self._read_file(os.path.join(data_dir, "test.txt")), "test")
-             self._read_file(os.path.join(data_dir, "labeled.txt")), "labeled")
+             self._read_file(os.path.join(data_dir, f"labeled_{domain}.txt")), "labeled")
     
-    def get_unlabeled_examples(self, data_dir,length=100000):
+    def get_unlabeled_examples(self, data_dir,domain=None,length=100000):
         """See base class."""
         return self._create_examples(
-            self._read_file(os.path.join(data_dir, "Unlabeled.txt")), "unlabeled",length=length)    
+            self._read_file(os.path.join(data_dir, f"Unlabeled_{domain}.txt")), "unlabeled",length=length)    
 
 
     def get_labels(self):
