@@ -337,7 +337,7 @@ if __name__ == "__main__":
             for idx, row in domain_sim_df.iterrows():
                 domain_similarities[idx] = row['curriculum_score']
             #read the csv file and select the top N samples based on the curriculum score'''
-            self_training_examples = data_processor.get_unlabeled_examples(args.unlabeled_data_dir,domain = args.domain,length=100000)
+            self_training_examples = data_processor.get_unlabeled_examples(args.unlabeled_data_dir,domain = args.domain,length=1000000)
             rows = []
             for ex in self_training_examples:
                 rows.append({
