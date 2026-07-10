@@ -202,7 +202,11 @@ if __name__ == "__main__":
                     help="Weight for confidence in combined scoring")
     parser.add_argument("--domain_weight", default=0.3, type=float,
                     help="Weight for domain similarity in combined scoring")
-    
+    parser.add_argument("--domain", default="domain", type=str,
+                    help="Weight for domain similarity in combined scoring")
+    parser.add_argument("--tmin", default=0.5, type=float,
+                    help="Minimum threshold for self-training")
+
     args = parser.parse_args()
 
     random.seed(args.seed)
@@ -218,7 +222,7 @@ if __name__ == "__main__":
     config["lr"] = args.learning_rate
     config["task"] = args.task
     config["lr_mult"] = args.lr_mult
-
+    config["domain"] = args.domain
     config["optimizer"] = {"type": optim.Adam, "optim_params": {'lr': args.learning_rate},
                            "lr_type": "inv", \
                            "lr_param": {"lr": args.learning_rate, "gamma": 0.001, "power": 0.75}}
@@ -227,7 +231,7 @@ if __name__ == "__main__":
 
     config["loss"] = {"trade_off": args.trade_off}
     config["threshold"] = args.threshold
-
+    config["tmin"] = args.tmin
     best_val_f1_msa = 0.0
     best_val_f1_da = 0.0    
     best_f1_msa = 0.0
@@ -266,7 +270,7 @@ if __name__ == "__main__":
                                            dropout_p=args.dropout, device=device)
     if args.task_name == "ner": 
         # here take the valid Wojood 
-        test_datasets =  ['/content/self-training/CONLL-files']
+        test_datasets =  ['/content/self-training/CONLL-files/MSA', '/content/self-training/CONLL-files/DA']
     if args.task_name == "pos":
         test_datasets =  ['data/POS-tagging/egy', 'data/POS-tagging/glf','data/POS-tagging/lev','data/POS-tagging/mag','data/POS-tagging/msa']
     val_dataloader = []
@@ -297,7 +301,7 @@ if __name__ == "__main__":
             })
 
         df = pd.DataFrame(rows)
-        df.to_csv("/content/self-training/embeddings/train_examples.csv", index=False, encoding="utf-8-sig")
+        df.to_csv(f"/content/self-training/embeddings_variables/train_examples_{config['domain']}_{config['tmin']}.csv", index=False, encoding="utf-8-sig")
         print("Saved: train_examples.csv", "Rows:", len(df))
     
    
@@ -321,19 +325,19 @@ if __name__ == "__main__":
         rows.append(row)
 
     df = pd.DataFrame(rows)
-    df.to_csv("/content/self-training/embeddings/train_features.csv", index=False, encoding="utf-8-sig")
+    df.to_csv(f"/content/self-training/embeddings_variables/train_features_{config['domain']}_{config['tmin']}.csv", index=False, encoding="utf-8-sig")
     print("Saved train_features.csv", df.shape)
 
     if args.self_training:
             # unlabaled_data is the histrory unlabaled /rep/nhamad/Konooz/History-domain-cleaned            
             # Load domain similarity scores (assuming CSV has columns: 'sentence_id' and 'domain_similarity')
-            #domain_sim_df = pd.read_csv('/content/Compute-domain-simirlaty/results/domain_similarity_health_history.csv')
+            #domain_sim_df = pd.read_csv('/content/self-training/Compute-domain-simirlaty/results/domain_similarity_health_history.csv')
             # Create a mapping from sentence index to domain similarity
             '''domain_similarities = {}
             for idx, row in domain_sim_df.iterrows():
                 domain_similarities[idx] = row['curriculum_score']
             #read the csv file and select the top N samples based on the curriculum score'''
-            self_training_examples = data_processor.get_unlabeled_examples(args.unlabeled_data_dir)
+            self_training_examples = data_processor.get_unlabeled_examples(args.unlabeled_data_dir,domain = args.domain,length=1000000)
             rows = []
             for ex in self_training_examples:
                 rows.append({
@@ -345,7 +349,7 @@ if __name__ == "__main__":
                 })
 
             df = pd.DataFrame(rows)
-            df.to_csv("/content/self-training/embeddings/self_training_examples.csv", index=False, encoding="utf-8-sig")
+            df.to_csv(f"/content/self-training/embeddings_variables/self_training_examples_{config['domain']}_{config['tmin']}.csv", index=False, encoding="utf-8-sig")
             print("Saved: self_training_examples.csv", "Rows:", len(df))
             
             self_training_features, _ = data_processor.convert_examples_to_features(self_training_examples, label_list, args.max_seq_length, classifier.encode_word)
@@ -372,7 +376,7 @@ if __name__ == "__main__":
                 rows.append(row)
 
             df = pd.DataFrame(rows)
-            df.to_csv("/content/self-training/embeddings/self_training_features.csv", index=False, encoding="utf-8-sig")
+            df.to_csv(f"/content/self-training/embeddings_variables/self_training_features_{config['domain']}_{config['tmin']}.csv", index=False, encoding="utf-8-sig")
             print("inisally, Saved self_training_features.csv", df.shape)
             
 
@@ -418,9 +422,9 @@ if __name__ == "__main__":
         #not executed in run 0.
         if run > 0:
             if args.task_name == "ner":
-                state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{ran}.pt'), 'rb'))
+                state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{args.domain}-{args.tmin}.pt'), 'rb'))
             if args.task_name == "pos":
-                state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-GLF-{ran}.pt'), 'rb'))
+                state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-GLF-{args.domain}-{args.tmin}.pt'), 'rb'))
             base_network.load_state_dict(state_dict)
 
         hidden_size = base_network.output_num()
@@ -471,8 +475,8 @@ if __name__ == "__main__":
                         print("Evaluation metrics")
                         for k, v in metrics_dict.items():
                             print(f"{k:10s}: {float(v):.4f}")
-                        torch.save(base_network.state_dict(), open(os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{ran}.pt'), 'wb'))
-                        torch.save(classifier.state_dict(), open(os.path.join(args.output_dir, f'model-self-Wojood-econ-{ran}.pt'), 'wb'))
+                        torch.save(base_network.state_dict(), open(os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{args.domain}-{args.tmin}.pt'), 'wb'))
+                        torch.save(classifier.state_dict(), open(os.path.join(args.output_dir, f'model-self-Wojood-econ-{args.domain}-{args.tmin}.pt'), 'wb'))
                     log_str = "iter: {:05d}, F1 self-Wojood-econ: {:.5f}, best F1 for self-Wojood-econ: {:.5f}".format(i, temp_f1_msa,best_f1_msa)
                     print(log_str)
                     print(metrics)
@@ -512,7 +516,7 @@ if __name__ == "__main__":
                 if i % len_unlab == 0:
                     iter_unlab = iter(unlab_dataloader)
             
-
+            #source batch
             tinput_ids, tattention_mask, labels_train, t_segments, t_segments_mask, t_segments_indices_mask = next(iter_train)
             tinput_ids, tattention_mask, labels_train, t_segments, t_segments_mask, t_segments_indices_mask = tinput_ids.to(device), tattention_mask.to(device), labels_train.to(device), t_segments.to(device), t_segments_mask, t_segments_indices_mask.to(device)
 
@@ -554,16 +558,16 @@ if __name__ == "__main__":
             break
 
         if args.task_name == "ner": # best model from the valid set after each run
-            state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{ran}.pt'), 'rb'))
+            state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{args.domain}-{args.tmin}.pt'), 'rb'))
             base_network.load_state_dict(state_dict)
 
-            state_dict = torch.load(open(os.path.join(args.output_dir, f'model-self-Wojood-econ-{ran}.pt'), 'rb'))
+            state_dict = torch.load(open(os.path.join(args.output_dir, f'model-self-Wojood-econ-{args.domain}-{args.tmin}.pt'), 'rb'))
             classifier.load_state_dict(state_dict)
         if args.task_name == "pos":
-            state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-GLF-{ran}.pt'), 'rb'))
+            state_dict = torch.load(open(os.path.join(args.output_dir, f'base_model-GLF-{args.domain}-{args.tmin}.pt'), 'rb'))
             base_network.load_state_dict(state_dict)
 
-            state_dict = torch.load(open(os.path.join(args.output_dir, f'model-GLF-{ran}.pt'), 'rb'))
+            state_dict = torch.load(open(os.path.join(args.output_dir, f'model-GLF-{args.domain}-{args.tmin}.pt'), 'rb'))
             classifier.load_state_dict(state_dict)
 
 
@@ -619,8 +623,8 @@ if __name__ == "__main__":
             rows.append(row)
 
         df = pd.DataFrame(rows)
-        df.to_csv(f"/content/self-training/embeddings/selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
-        print(f"Saved selected_features_dann-run{run}.csv", df.shape)
+        df.to_csv(f"/content/self-training/embeddings_variables/selected_features_{config['domain']}_{config['tmin']}_dann-run{run}.csv", index=False, encoding="utf-8-sig")
+        print(f"Saved selected_features_{config['domain']}_{config['tmin']}_dann-run{run}.csv", df.shape)
 
 
         rows = []
@@ -643,8 +647,8 @@ if __name__ == "__main__":
             rows.append(row)
 
         df = pd.DataFrame(rows)
-        df.to_csv(f"/content/self-training/embeddings/not_selected_features_dann-run{run}.csv", index=False, encoding="utf-8-sig")
-        print(f"Saved not_selected_features_dann-run{run}.csv", df.shape)
+        df.to_csv(f"/content/self-training/embeddings_variables/not_selected_features_{config['domain']}_{config['tmin']}_dann-run{run}.csv", index=False, encoding="utf-8-sig")
+        print(f"Saved not_selected_features_{config['domain']}_{config['tmin']}_dann-run{run}.csv", df.shape)
 
 
 
@@ -654,7 +658,7 @@ if __name__ == "__main__":
     #after finished all self-training runs, do a final test on the test set
     if args.task_name == "ner":
         paths_for_best_models = {
-        '/rep/nhamad/AdaSL/domain-Ad/self-fixedK/' : [f'base_model-self-Wojood-econ-{ran}.pt', f'model-self-Wojood-econ-{ran}.pt'],
+        '/content/self-training/domain-Ad/self-fixedK/' : [f'base_model-self-Wojood-econ-{args.domain}-{args.tmin}.pt', f'model-self-Wojood-econ-{args.domain}-{args.tmin}.pt'],
         
         }
     
@@ -669,8 +673,8 @@ if __name__ == "__main__":
         state_dict = torch.load(open(os.path.join(args.output_dir, paths_for_best_models[test_exp][1]), 'rb'))
         classifier.load_state_dict(state_dict)'''
 
-        base_path = os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{ran}.pt')
-        clf_path  = os.path.join(args.output_dir, f'model-self-Wojood-econ-{ran}.pt')
+        base_path = os.path.join(args.output_dir, f'base_model-self-Wojood-econ-{args.domain}-{args.tmin}.pt')
+        clf_path  = os.path.join(args.output_dir, f'model-self-Wojood-econ-{args.domain}-{args.tmin}.pt')
 
         base_state = torch.load(base_path, map_location=device)
         clf_state  = torch.load(clf_path,  map_location=device)
@@ -682,7 +686,7 @@ if __name__ == "__main__":
         classifier.to(device)
 
 
-        test_examples = data_processor.get_test_examples(test_exp)
+        test_examples = data_processor.get_test_examples(test_exp, domain=args.domain)
         test_features, _ = data_processor.convert_examples_to_features(
                 test_examples, label_list, args.max_seq_length, classifier.encode_word)
         print("number of test (labeled) - target", len(test_features))
@@ -692,7 +696,7 @@ if __name__ == "__main__":
             temp_f1, report, y_truee, y_predd,metrics  = sequence_labeling_test(test_dataloader, base_network, classifier,label_list,with_segs = args.seg_true, error_analysis = True)
             test_texts = [i.text_a for i in test_examples]
             eanalysis = pd.DataFrame(zip(test_texts,y_truee,y_predd),columns = ['Text','True Labels', 'Predicted labels'])
-            eanalysis.to_csv(f'/content/self-training/error_analysis/{args.exp_msg}_{test_exp.replace("/","_").replace("-","_")}.csv',index=False)
+            eanalysis.to_csv(f'error_analysis/{args.exp_msg}_{test_exp.replace("/","_").replace("-","_")}.csv',index=False)
             print(metrics)
             metrics_dict = vars(metrics)
 
@@ -727,5 +731,6 @@ if __name__ == "__main__":
         except:
             pass
         #print(report)
+
 
 
